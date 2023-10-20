@@ -6,7 +6,7 @@
 </p>
 
 # WOC ESA Data Challenges
-
+ 
 This repository contains codes and sample notebooks for downloading and processing the 2024a WOC-ESA data challenges.
 Note that this data challenge is part of the extended effort to improve oceanographic algorithms using data challenges: [ocean-data-challenges](https://ocean-data-challenges.github.io/index.html).
 
