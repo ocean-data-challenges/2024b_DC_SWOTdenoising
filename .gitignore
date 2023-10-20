@@ -1,7 +1,4 @@
 # ignoring results directory
 /results/
-/results_dev/
-/dev/
-/data_dev/
-/data/
+swot_data/
 /src/__pycache__/
