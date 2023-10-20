@@ -22,7 +22,7 @@ autodoc_mock_imports = ['numpy','xarray','matplotlib','pyinterp','netCDF4','scip
 
 # -- Project information -----------------------------------------------------
 
-project = 'WOC-ESA Data challenges'
+project = 'SWOT denoising data challenge'
 copyright = '2023, Datlas'
 author = 'Sammy Metref'
 

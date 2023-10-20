@@ -1,22 +1,19 @@
 .. 2024_DC_WOC-ESA documentation master file, created by
    sphinx-quickstart on Fri Jul 21 14:53:11 2023.
    You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-.. image:: figures/dc_2024_WOC-ESA_logo-rtd2.png
-    :width: 1200
+   contain the root `toctree` directive. 
     
     
-=================================================
-World Ocean Circulation - ESA - Data challenges
-=================================================
+=============================
+SWOT denoising data challenge
+=============================
 
 .. role:: raw-html(raw)
     :format: html
 
 :raw-html:`<br />`
 
-.. image:: ../../figures/dc_2024a_WOC-ESA_banner.jpg
+.. image:: ../../figures/dc_2024b_SWOTdenoising_banner.jpg
     :width: 600 
     :align: center
 
@@ -27,42 +24,19 @@ World Ocean Circulation - ESA - Data challenges
     
      
 
-The WOC project 
---------------- 
-
-The World Ocean Circulation (WOC) consortium is composed partners from France, Norway, Italy, Spain, Netherlands. It gathers experts in the Earth Observation  and ocean processes and sea state interactions.
-
-The WOC project developed synergetic products optimizing the capacy offered by Earth Observations as well as in-situ and numerical models by focusing on four domains of applications: 
-
-* Sea-state current interactions for Safe Navigation, 
-* 3D currents and vertical motion for Sustainable Fisheries, 
-* Surface Lagrangian drift for a Clean Ocean, 
-* High Resolution wave and current model assessment for a Productive Ocean and ocean processes and sea state interactions.
-
-:raw-html:`<br />`
+SWOT data 
+--------- 
  
 
-.. raw:: html
-
-    <embed> 
-        <center>
-        <a href="https://www.worldoceancirculation.org/Products#/search?from=1&to=30"> <b>Check out the WOC products</b> </a>  <br> <br> <a href="https://www.worldoceancirculation.org/Products#/search?from=1&to=30"><img src="https://github.com/ocean-data-challenges/2024_DC_WOC-ESA/assets/33433820/8434082f-ad1d-494a-9325-e6668fc85e1a" width="200"></a> 
-        </center>
-        
-    </embed>
-    
-    
 :raw-html:`<br />`
 
-:raw-html:`<br />`
-
-WOC Data Challenges
--------------------
+Instrumental errors: KaRIn noise
+--------------------------------
  
+The data challenge setup
+------------------------
 
-The WOC data challenges are comparison platforms that allow a sound and fair assessment of the WOC products between them and to other products. These platforms offer an input dataset (altimetric data, drifters, doppler data ...) for anyone to create a current products as well as a reference dataset (independant from the input dataset) in order to evaluate the products. These data challenges are contained in a `github repository <https://github.com/ocean-data-challenges/2024_DC_WOC-ESA/tree/main>`_ and their documentation and results are presented on this readthedocs website. 
-
-The WOC data challenges cover three geographical regions, with different dynamical characteristics, and multiple WOC products that are available in these regions. 
+The SWOT denoising regions:  
 
 * `Mediterranean Sea <https://2024-dc-woc-esa.readthedocs.io/en/latest/2_dc_medsea/dc_medsea_details.html>`_
     * Area: [5°W, 25°E, 35°N, 47°N]
@@ -74,7 +48,7 @@ The WOC data challenges cover three geographical regions, with different dynamic
     * Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics. 
     * WOC products: Merged SSH/SST currents, Drifter data-driven currents, BFN-QG geostrophic currents, Doppler currents
     
-* `Agulhas Current <https://2024-dc-woc-esa.readthedocs.io/en/latest/4_dc_agulhas/dc_agulhas_details.html>`_ 
+* `Atlantic circumpolar <https://2024-dc-woc-esa.readthedocs.io/en/latest/4_dc_agulhas/dc_agulhas_details.html>`_ 
     * Area: [14°E, 35°E, 45°S, 30°S]
     * Dynamical specificities: Strongly geostrophic region. 
     * WOC products: Drifter data-driven currents, BFN-QG geostrophic currents, Doppler currents
