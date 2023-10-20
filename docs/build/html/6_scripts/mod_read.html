@@ -20,8 +20,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mod_spectral module" href="mod_spectral.html" />
-    <link rel="prev" title="mod_powerspec module" href="mod_powerspec.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -89,21 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="mod_compare.html">mod_compare module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_filter.html">mod_filter module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_interp.html">mod_interp module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_powerspec.html">mod_powerspec module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_read module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_stat.html">mod_stat module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_traj.html">mod_traj module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
-</ul>
 
         </div>
       </div>
@@ -119,7 +102,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
       <li class="breadcrumb-item active">mod_read module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/6_scripts/mod_read.rst.txt" rel="nofollow"> View page source</a>
@@ -130,53 +112,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mod_read">
-<span id="mod-read-module"></span><h1>mod_read module<a class="headerlink" href="#module-mod_read" title="Permalink to this headline"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_read.retrieve_list_of_files_from_url">
-<span class="sig-prename descclassname"><span class="pre">mod_read.</span></span><span class="sig-name descname"><span class="pre">retrieve_list_of_files_from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dt_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_online</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_read.retrieve_list_of_files_from_url" title="Permalink to this definition"></a></dt>
-<dd><p>Retrieve a list of files from a URL catalog and construct download links.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path_catalog</strong> (<em>str</em>) – The URL to the catalog page containing the list of files to retrieve.</p></li>
-<li><p><strong>path_data</strong> (<em>str</em>) – The base URL path to the directory where the files are hosted.</p></li>
-<li><p><strong>prefix3</strong> (<em>str</em><em>, </em><em>optional</em>) – A prefix filter to select files with a specific prefix (default is ‘dt*’).</p></li>
-<li><p><strong>read_online</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, constructs online-readable URLs (default is True).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A sorted list of file URLs, ready for download or online access.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This function reads the contents of a catalog page hosted at the provided URL (<cite>path_catalog</cite>). It then extracts
-the filenames and constructs file URLs based on the <cite>path_data</cite>. The constructed URLs can be either for online
-reading (default) or direct download, depending on the value of the <cite>read_online</cite> parameter.</p>
-<p>The optional <cite>prefix3</cite> parameter allows filtering files by a specific prefix. Only files with names starting with
-the specified prefix will be included in the list.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">catalog_url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com/catalog/&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">data_base_url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com/data/&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">file_list</span> <span class="o">=</span> <span class="n">retrieve_list_of_files_from_url</span><span class="p">(</span><span class="n">catalog_url</span><span class="p">,</span> <span class="n">data_base_url</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">file_url</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>  <span class="c1"># Print the constructed file URLs.</span>
-</pre></div>
-</div>
-</dd></dl>
-
+  <section id="mod-read-module">
+<h1>mod_read module<a class="headerlink" href="#mod-read-module" title="Permalink to this headline"></a></h1>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mod_powerspec.html" class="btn btn-neutral float-left" title="mod_powerspec module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mod_spectral.html" class="btn btn-neutral float-right" title="mod_spectral module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

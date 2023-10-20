@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>swot module &mdash; WOC-ESA Data challenges  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            WOC-ESA Data challenges
+              <img src="_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Mediterranean Sea</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_details.html">Mediterranean Sea setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_dc_medsea/dc_medsea_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Gulf Stream</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_details.html">Gulf Stream setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_dc_gulfstream/dc_gulfstream_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Agulhas Current</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="4_dc_agulhas/dc_agulhas_details.html">Agulhas current setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dc_agulhas/dc_agulhas_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dc_agulhas/dc_agulhas_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dc_agulhas/dc_agulhas_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dc_agulhas/dc_agulhas_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_dc_agulhas/dc_agulhas_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="5_metrics_det/metrics_1-standard-insitu.html">Standard insitu validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_metrics_det/metrics_2-effective-resolution.html">Effective resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_metrics_det/metrics_3-position-structures.html">Position of structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WOC-ESA Data challenges</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">swot module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/swot.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-swot">
+<span id="swot-module"></span><h1>swot module<a class="headerlink" href="#module-swot" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="swot.SwotTrack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">swot.</span></span><span class="sig-name descname"><span class="pre">SwotTrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.add_swath_variable">
+<span class="sig-name descname"><span class="pre">add_swath_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.add_swath_variable" title="Permalink to this definition"></a></dt>
+<dd><p>add a 2d variable to the dataset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_boxcar_filter">
+<span class="sig-name descname"><span class="pre">apply_boxcar_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_boxcar_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply boxcar filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_gaussian_filter">
+<span class="sig-name descname"><span class="pre">apply_gaussian_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_gaussian_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply gaussian filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_lanczos_filter">
+<span class="sig-name descname"><span class="pre">apply_lanczos_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_lanczos_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply a lanczos filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_lee_filter">
+<span class="sig-name descname"><span class="pre">apply_lee_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_lee_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply filter from lee et al., 1980</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_loess_filter">
+<span class="sig-name descname"><span class="pre">apply_loess_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gaussian'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_loess_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply a loess filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_median_filter">
+<span class="sig-name descname"><span class="pre">apply_median_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_median_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply median filter, enrich dataset inplace</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_var_filter">
+<span class="sig-name descname"><span class="pre">apply_var_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_var_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply the Gomez et al. filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.apply_your_own_filter">
+<span class="sig-name descname"><span class="pre">apply_your_own_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thefilter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.apply_your_own_filter" title="Permalink to this definition"></a></dt>
+<dd><p>apply median filter, enrich dataset inplace</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.compute_geos_current">
+<span class="sig-name descname"><span class="pre">compute_geos_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.compute_geos_current" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.compute_relative_vorticity">
+<span class="sig-name descname"><span class="pre">compute_relative_vorticity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invar_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outvar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.compute_relative_vorticity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.cycle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cycle</span></span><a class="headerlink" href="#swot.SwotTrack.cycle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.display_demo">
+<span class="sig-name descname"><span class="pre">display_demo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'karin'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.display_demo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.display_demo_input">
+<span class="sig-name descname"><span class="pre">display_demo_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.display_demo_input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.display_demo_target">
+<span class="sig-name descname"><span class="pre">display_demo_target</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.display_demo_target" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.display_result_quickstart">
+<span class="sig-name descname"><span class="pre">display_result_quickstart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.display_result_quickstart" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.display_track">
+<span class="sig-name descname"><span class="pre">display_track</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.display_track" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.dset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dset</span></span><a class="headerlink" href="#swot.SwotTrack.dset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.empty_nadir_gap">
+<span class="sig-name descname"><span class="pre">empty_nadir_gap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.empty_nadir_gap" title="Permalink to this definition"></a></dt>
+<dd><p>empty nadir gap by applying the mask back on</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.filename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#swot.SwotTrack.filename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.fill_nadir_gap">
+<span class="sig-name descname"><span class="pre">fill_nadir_gap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.fill_nadir_gap" title="Permalink to this definition"></a></dt>
+<dd><p>fill nadir gap</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.latitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">latitude</span></span><a class="headerlink" href="#swot.SwotTrack.latitude" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.longitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">longitude</span></span><a class="headerlink" href="#swot.SwotTrack.longitude" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.maxlat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">maxlat</span></span><a class="headerlink" href="#swot.SwotTrack.maxlat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.maxlon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">maxlon</span></span><a class="headerlink" href="#swot.SwotTrack.maxlon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.minlat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minlat</span></span><a class="headerlink" href="#swot.SwotTrack.minlat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.minlon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minlon</span></span><a class="headerlink" href="#swot.SwotTrack.minlon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.nadir_mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nadir_mask</span></span><a class="headerlink" href="#swot.SwotTrack.nadir_mask" title="Permalink to this definition"></a></dt>
+<dd><p>return nadir mask</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.nx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nx</span></span><a class="headerlink" href="#swot.SwotTrack.nx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.ny">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ny</span></span><a class="headerlink" href="#swot.SwotTrack.ny" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.plot_track">
+<span class="sig-name descname"><span class="pre">plot_track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filtered_var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swottrack_input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.plot_track" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="swot.SwotTrack.to_netcdf">
+<span class="sig-name descname"><span class="pre">to_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#swot.SwotTrack.to_netcdf" title="Permalink to this definition"></a></dt>
+<dd><p>write to netcdf file</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.track">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">track</span></span><a class="headerlink" href="#swot.SwotTrack.track" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.x_ac">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x_ac</span></span><a class="headerlink" href="#swot.SwotTrack.x_ac" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="swot.SwotTrack.x_at">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x_at</span></span><a class="headerlink" href="#swot.SwotTrack.x_at" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

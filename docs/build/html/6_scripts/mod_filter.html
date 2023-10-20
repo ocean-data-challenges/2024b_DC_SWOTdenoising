@@ -20,8 +20,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mod_interp module" href="mod_interp.html" />
-    <link rel="prev" title="mod_compare module" href="mod_compare.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -89,21 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="mod_compare.html">mod_compare module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_filter module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_interp.html">mod_interp module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_powerspec.html">mod_powerspec module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_read.html">mod_read module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_stat.html">mod_stat module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_traj.html">mod_traj module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
-</ul>
 
         </div>
       </div>
@@ -119,7 +102,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
       <li class="breadcrumb-item active">mod_filter module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/6_scripts/mod_filter.rst.txt" rel="nofollow"> View page source</a>
@@ -130,107 +112,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mod_filter">
-<span id="mod-filter-module"></span><h1>mod_filter module<a class="headerlink" href="#module-mod_filter" title="Permalink to this headline"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_filter.apply_bandpass_filter">
-<span class="sig-prename descclassname"><span class="pre">mod_filter.</span></span><span class="sig-name descname"><span class="pre">apply_bandpass_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">65.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_filter.apply_bandpass_filter" title="Permalink to this definition"></a></dt>
-<dd><p>Apply a bandpass filter to a dataset.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ds</strong> (<em>xarray.Dataset</em>) – Input dataset containing relevant variables.</p></li>
-<li><p><strong>lambda_min</strong> (<em>float</em><em>, </em><em>optional</em>) – Minimum wavelength for the filter in kilometers, by default 65.</p></li>
-<li><p><strong>lambda_max</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum wavelength for the filter in kilometers, by default 500.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The filtered dataset with additional variables ‘msla_filtered’, ‘sla_filtered’, and ‘mapping_err_filtered’.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>xarray.Dataset</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_filter.compute_median_dx">
-<span class="sig-prename descclassname"><span class="pre">mod_filter.</span></span><span class="sig-name descname"><span class="pre">compute_median_dx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_filter.compute_median_dx" title="Permalink to this definition"></a></dt>
-<dd><p>Compute the median spacing between along-track measurements.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dataset</strong> (<em>xarray.Dataset</em>) – Input dataset containing longitude and latitude coordinates.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The median spacing between along-track measurements in kilometers.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_filter.distance">
-<span class="sig-prename descclassname"><span class="pre">mod_filter.</span></span><span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lon0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_filter.distance" title="Permalink to this definition"></a></dt>
-<dd><p>Compute distance between two geographical locations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>lon0</strong> (<em>float</em>) – Longitude of first location.</p></li>
-<li><p><strong>lat0</strong> (<em>float</em>) – Latitude of first location.</p></li>
-<li><p><strong>lon1</strong> (<em>float</em>) – Longitude of second location.</p></li>
-<li><p><strong>lat1</strong> (<em>float</em>) – Latitude of second location.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>distance (in m)</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>array</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_filter.lanczos_filter">
-<span class="sig-prename descclassname"><span class="pre">mod_filter.</span></span><span class="sig-name descname"><span class="pre">lanczos_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_filter.lanczos_filter" title="Permalink to this definition"></a></dt>
-<dd><p>Apply a lanczos filter on z field</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wave_length</strong> (<em>float</em>) – half window where apply lanczos in x units</p></li>
-<li><p><strong>x</strong> (<em>array</em>) – must be growing for each track but could be irregular</p></li>
-<li><p><strong>z</strong> (<em>array</em>) – field to apply lanczos</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_filter.median_filter">
-<span class="sig-prename descclassname"><span class="pre">mod_filter.</span></span><span class="sig-name descname"><span class="pre">median_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">half_window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_filter.median_filter" title="Permalink to this definition"></a></dt>
-<dd><p>Apply a median filter on z field</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>half_window</strong> (<em>float</em>) – half window where apply median</p></li>
-<li><p><strong>x</strong> (<em>array</em>) – must be growing for each track but could be irregular</p></li>
-<li><p><strong>z</strong> (<em>array</em>) – field to apply median</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="mod-filter-module">
+<h1>mod_filter module<a class="headerlink" href="#mod-filter-module" title="Permalink to this headline"></a></h1>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mod_compare.html" class="btn btn-neutral float-left" title="mod_compare module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mod_interp.html" class="btn btn-neutral float-right" title="mod_interp module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

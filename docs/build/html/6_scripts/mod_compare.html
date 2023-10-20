@@ -20,8 +20,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mod_filter module" href="mod_filter.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="modules.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -89,21 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_compare module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_filter.html">mod_filter module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_interp.html">mod_interp module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_powerspec.html">mod_powerspec module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_read.html">mod_read module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_stat.html">mod_stat module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_traj.html">mod_traj module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
-</ul>
 
         </div>
       </div>
@@ -119,7 +102,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
       <li class="breadcrumb-item active">mod_compare module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/6_scripts/mod_compare.rst.txt" rel="nofollow"> View page source</a>
@@ -130,115 +112,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mod_compare">
-<span id="mod-compare-module"></span><h1>mod_compare module<a class="headerlink" href="#module-mod_compare" title="Permalink to this headline"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_compare.compare_psd_score">
-<span class="sig-prename descclassname"><span class="pre">mod_compare.</span></span><span class="sig-name descname"><span class="pre">compare_psd_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boxlon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">180,</span> <span class="pre">180]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boxlat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">90,</span> <span class="pre">90]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_compare.compare_psd_score" title="Permalink to this definition"></a></dt>
-<dd><p>Compare Power Spectral Density (PSD) scores between a study dataset and a reference dataset.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>study_filename</strong> (<em>str</em>) – Filepath to the study dataset NetCDF file for comparison.</p></li>
-<li><p><strong>ref_filename</strong> (<em>str</em>) – Filepath to the reference dataset NetCDF file for comparison.</p></li>
-<li><p><strong>boxlon</strong> (<em>list of float</em><em>, </em><em>optional</em>) – Longitude bounding box for regional zoom, by default [-180, 180].</p></li>
-<li><p><strong>boxlat</strong> (<em>list of float</em><em>, </em><em>optional</em>) – Latitude bounding box for regional zoom, by default [-90, 90].</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A HoloViews layout containing three plots:
-- Effective resolution of the reference dataset.
-- Effective resolution of the study dataset.
-- Gain(-)/loss(+) of effective resolution compared to the reference dataset.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>holoviews.Layout</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">study_file</span> <span class="o">=</span> <span class="s2">&quot;study_data.nc&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ref_file</span> <span class="o">=</span> <span class="s2">&quot;reference_data.nc&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">compare_psd_score</span><span class="p">(</span><span class="n">study_file</span><span class="p">,</span> <span class="n">ref_file</span><span class="p">,</span> <span class="n">boxlon</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">70</span><span class="p">],</span> <span class="n">boxlat</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_compare.compare_stat_score_map">
-<span class="sig-prename descclassname"><span class="pre">mod_compare.</span></span><span class="sig-name descname"><span class="pre">compare_stat_score_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boxlon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">180,</span> <span class="pre">180]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boxlat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">90,</span> <span class="pre">90]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vartype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'err_var'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_compare.compare_stat_score_map" title="Permalink to this definition"></a></dt>
-<dd><p>Plot statistical score maps.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>study_filename</strong> (<em>str</em>) – Path to the NetCDF file containing the studied data.</p></li>
-<li><p><strong>ref_filename</strong> (<em>str</em>) – Path to the NetCDF file containing the reference data.</p></li>
-<li><p><strong>boxlon</strong> (<em>Array of floats</em><em>, </em><em>optional</em>) – Array containing min and max longitude to plot.</p></li>
-<li><p><strong>boxlar</strong> (<em>Array of floats</em><em>, </em><em>optional</em>) – Array containing min and max latitude to plot.</p></li>
-<li><p><strong>vartype</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the variable to plot, ‘err_var’ by default or ‘exp_var’.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A HoloViews layout containing six plots.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>holoviews.Layout</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_compare.convert_longitude">
-<span class="sig-prename descclassname"><span class="pre">mod_compare.</span></span><span class="sig-name descname"><span class="pre">convert_longitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_compare.convert_longitude" title="Permalink to this definition"></a></dt>
-<dd><p>Converts longitude coordinates ranging from 0 to 360 to -180 to 180.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ds</strong> (<em>xarray.Dataset</em>) – The input dataset containing longitude coordinates ranging from 0 to 360.</p></li>
-<li><p><strong>lon_name</strong> (<em>str</em>) – The name of the longitude coordinate in the dataset.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The input dataset with longitude coordinates ranging from -180 to 180.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>xarray.Dataset</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_compare.regional_zoom">
-<span class="sig-prename descclassname"><span class="pre">mod_compare.</span></span><span class="sig-name descname"><span class="pre">regional_zoom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_glob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boxlon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boxlat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namelon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lon'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namelat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lat'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_compare.regional_zoom" title="Permalink to this definition"></a></dt>
-<dd><p>Select a geographical region in a xarray.dataset using longitude and latitude information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ds_glob</strong> (<em>xarray.Dataset</em>) – Input dataset organized in longitudes and latitudes coordinates.</p></li>
-<li><p><strong>box_lon</strong> (<em>Array of float</em>) – Min and max longitudes of the requested regional zoom.</p></li>
-<li><p><strong>box_lat</strong> (<em>Array of float</em>) – Min and max latitudes of the requested regional zoom.</p></li>
-<li><p><strong>namelon</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the longitude coordinate.</p></li>
-<li><p><strong>namelat</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the latitude coordinate.</p></li>
-<li><p><strong>change_lon</strong> (<em>Boolean</em><em>, </em><em>optional</em>) – Switches from (0,360) longitude to (-180,180) if True. Default True.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The input dataset restricted in the requested geographical region.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>xarray.Dataset</p>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="mod-compare-module">
+<h1>mod_compare module<a class="headerlink" href="#mod-compare-module" title="Permalink to this headline"></a></h1>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="modules.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mod_filter.html" class="btn btn-neutral float-right" title="mod_filter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

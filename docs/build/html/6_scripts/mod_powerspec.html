@@ -20,8 +20,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mod_read module" href="mod_read.html" />
-    <link rel="prev" title="mod_plot module" href="mod_plot.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -89,21 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="mod_compare.html">mod_compare module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_filter.html">mod_filter module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_interp.html">mod_interp module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_powerspec module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_read.html">mod_read module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_stat.html">mod_stat module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_traj.html">mod_traj module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
-</ul>
 
         </div>
       </div>
@@ -119,7 +102,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
       <li class="breadcrumb-item active">mod_powerspec module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/6_scripts/mod_powerspec.rst.txt" rel="nofollow"> View page source</a>
@@ -130,202 +112,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mod_powerspec">
-<span id="mod-powerspec-module"></span><h1>mod_powerspec module<a class="headerlink" href="#module-mod_powerspec" title="Permalink to this headline"></a></h1>
-<p>Powerspec is a python package created by Adekunle Ajayi and available at <a class="reference external" href="https://github.com/adekunleoajayi/powerspec">https://github.com/adekunleoajayi/powerspec</a>.</p>
-<p>The powerspec package was created for estimating wavenumber spectral density, kinetic energy spectral flux and spectral coherence of two-dimensional oceanic dataset such as SSH, vorticity.</p>
-<p>Due to some deprecations of the package, only parts of it are used here in mod_powerspec.py.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.cross_spectra">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">cross_spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Tukey'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Both'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.cross_spectra" title="Permalink to this definition"></a></dt>
-<dd><p>Compute cross spectra.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data1</strong> (<em>numpy.ndarray</em>) – First data array.</p></li>
-<li><p><strong>data2</strong> (<em>numpy.ndarray</em>) – Second data array.</p></li>
-<li><p><strong>navlon</strong> (<em>numpy.ndarray</em>) – Longitude.</p></li>
-<li><p><strong>navlat</strong> (<em>numpy.ndarray</em>) – Latitude.</p></li>
-<li><p><strong>window</strong> (<em>str</em><em>, </em><em>optional</em>) – Windowing method (default is ‘Tukey’).</p></li>
-<li><p><strong>detrend</strong> (<em>str</em><em>, </em><em>optional</em>) – Detrend method (default is ‘Both’).</p></li>
-<li><p><strong>Normalize</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, normalize the cross spectra (default is False).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>wavenumber</strong> (<em>numpy.ndarray</em>) – Wavenumber values.</p></li>
-<li><p><strong>cross_spectra</strong> (<em>numpy.ndarray</em>) – Cross spectra.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.fill_nan">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">fill_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.fill_nan" title="Permalink to this definition"></a></dt>
-<dd><p>Replaces a NaN value in a dataset with an interpolated one.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<em>numpy.ndarray</em>) – Input data containing NaN values.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>data_nonan</strong> – Data with NaN values replaced by interpolation.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.interpolate">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">interpolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.interpolate" title="Permalink to this definition"></a></dt>
-<dd><p>Perform a spatial interpolation if required; return x_reg, y_reg, data_reg.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – Raw data.</p></li>
-<li><p><strong>navlon</strong> (<em>numpy.ndarray</em>) – Longitude.</p></li>
-<li><p><strong>navlat</strong> (<em>numpy.ndarray</em>) – Latitude.</p></li>
-<li><p><strong>interp</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – If None, return data with coordinates in meters.
-If ‘basemap’, return interpolated data using basemap from mpl_toolkits
-and also coordinates in meters.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>x2d_in</strong> (<em>numpy.ndarray</em>) – 2D array of x-coordinates.</p></li>
-<li><p><strong>y2d_in</strong> (<em>numpy.ndarray</em>) – 2D array of y-coordinates.</p></li>
-<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – Raw data.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.isdata_contain_nan">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">isdata_contain_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.isdata_contain_nan" title="Permalink to this definition"></a></dt>
-<dd><p>This function checks if data contains any NaN value. If yes, it replaces
-the NaN values with an interpolated value using the fill_nan function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<em>numpy.ndarray</em>) – Input data.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>data_new</strong> – Data with NaN values replaced.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>numpy.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.preprocess_data">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">preprocess_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.preprocess_data" title="Permalink to this definition"></a></dt>
-<dd><p>Preprocess data by performing interpolation, NaN handling, detrending, and windowing.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – Raw data.</p></li>
-<li><p><strong>detrend</strong> (<em>str</em><em> or </em><em>None</em>) – Detrend method.</p></li>
-<li><p><strong>window</strong> (<em>str</em><em> or </em><em>None</em>) – Windowing method.</p></li>
-<li><p><strong>navlon</strong> (<em>numpy.ndarray</em>) – Longitude.</p></li>
-<li><p><strong>navlat</strong> (<em>numpy.ndarray</em>) – Latitude.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – Preprocessed data.</p></li>
-<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – x-coordinates.</p></li>
-<li><p><strong>y</strong> (<em>numpy.ndarray</em>) – y-coordinates.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.spectra_flux">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">spectra_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Tukey'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Both'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.spectra_flux" title="Permalink to this definition"></a></dt>
-<dd><p>Compute kinetic energy spectral flux.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>_u</strong> (<em>numpy.ndarray</em>) – Zonal velocity data.</p></li>
-<li><p><strong>_v</strong> (<em>numpy.ndarray</em>) – Meridional velocity data.</p></li>
-<li><p><strong>navlon</strong> (<em>numpy.ndarray</em>) – Longitude.</p></li>
-<li><p><strong>navlat</strong> (<em>numpy.ndarray</em>) – Latitude.</p></li>
-<li><p><strong>window</strong> (<em>str</em><em>, </em><em>optional</em>) – Windowing method (default is ‘Tukey’).</p></li>
-<li><p><strong>detrend</strong> (<em>str</em><em>, </em><em>optional</em>) – Detrend method (default is ‘Both’).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>wavenumber</strong> (<em>numpy.ndarray</em>) – Wavenumber values.</p></li>
-<li><p><strong>flux</strong> (<em>numpy.ndarray</em>) – Kinetic energy spectral flux.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.wavenumber_spectra">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">wavenumber_spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">navlat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Tukey'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Both'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.wavenumber_spectra" title="Permalink to this definition"></a></dt>
-<dd><p>Compute wavenumber spectra.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – Raw data.</p></li>
-<li><p><strong>navlon</strong> (<em>numpy.ndarray</em>) – Longitude.</p></li>
-<li><p><strong>navlat</strong> (<em>numpy.ndarray</em>) – Latitude.</p></li>
-<li><p><strong>window</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Windowing method (default is ‘Tukey’).</p></li>
-<li><p><strong>detrend</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Detrend method (default is ‘Both’).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>wavenumber</strong> (<em>numpy.ndarray</em>) – Wavenumber values.</p></li>
-<li><p><strong>psd</strong> (<em>numpy.ndarray</em>) – Isotropic power spectral density.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mod_powerspec.weighted_scale">
-<span class="sig-prename descclassname"><span class="pre">mod_powerspec.</span></span><span class="sig-name descname"><span class="pre">weighted_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavenumber</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_powerspec.weighted_scale" title="Permalink to this definition"></a></dt>
-<dd><p>Compute the weighted scale from wavenumber spectra density (like integral scale).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wavenumber</strong> (<em>numpy.ndarray</em>) – Wavenumber values.</p></li>
-<li><p><strong>psd</strong> (<em>numpy.ndarray</em>) – Power spectral density.</p></li>
-<li><p><strong>axs</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Axis to sum over (default is None).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>scale</strong> – Weighted scale.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float or numpy.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="mod-powerspec-module">
+<h1>mod_powerspec module<a class="headerlink" href="#mod-powerspec-module" title="Permalink to this headline"></a></h1>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mod_plot.html" class="btn btn-neutral float-left" title="mod_plot module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mod_read.html" class="btn btn-neutral float-right" title="mod_read module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
