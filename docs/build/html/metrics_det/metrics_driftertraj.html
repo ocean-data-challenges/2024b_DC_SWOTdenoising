@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currents - Lagrangian metrics &mdash; ODC - global OSE mapping  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../modules.html" />
+    <link rel="prev" title="Currents - Along drifter metrics" href="metrics_alongdrifter.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ODC - global OSE mapping
+              <img src="../_static/dc_2023_ose_global_logo-rtd.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generic evaluation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_global.html">Global scale evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_NA.html">North Atlantic evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_WM.html">Western Mediterranean evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_GS.html">Gulf Stream evaluation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specific focus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spec_focus/eval_nio_rotaryspec.html">Near inertial oscillation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_evaluation.html">Notebooks evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_download_data.html">Notebooks download the data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="metrics_alongtrack.html">SSH - Along track metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_alongdrifter.html">Currents - Along drifter metrics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Currents - Lagrangian metrics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#drifter-trajectory-deviation">Drifter trajectory deviation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trajectory-deviation-maps">•  Trajectory deviation maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trajectory-deviation-horizons">•  Trajectory deviation horizons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ODC - global OSE mapping</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Currents - Lagrangian metrics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/metrics_det/metrics_driftertraj.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="currents-lagrangian-metrics">
+<h1>Currents - Lagrangian metrics<a class="headerlink" href="#currents-lagrangian-metrics" title="Permalink to this headline"></a></h1>
+<br>
+<br>
+<section id="drifter-trajectory-deviation">
+<h2>Drifter trajectory deviation<a class="headerlink" href="#drifter-trajectory-deviation" title="Permalink to this headline"></a></h2>
+<br>
+<p><a class="reference internal" href="../gallery/alongtrack_spectral_description.html"><span class="doc std std-doc"><strong>Check drifter trajectory example notebook</strong></span></a></p>
+<div style="text-align: justify">
+The drifter trajectory deviation (or Lagrangian Cumulative Distance ; Liu and Weisberg, 2011) is a Lagrangian diagnostic that compares simulated drifters' trajectories with real drifter trajectories that started at the same locations. More precisely, we compute the distances between each drifter's location and the expected locations obtained by advecting past positions from the reconstructed velocities. These distances are evaluated with forecast lead times ranging from 0 to 5 days, every day.
+</div>
+<br>
+<section id="trajectory-deviation-maps">
+<h3>•  Trajectory deviation maps<a class="headerlink" href="#trajectory-deviation-maps" title="Permalink to this headline"></a></h3>
+<br>
+<p><img alt="Drifter deviation map h5" src="../_images/deviation_maps_DUACS_global_h5.png" /></p>
+<br>
+</section>
+<section id="trajectory-deviation-horizons">
+<h3>•  Trajectory deviation horizons<a class="headerlink" href="#trajectory-deviation-horizons" title="Permalink to this headline"></a></h3>
+<br>
+<p><img alt="Drifter deviation horizon" src="../_images/deviation_horizon_global.png" /></p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Liu, Y., &amp; Weisberg, R. H. (2011). Evaluation of trajectory modeling in different dynamic regions using normalized cumulative Lagrangian separation. Journal of Geophysical Research: Oceans, 116(C9).</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="metrics_alongdrifter.html" class="btn btn-neutral float-left" title="Currents - Along drifter metrics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../modules.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

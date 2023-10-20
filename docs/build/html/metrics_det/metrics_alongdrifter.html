@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currents - Along drifter metrics &mdash; ODC - global OSE mapping  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Currents - Lagrangian metrics" href="metrics_driftertraj.html" />
+    <link rel="prev" title="SSH - Along track metrics" href="metrics_alongtrack.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ODC - global OSE mapping
+              <img src="../_static/dc_2023_ose_global_logo-rtd.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generic evaluation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_global.html">Global scale evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_NA.html">North Atlantic evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_WM.html">Western Mediterranean evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic/eval_generic_GS.html">Gulf Stream evaluation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specific focus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spec_focus/eval_nio_rotaryspec.html">Near inertial oscillation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_evaluation.html">Notebooks evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_download_data.html">Notebooks download the data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="metrics_alongtrack.html">SSH - Along track metrics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Currents - Along drifter metrics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#statistics">Statistics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#error-variance">• Error variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#explained-variance">•  Explained variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#statistics-by-regime">• Statistics by regime</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#spectral">Spectral</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rotary-spectrum-and-noise-to-signal-ratio">• Rotary spectrum and noise-to-signal ratio</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_driftertraj.html">Currents - Lagrangian metrics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ODC - global OSE mapping</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Currents - Along drifter metrics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/metrics_det/metrics_alongdrifter.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="currents-along-drifter-metrics">
+<h1>Currents - Along drifter metrics<a class="headerlink" href="#currents-along-drifter-metrics" title="Permalink to this headline"></a></h1>
+<br>
+<br>
+<div style="text-align: justify">
+In this section, the mapping performances are assessed by comparing the currents products (or estimated geostrophic velocities for methods that only reconstruct SSH) with independent drifter data (available at 6-hour resolution). The ageostrophic component of the observed velocities have not been removed in these reference data. 
+</div>
+<section id="statistics">
+<h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline"></a></h2>
+<p><a class="reference internal" href="../gallery/alongtrack_statistics_description.html"><span class="doc std std-doc"><strong>Check alongdrifter statistics example notebook</strong></span></a></p>
+<br>
+<section id="error-variance">
+<h3>• Error variance<a class="headerlink" href="#error-variance" title="Permalink to this headline"></a></h3>
+<div style="text-align: justify">
+Eulerian diagnostics are performed by comparing the estimated currents with the velocities measured by the drifters at each location (in space and time) of the drifters. The methodology used is the same as for the SSH evaluation: the mapped velocities (meridional and zonal components) are interpolated on the drifters' locations and the error variance with the drifters' velocities are aggregated in 1° longitude x 1° latitude boxes.
+</div>
+<p><img alt="DUACS UV error variance" src="../_images/Maps_DUACS_errvar_glob_uv.png" /></p>
+<center> 
+  <i>Figure 1: Global DUACS corresponding geostrophic currents error variance with respect to independent drifter currents for the zonal component (left) and the meridional component (right). </i> 
+</center>
+<br>
+</section>
+<section id="explained-variance">
+<h3>•  Explained variance<a class="headerlink" href="#explained-variance" title="Permalink to this headline"></a></h3>
+<div style="text-align: justify">
+The same process is done to obtained the currents explained variance. 
+</div>
+<p><img alt="DUACS UV explained variance" src="../_images/Maps_DUACS_explvar_glob_uv.png" /></p>
+<center> 
+  <i>Figure 2: Global DUACS corresponding geostrophic currents explained variance with respect to independent drifter currents the zonal component (left) and the meridional component (right). </i> 
+</center>
+<br>
+</section>
+<section id="statistics-by-regime">
+<h3>• Statistics by regime<a class="headerlink" href="#statistics-by-regime" title="Permalink to this headline"></a></h3>
+<div style="text-align: justify">
+The statistics displayed in the previous maps are also averaged in specific geographical areas and regimes (<i>coastal, offshore-high variability, offshore-low variability, equatorial band, Arctic, Antarctic</i>) in order to provide a series of scores summarized in the Leaderboards.
+</div>
+<br>
+<br>
+</section>
+</section>
+<section id="spectral">
+<h2>Spectral<a class="headerlink" href="#spectral" title="Permalink to this headline"></a></h2>
+<p><a class="reference internal" href="../gallery/alongtrack_spectral_description.html"><span class="doc std std-doc"><strong>Check alongdrifter spectral example notebook</strong></span></a></p>
+<br> 
+<section id="rotary-spectrum-and-noise-to-signal-ratio">
+<h3>• Rotary spectrum and noise-to-signal ratio<a class="headerlink" href="#rotary-spectrum-and-noise-to-signal-ratio" title="Permalink to this headline"></a></h3>
+<div style="text-align: justify">
+Rotary spectrum are a frequently used approach for current data analysis. The idea is to resolve the velocity vector into two rotational components: clockwise and anti-clockwise (Mooers, 1973 ; Gonella, 1972). This allows to represent the current energy distribution between the rotation and the latitude. 
+<p>The frequency rotary spectra of drifter (artificial from reconstruction and real) velocity (Ee) are computed along the drifter trajectories and displayed as a function of latitude and frequency. The velocity spectra are characterized by high-energy peaks at low frequencies (&lt;0.5 cpd), diurnal, semidiurnal, and latitude-varying inertial frequencies. This diagnostics allows to assess the methods reconstruction skills on certain specific dynamics.</p>
+<p>For instance, the dashed line superimposed to the spectrum corresponds to the inertial frequency, hence, the energy around that dashed line is characteristic of near-inertial oscillation induced currents. This energy can be observed in the real drifter data but is also partly reconstructed by some methods (e.g., WOC product or Glorys12v1 but not in DUACS).</p>
+</div>
+<p><img alt="DUACS currents effective resolution" src="../_images/Maps_DUACS_effres_glob_uv.png" /></p>
+<div style="text-align: justify">
+Also, similarly to the noise-to-signal ratio needed to compute the alongtrack effective resolution, the spectrum of the difference between reconstructed currents and drifter measured currents is divided by the spectrum of the drifter measured currents in order to provide rotation/latitude plots of the noise-to-signal ratio. 
+</div>
+<br>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Gonella, J. (1972, December). A rotary-component method for analysing meteorological and oceanographic vector time series. In Deep Sea Research and Oceanographic Abstracts (Vol. 19, No. 12, pp. 833-846). Elsevier.</p></li>
+<li><p>Mooers, C. N. (1973, December). A technique for the cross spectrum analysis of pairs of complex-valued time series, with emphasis on properties of polarized components and rotational invariants. In Deep Sea Research and Oceanographic Abstracts (Vol. 20, No. 12, pp. 1129-1141). Elsevier.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="metrics_alongtrack.html" class="btn btn-neutral float-left" title="SSH - Along track metrics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="metrics_driftertraj.html" class="btn btn-neutral float-right" title="Currents - Lagrangian metrics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

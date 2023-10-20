@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mod_stat module &mdash; WOC-ESA Data challenges  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mod_switchvar module" href="mod_switchvar.html" />
+    <link rel="prev" title="mod_spectral module" href="mod_spectral.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WOC-ESA Data challenges
+              <img src="../_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Mediterranean Sea</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_details.html">Mediterranean Sea setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Gulf Stream</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_details.html">Gulf Stream setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Agulhas Current</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_details.html">Agulhas current setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_1-standard-insitu.html">Standard insitu validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_2-effective-resolution.html">Effective resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_3-position-structures.html">Position of structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WOC-ESA Data challenges</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">mod_stat module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/6_scripts/mod_stat.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mod_stat">
+<span id="mod-stat-module"></span><h1>mod_stat module<a class="headerlink" href="#module-mod_stat" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_stat.bin_data">
+<span class="sig-prename descclassname"><span class="pre">mod_stat.</span></span><span class="sig-name descname"><span class="pre">bin_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_stat.bin_data" title="Permalink to this definition"></a></dt>
+<dd><p>Aggregate gridded data to a larger bin grid and calculate statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds</strong> (<em>xarray.Dataset</em>) – Dataset containing gridded data to be binned.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Filepath to save binned data to.</p></li>
+<li><p><strong>lon_out</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Array of longitude values for the output grid, by default np.arange(0, 360, 1).</p></li>
+<li><p><strong>lat_out</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Array of latitude values for the output grid, by default np.arange(-90, 90, 1).</p></li>
+<li><p><strong>freq_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Time frequency for temporal aggregation, by default ‘1D’.</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the method used, by default ‘ ‘.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function aggregates gridded data to a larger bin grid and calculates statistics, including mean, variance, and
+root mean square error (RMSE), for different datasets and timeseries. The results are saved to a NetCDF file.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s2">&quot;gridded_data.nc&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;binned_data.nc&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bin_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_stat.bin_data_uv">
+<span class="sig-prename descclassname"><span class="pre">mod_stat.</span></span><span class="sig-name descname"><span class="pre">bin_data_uv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_stat.bin_data_uv" title="Permalink to this definition"></a></dt>
+<dd><p>Bin and compute statistical measures for oceanographic current data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds</strong> (<em>xarray.Dataset</em>) – Input dataset containing oceanographic current data.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Output file path for saving the results.</p></li>
+<li><p><strong>lon_out</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Longitudes for binning. Default is a range from 0 to 360 with step 1.</p></li>
+<li><p><strong>lat_out</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Latitudes for binning. Default is a range from -90 to 90 with step 1.</p></li>
+<li><p><strong>freq_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Resampling frequency for time series data. Default is ‘1D’.</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the method used for computation. Default is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_stat.compute_stat_scores">
+<span class="sig-prename descclassname"><span class="pre">mod_stat.</span></span><span class="sig-name descname"><span class="pre">compute_stat_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_interp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_stat.compute_stat_scores" title="Permalink to this definition"></a></dt>
+<dd><p>Compute statistical scores for interpolation results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_interp</strong> (<em>xarray.Dataset</em>) – Interpolated dataset containing ‘sla_interpolated’, ‘sla_unfiltered’, ‘lwe’, and ‘msla_interpolated’.</p></li>
+<li><p><strong>lambda_min</strong> (<em>float</em>) – Minimum wavelength for bandpass filter.</p></li>
+<li><p><strong>lambda_max</strong> (<em>float</em>) – Maximum wavelength for bandpass filter.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Filepath to save computed statistics to.</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the method used, by default ‘ ‘.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function computes statistical scores for interpolation results, including mapping error, bandpass filtering,
+and binning statistics. The results are saved to a NetCDF file.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">interpolated_data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s2">&quot;interpolated_data.nc&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;statistical_scores.nc&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compute_stat_scores</span><span class="p">(</span><span class="n">interpolated_data</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_stat.compute_stat_scores_by_regimes">
+<span class="sig-prename descclassname"><span class="pre">mod_stat.</span></span><span class="sig-name descname"><span class="pre">compute_stat_scores_by_regimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_interp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_stat.compute_stat_scores_by_regimes" title="Permalink to this definition"></a></dt>
+<dd><p>Compute statistical scores by oceanic regimes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_interp</strong> (<em>xarray.Dataset</em>) – Interpolated dataset containing ‘sla_interpolated’, ‘sla_unfiltered’, ‘lwe’, ‘msla_interpolated’, and ‘mask’.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Filepath to save computed statistics by regimes to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function computes statistical scores for interpolation results based on oceanic regimes. It masks the input
+data and calculates statistics for each regime separately. The results are saved to a NetCDF file.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">interpolated_data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s2">&quot;interpolated_data.nc&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;regime_scores.nc&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compute_stat_scores_by_regimes</span><span class="p">(</span><span class="n">interpolated_data</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_stat.compute_stat_scores_uv">
+<span class="sig-prename descclassname"><span class="pre">mod_stat.</span></span><span class="sig-name descname"><span class="pre">compute_stat_scores_uv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_interp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_stat.compute_stat_scores_uv" title="Permalink to this definition"></a></dt>
+<dd><p>Compute mapping errors and statistical measures for oceanographic current data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_interp</strong> (<em>xarray.Dataset</em>) – Interpolated oceanographic current dataset.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Output file path for saving the results.</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the method used for computation. Default is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_stat.compute_stat_scores_uv_by_regimes">
+<span class="sig-prename descclassname"><span class="pre">mod_stat.</span></span><span class="sig-name descname"><span class="pre">compute_stat_scores_uv_by_regimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_interp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_stat.compute_stat_scores_uv_by_regimes" title="Permalink to this definition"></a></dt>
+<dd><p>Compute statistical scores for oceanographic current data based on different oceanic regimes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_interp</strong> (<em>xarray.Dataset</em>) – Interpolated oceanographic current dataset.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Output file path for saving the results.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mod_spectral.html" class="btn btn-neutral float-left" title="mod_spectral module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod_switchvar.html" class="btn btn-neutral float-right" title="mod_switchvar module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

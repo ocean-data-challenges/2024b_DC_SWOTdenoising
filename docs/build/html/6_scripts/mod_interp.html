@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mod_interp module &mdash; WOC-ESA Data challenges  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mod_plot module" href="mod_plot.html" />
+    <link rel="prev" title="mod_filter module" href="mod_filter.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WOC-ESA Data challenges
+              <img src="../_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Mediterranean Sea</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_details.html">Mediterranean Sea setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Gulf Stream</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_details.html">Gulf Stream setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Agulhas Current</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_details.html">Agulhas current setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_1-standard-insitu.html">Standard insitu validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_2-effective-resolution.html">Effective resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_3-position-structures.html">Position of structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WOC-ESA Data challenges</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">mod_interp module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/6_scripts/mod_interp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mod_interp">
+<span id="mod-interp-module"></span><h1>mod_interp module<a class="headerlink" href="#module-mod_interp" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">TimeSeries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.TimeSeries" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manage a time series composed of a grid stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ds</strong> (<em>xarray.Dataset</em>) – Input dataset containing the time series data.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries.ds">
+<span class="sig-name descname"><span class="pre">ds</span></span><a class="headerlink" href="#mod_interp.TimeSeries.ds" title="Permalink to this definition"></a></dt>
+<dd><p>Input dataset containing the time series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>xarray.Dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries.series">
+<span class="sig-name descname"><span class="pre">series</span></span><a class="headerlink" href="#mod_interp.TimeSeries.series" title="Permalink to this definition"></a></dt>
+<dd><p>Time series data loaded from the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pandas.Series</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries.dt">
+<span class="sig-name descname"><span class="pre">dt</span></span><a class="headerlink" href="#mod_interp.TimeSeries.dt" title="Permalink to this definition"></a></dt>
+<dd><p>Time step duration between consecutive data points in the series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>datetime.timedelta</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries._is_sorted">
+<span class="sig-name descname"><span class="pre">_is_sorted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.TimeSeries._is_sorted" title="Permalink to this definition"></a></dt>
+<dd><p>Check if an array is sorted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries._load_ts">
+<span class="sig-name descname"><span class="pre">_load_ts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.TimeSeries._load_ts" title="Permalink to this definition"></a></dt>
+<dd><p>Load the time series data into memory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mod_interp.TimeSeries._load_dataset">
+<span class="sig-name descname"><span class="pre">_load_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.TimeSeries._load_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Loading the time series into memory for the defined period.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.interp2d">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">interp2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.interp2d" title="Permalink to this definition"></a></dt>
+<dd><p>Interpolate 2D data on a new grid defined by lon_out and lat_out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds</strong> (<em>xarray.Dataset</em>) – Dataset containing the data to be interpolated.</p></li>
+<li><p><strong>name_vars</strong> (<em>dict</em>) – A dictionary specifying the variable names and dimension names.
+Example: {‘lon’: ‘longitude’, ‘lat’: ‘latitude’, ‘var’: ‘data_variable’}</p></li>
+<li><p><strong>lon_out</strong> (<em>numpy.ndarray</em>) – 2D array of longitudes for the output grid.</p></li>
+<li><p><strong>lat_out</strong> (<em>numpy.ndarray</em>) – 2D array of latitudes for the output grid.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>var_out</strong> – 2D array of the interpolated data on the new grid.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.interpolate">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">interpolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sla'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.interpolate" title="Permalink to this definition"></a></dt>
+<dd><p>Interpolate the time series over the defined period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Input DataFrame containing time series data.</p></li>
+<li><p><strong>time_series</strong> (<a class="reference internal" href="#mod_interp.TimeSeries" title="mod_interp.TimeSeries"><em>TimeSeries</em></a>) – Time series data and properties.</p></li>
+<li><p><strong>start</strong> (<em>pandas.Timestamp</em>) – Start timestamp of the interpolation period.</p></li>
+<li><p><strong>end</strong> (<em>pandas.Timestamp</em>) – End timestamp of the interpolation period.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.interpolate_current">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">interpolate_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.interpolate_current" title="Permalink to this definition"></a></dt>
+<dd><p>Interpolate the current time series over the defined period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Input DataFrame containing time series data.</p></li>
+<li><p><strong>time_series</strong> (<a class="reference internal" href="#mod_interp.TimeSeries" title="mod_interp.TimeSeries"><em>TimeSeries</em></a>) – Time series data and properties.</p></li>
+<li><p><strong>start</strong> (<em>pandas.Timestamp</em>) – Start timestamp of the interpolation period.</p></li>
+<li><p><strong>end</strong> (<em>pandas.Timestamp</em>) – End timestamp of the interpolation period.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.periods">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">periods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sla_unfiltered'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'W'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.periods" title="Permalink to this definition"></a></dt>
+<dd><p>Return the list of periods covering the time series loaded in memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Input DataFrame containing time series data.</p></li>
+<li><p><strong>time_series</strong> (<a class="reference internal" href="#mod_interp.TimeSeries" title="mod_interp.TimeSeries"><em>TimeSeries</em></a>) – Time series data and properties.</p></li>
+<li><p><strong>var_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the variable to consider, by default “sla_unfiltered”.</p></li>
+<li><p><strong>frequency</strong> (<em>str</em><em>, </em><em>optional</em>) – Frequency for period grouping, by default ‘W’ (weekly).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p><em>tuple</em> – A tuple containing the start and end timestamps of each period.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.reformat_drifter_dataset">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">reformat_drifter_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.reformat_drifter_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Reformat a drifter dataset, extracting relevant variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ds</strong> (<em>xarray.Dataset</em>) – Input drifter dataset.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reformatted drifter dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>xarray.Dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.run_interpolation">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">run_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_maps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds_alongtrack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'M'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sla'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.run_interpolation" title="Permalink to this definition"></a></dt>
+<dd><p>Interpolate time series data over specified periods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_maps</strong> (<em>xarray.Dataset</em>) – Input dataset containing maps data.</p></li>
+<li><p><strong>ds_alongtrack</strong> (<em>xarray.Dataset</em>) – Input dataset containing along-track data.</p></li>
+<li><p><strong>frequency</strong> (<em>str</em><em>, </em><em>optional</em>) – Frequency for period grouping, by default ‘M’ (monthly).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Interpolated dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>xarray.Dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_interp.run_interpolation_drifters">
+<span class="sig-prename descclassname"><span class="pre">mod_interp.</span></span><span class="sig-name descname"><span class="pre">run_interpolation_drifters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_maps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds_drifter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'M'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_interp.run_interpolation_drifters" title="Permalink to this definition"></a></dt>
+<dd><p>Interpolate drifters data over specified periods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_maps</strong> (<em>xarray.Dataset</em>) – Input dataset containing maps data.</p></li>
+<li><p><strong>ds_drifter</strong> (<em>xarray.Dataset</em>) – Input dataset containing drifter data.</p></li>
+<li><p><strong>time_min</strong> (<em>numpy.datetime64</em>) – Minimum time for interpolation.</p></li>
+<li><p><strong>time_max</strong> (<em>numpy.datetime64</em>) – Maximum time for interpolation.</p></li>
+<li><p><strong>frequency</strong> (<em>str</em><em>, </em><em>optional</em>) – Frequency for period grouping, by default ‘M’ (monthly).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Interpolated drifter dataset.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>xarray.Dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mod_filter.html" class="btn btn-neutral float-left" title="mod_filter module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod_plot.html" class="btn btn-neutral float-right" title="mod_plot module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

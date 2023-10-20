@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluate your own maps &mdash; ODC - global OSE mapping  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Global scale evaluation" href="../eval_generic_global.html" />
+    <link rel="prev" title="Download the data" href="getstarted_data.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ODC - global OSE mapping
+              <img src="../_static/dc_2023_ose_global_logo-rtd.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Evaluate your own maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#maps-format">Maps format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sea-level-anomaly-maps-format">Sea Level Anomaly maps format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#currents-maps-format">Currents maps format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#available-metrics-and-where-to-find-them">Available metrics and where to find them</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-evaluation-with-independant-nadir-ssh-data">SSH evaluation with independant nadir SSH data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-example-1">Check example 1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#currents-evaluation-with-independant-drifter-currents">Currents evaluation with independant drifter currents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-example-2">Check example 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#currents-evaluation-with-independant-drifter-trajectories">Currents evaluation with independant drifter trajectories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-example-3">Check example 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generic evaluation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic_global.html">Global scale evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic_NA.html">North Atlantic evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic_WM.html">Western Mediterranean evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eval_generic_GS.html">Gulf Stream evaluation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specific focus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../eval_nio_rotaryspec.html">Near inertial oscillation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_evaluation.html">Notebooks evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_download_data.html">Notebooks download the data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../metrics_alongtrack.html">SSH - Along track metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics_alongdrifter.html">Currents - Along drifter metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics_driftertraj.html">Currents - Lagrangian metrics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ODC - global OSE mapping</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Evaluate your own maps</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/getstarted/getstarted_eval.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="evaluate-your-own-maps">
+<h1>Evaluate your own maps<a class="headerlink" href="#evaluate-your-own-maps" title="Permalink to this headline"></a></h1>
+<br> 
+<br> 
+<p>Once you have <a class="reference internal" href="getstarted_install.html"><span class="doc std std-doc">installed the data challenge</span></a> and <a class="reference internal" href="getstarted_data.html"><span class="doc std std-doc">downloaded the data</span></a>, you can now evaluate your maps. Although, you might want to check first that your sea level anomaly or sea surface currents maps respect a certain format. You can then scroll through the different metrics, checking the DUACS evaluation notebooks as example.</p>
+<br> 
+<section id="maps-format">
+<h2>Maps format<a class="headerlink" href="#maps-format" title="Permalink to this headline"></a></h2>
+<p>The input netcdf files must contain:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code> and <code class="docutils literal notranslate"><span class="pre">time</span></code> dimensions.</p></li>
+<li><p>for sea level anomaly evaluation, a sea level anomaly variable <code class="docutils literal notranslate"><span class="pre">sla</span></code>.</p></li>
+<li><p>for currents evaluation, a meridional and a zonal currents variable <code class="docutils literal notranslate"><span class="pre">ugos</span></code> and <code class="docutils literal notranslate"><span class="pre">vgos</span></code>.</p></li>
+</ul>
+<p>Note that some formatting can be done using xarray within the jupyter notebooks. For instance, you can change a variable’s name simply with <code class="docutils literal notranslate"><span class="pre">ds</span> <span class="pre">=</span> <span class="pre">ds.rename_var({'my_sla':'sla'})</span></code>.</p>
+<section id="sea-level-anomaly-maps-format">
+<h3>Sea Level Anomaly maps format<a class="headerlink" href="#sea-level-anomaly-maps-format" title="Permalink to this headline"></a></h3>
+<p><img alt="SLA Format" src="../_images/Maps_format_SLA.png" /></p>
+</section>
+<section id="currents-maps-format">
+<h3>Currents maps format<a class="headerlink" href="#currents-maps-format" title="Permalink to this headline"></a></h3>
+<p><img alt="Currents_Format" src="../_images/Maps_format_Currents.png" /></p>
+<br> 
+</section>
+</section>
+<section id="available-metrics-and-where-to-find-them">
+<h2>Available metrics and where to find them<a class="headerlink" href="#available-metrics-and-where-to-find-them" title="Permalink to this headline"></a></h2>
+<section id="ssh-evaluation-with-independant-nadir-ssh-data">
+<h3>SSH evaluation with independant nadir SSH data<a class="headerlink" href="#ssh-evaluation-with-independant-nadir-ssh-data" title="Permalink to this headline"></a></h3>
+<section id="check-example-1">
+<h4><a class="reference external" href="https://github.com/ocean-data-challenges/2023a_SSH_mapping_OSE/blob/main/nb_diags_global/ssh_scores_DUACS_geos.ipynb">Check example 1</a><a class="headerlink" href="#check-example-1" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p><strong>Grid boxes statistics (maps)</strong></p>
+<ul>
+<li><p><strong>SSH Error variance</strong></p></li>
+<li><p><strong>SSH Explained variance</strong></p></li>
+</ul>
+</li>
+</ul>
+<br> 
+<ul class="simple">
+<li><p><strong>Statistics by regimes (scalar scores)</strong></p></li>
+</ul>
+<br> 
+<ul class="simple">
+<li><p><strong>Spectral effective resolution (maps)</strong></p></li>
+</ul>
+<br> 
+<br> 
+</section>
+</section>
+<section id="currents-evaluation-with-independant-drifter-currents">
+<h3>Currents evaluation with independant drifter currents<a class="headerlink" href="#currents-evaluation-with-independant-drifter-currents" title="Permalink to this headline"></a></h3>
+<section id="check-example-2">
+<h4><a class="reference external" href="https://github.com/ocean-data-challenges/2023a_SSH_mapping_OSE/blob/main/nb_diags_global/uv_scores_DUACS_geos.ipynb">Check example 2</a><a class="headerlink" href="#check-example-2" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p><strong>Grid boxes statistics (maps)</strong></p>
+<ul>
+<li><p><strong>Currents Error variance</strong></p></li>
+<li><p><strong>Currents Explained variance</strong></p></li>
+</ul>
+</li>
+</ul>
+<br> 
+<ul class="simple">
+<li><p><strong>Statistics by regimes (scalar scores)</strong></p></li>
+</ul>
+<br> 
+<ul class="simple">
+<li><p><strong>Zonaly averaged rotary spectra (omega-latitude plots)</strong></p></li>
+</ul>
+<br> 
+<br> 
+</section>
+</section>
+<section id="currents-evaluation-with-independant-drifter-trajectories">
+<h3>Currents evaluation with independant drifter trajectories<a class="headerlink" href="#currents-evaluation-with-independant-drifter-trajectories" title="Permalink to this headline"></a></h3>
+<section id="check-example-3">
+<h4><a class="reference external" href="https://github.com/ocean-data-challenges/2023a_SSH_mapping_OSE/blob/main/nb_diags_global/uv_scores_DUACS_geos.ipynb">Check example 3</a><a class="headerlink" href="#check-example-3" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p><strong>Drifter deviation maps at fixed horizons (maps)</strong></p></li>
+<li><p><strong>Drifter deviation global (horizon series)</strong></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getstarted_data.html" class="btn btn-neutral float-left" title="Download the data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../eval_generic_global.html" class="btn btn-neutral float-right" title="Global scale evaluation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

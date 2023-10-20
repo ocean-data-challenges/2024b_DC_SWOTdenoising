@@ -1,0 +1,19 @@
+name: env-dc-swot-denoising
+channels:
+  - pyviz
+dependencies:
+  - python=3.10
+  - numpy=1.21.*
+  - scipy
+  - hvplot
+  - conda-forge::pyinterp
+  - conda-forge::cmocean
+  - holoviews
+  - geoviews
+  - cartopy=0.21
+  - tabulate
+  - datashader
+  - netcdf4
+  - pip
+  - pip:
+    - mycolorpy

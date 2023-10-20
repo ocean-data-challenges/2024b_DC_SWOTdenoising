@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Read and download regional data &mdash; WOC-ESA Data challenges  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WOC-ESA Data challenges
+              <img src="../_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Mediterranean Sea</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_details.html">Mediterranean Sea setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Gulf Stream</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_details.html">Gulf Stream setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Agulhas Current</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_details.html">Agulhas current setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_1-standard-insitu.html">Standard insitu validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_2-effective-resolution.html">Effective resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_3-position-structures.html">Position of structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_scripts/mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WOC-ESA Data challenges</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Read and download regional data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/gallery/read_and_download_regional_data.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <img alt="header" src="../_images/logos_partenaires._cmems_se.jpg" />
+<section id="Read-and-download-regional-data">
+<h1>Read and download regional data<a class="headerlink" href="#Read-and-download-regional-data" title="Permalink to this headline"></a></h1>
+<div style="text-align: right"><p>2023-04-27 READ_AND_DOWNLOAD_REGIONAL_DATA</p>
+</div><hr class="docutils" />
+<p><strong>Authors:</strong> CLS &amp; Datlas <strong>Copyright:</strong> 2023 CLS &amp; Datlas <strong>License:</strong> MIT</p>
+<div class="alert alert-block alert-success"><h1><center><p>Read and download regional data</p>
+</center></h1><h5><p>The notebook illustrates how to read online the global data, select the regional data of interest and locally save them in a netcdf file. The example is given here for the Gulf Stream region (see DC_2020 and DC_2021 data challenges).</p>
+</h5></div><hr class="docutils" />
+<p><strong>General Note 1</strong>: Execute each cell through the button from the top MENU (or keyboard shortcut <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">Enter</span></code>). <strong>General Note 2</strong>: If, for any reason, the kernel is not working anymore, in the top MENU, click on the button. Then, in the top MENU, click on “Cell” and select “Run All Above Selected Cell”. ***</p>
+<div class="alert alert-danger" role="alert"><h3><p>Learning outcomes</p>
+</h3><p>At the end of this notebook you will know how you can :</p>
+<ul><li><p>read online the global data,</p>
+</li><li><p>select the regional data of interest,</p>
+</li><li><p>locally save them in a netcdf file.</p>
+</li></ul></div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">src.mod_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.mod_stat</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.mod_read</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.mod_spectral</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="output_javascript"></div>
+<script type="text/javascript">
+var element = document.currentScript.previousSibling.previousSibling;
+(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  var force = true;
+  var py_version = '3.1.1'.replace('rc', '-rc.').replace('.dev', '-dev.');
+  var is_dev = py_version.indexOf("+") !== -1 || py_version.indexOf("-") !== -1;
+  var reloading = false;
+  var Bokeh = root.Bokeh;
+  var bokeh_loaded = Bokeh != null && (Bokeh.version === py_version || (Bokeh.versions !== undefined && Bokeh.versions.has(py_version)));
+
+  if (typeof (root._bokeh_timeout) === "undefined" || force) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks;
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, js_modules, js_exports, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+    if (js_modules == null) js_modules = [];
+    if (js_exports == null) js_exports = {};
+
+    root._bokeh_onload_callbacks.push(callback);
+
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls.length === 0 && js_modules.length === 0 && Object.keys(js_exports).length === 0) {
+      run_callbacks();
+      return null;
+    }
+    if (!reloading) {
+      console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    }
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+    window._bokeh_on_load = on_load
+
+    function on_error() {
+      console.error("failed to load " + url);
+    }
+
+    var skip = [];
+    if (window.requirejs) {
+      window.requirejs.config({'packages': {}, 'paths': {'jspanel': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/jspanel', 'jspanel-modal': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal', 'jspanel-tooltip': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip', 'jspanel-hint': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint', 'jspanel-layout': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout', 'jspanel-contextmenu': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu', 'jspanel-dock': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock', 'gridstack': 'https://cdn.jsdelivr.net/npm/gridstack@7.2.3/dist/gridstack-all', 'notyf': 'https://cdn.jsdelivr.net/npm/notyf@3/notyf.min'}, 'shim': {'jspanel': {'exports': 'jsPanel'}, 'gridstack': {'exports': 'GridStack'}}});
+      require(["jspanel"], function(jsPanel) {
+    window.jsPanel = jsPanel
+    on_load()
+      })
+      require(["jspanel-modal"], function() {
+    on_load()
+      })
+      require(["jspanel-tooltip"], function() {
+    on_load()
+      })
+      require(["jspanel-hint"], function() {
+    on_load()
+      })
+      require(["jspanel-layout"], function() {
+    on_load()
+      })
+      require(["jspanel-contextmenu"], function() {
+    on_load()
+      })
+      require(["jspanel-dock"], function() {
+    on_load()
+      })
+      require(["gridstack"], function(GridStack) {
+    window.GridStack = GridStack
+    on_load()
+      })
+      require(["notyf"], function() {
+    on_load()
+      })
+      root._bokeh_is_loading = css_urls.length + 9;
+    } else {
+      root._bokeh_is_loading = css_urls.length + js_urls.length + js_modules.length + Object.keys(js_exports).length;
+    }
+
+    var existing_stylesheets = []
+    var links = document.getElementsByTagName('link')
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i]
+      if (link.href != null) {
+    existing_stylesheets.push(link.href)
+      }
+    }
+    for (var i = 0; i < css_urls.length; i++) {
+      var url = css_urls[i];
+      if (existing_stylesheets.indexOf(url) !== -1) {
+    on_load()
+    continue;
+      }
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }    if (((window['jsPanel'] !== undefined) && (!(window['jsPanel'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/jspanel.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu.js', 'https://cdn.holoviz.org/panel/1.1.1/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['GridStack'] !== undefined) && (!(window['GridStack'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.1.1/dist/bundled/gridstack/gridstack@7.2.3/dist/gridstack-all.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['Notyf'] !== undefined) && (!(window['Notyf'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.1.1/dist/bundled/notificationarea/notyf@3/notyf.min.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    var existing_scripts = []
+    var scripts = document.getElementsByTagName('script')
+    for (var i = 0; i < scripts.length; i++) {
+      var script = scripts[i]
+      if (script.src != null) {
+    existing_scripts.push(script.src)
+      }
+    }
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+    if (!window.requirejs) {
+      on_load();
+    }
+    continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (var i = 0; i < js_modules.length; i++) {
+      var url = js_modules[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+    if (!window.requirejs) {
+      on_load();
+    }
+    continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (const name in js_exports) {
+      var url = js_exports[name];
+      if (skip.indexOf(url) >= 0 || root[name] != null) {
+    if (!window.requirejs) {
+      on_load();
+    }
+    continue;
+      }
+      var element = document.createElement('script');
+      element.onerror = on_error;
+      element.async = false;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      element.textContent = `
+      import ${name} from "${url}"
+      window.${name} = ${name}
+      window._bokeh_on_load()
+      `
+      document.head.appendChild(element);
+    }
+    if (!js_urls.length && !js_modules.length) {
+      on_load()
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.1.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.1.1.min.js", "https://cdn.holoviz.org/panel/1.1.1/dist/panel.min.js"];
+  var js_modules = [];
+  var js_exports = {};
+  var css_urls = [];
+  var inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {} // ensure no trailing comma for IE
+  ];
+
+  function run_inline_js() {
+    if ((root.Bokeh !== undefined) || (force === true)) {
+      for (var i = 0; i < inline_js.length; i++) {
+        inline_js[i].call(root, root.Bokeh);
+      }
+      // Cache old bokeh versions
+      if (Bokeh != undefined && !reloading) {
+    var NewBokeh = root.Bokeh;
+    if (Bokeh.versions === undefined) {
+      Bokeh.versions = new Map();
+    }
+    if (NewBokeh.version !== Bokeh.version) {
+      Bokeh.versions.set(NewBokeh.version, NewBokeh)
+    }
+    root.Bokeh = Bokeh;
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    }
+    root._bokeh_is_initializing = false
+  }
+
+  function load_or_wait() {
+    // Implement a backoff loop that tries to ensure we do not load multiple
+    // versions of Bokeh and its dependencies at the same time.
+    // In recent versions we use the root._bokeh_is_initializing flag
+    // to determine whether there is an ongoing attempt to initialize
+    // bokeh, however for backward compatibility we also try to ensure
+    // that we do not start loading a newer (Panel>=1.0 and Bokeh>3) version
+    // before older versions are fully initialized.
+    if (root._bokeh_is_initializing && Date.now() > root._bokeh_timeout) {
+      root._bokeh_is_initializing = false;
+      root._bokeh_onload_callbacks = undefined;
+      console.log("Bokeh: BokehJS was loaded multiple times but one version failed to initialize.");
+      load_or_wait();
+    } else if (root._bokeh_is_initializing || (typeof root._bokeh_is_initializing === "undefined" && root._bokeh_onload_callbacks !== undefined)) {
+      setTimeout(load_or_wait, 100);
+    } else {
+      Bokeh = root.Bokeh;
+      bokeh_loaded = Bokeh != null && (Bokeh.version === py_version || (Bokeh.versions !== undefined && Bokeh.versions.has(py_version)));
+      root._bokeh_is_initializing = true
+      root._bokeh_onload_callbacks = []
+      if (!reloading && (!bokeh_loaded || is_dev)) {
+    root.Bokeh = undefined;
+      }
+      load_libs(css_urls, js_urls, js_modules, js_exports, function() {
+    console.debug("Bokeh: BokehJS plotting callback run at", now());
+    run_inline_js();
+      });
+    }
+  }
+  // Give older versions of the autoload script a head-start to ensure
+  // they initialize before we start loading newer version.
+  setTimeout(load_or_wait, 100)
+}(window));
+</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="output_javascript"></div>
+<script type="text/javascript">
+var element = document.currentScript.previousSibling.previousSibling;
+
+if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
+  window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
+}
+
+
+    function JupyterCommManager() {
+    }
+
+    JupyterCommManager.prototype.register_target = function(plot_id, comm_id, msg_handler) {
+      if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        comm_manager.register_target(comm_id, function(comm) {
+          comm.on_msg(msg_handler);
+        });
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        window.PyViz.kernels[plot_id].registerCommTarget(comm_id, function(comm) {
+          comm.onMsg = msg_handler;
+        });
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        google.colab.kernel.comms.registerTarget(comm_id, (comm) => {
+          var messages = comm.messages[Symbol.asyncIterator]();
+          function processIteratorResult(result) {
+            var message = result.value;
+            console.log(message)
+            var content = {data: message.data, comm_id};
+            var buffers = []
+            for (var buffer of message.buffers || []) {
+              buffers.push(new DataView(buffer))
+            }
+            var metadata = message.metadata || {};
+            var msg = {content, buffers, metadata}
+            msg_handler(msg);
+            return messages.next().then(processIteratorResult);
+          }
+          return messages.next().then(processIteratorResult);
+        })
+      }
+    }
+
+    JupyterCommManager.prototype.get_client_comm = function(plot_id, comm_id, msg_handler) {
+      if (comm_id in window.PyViz.comms) {
+        return window.PyViz.comms[comm_id];
+      } else if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        var comm = comm_manager.new_comm(comm_id, {}, {}, {}, comm_id);
+        if (msg_handler) {
+          comm.on_msg(msg_handler);
+        }
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        var comm = window.PyViz.kernels[plot_id].connectToComm(comm_id);
+        comm.open();
+        if (msg_handler) {
+          comm.onMsg = msg_handler;
+        }
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        var comm_promise = google.colab.kernel.comms.open(comm_id)
+        comm_promise.then((comm) => {
+          window.PyViz.comms[comm_id] = comm;
+          if (msg_handler) {
+            var messages = comm.messages[Symbol.asyncIterator]();
+            function processIteratorResult(result) {
+              var message = result.value;
+              var content = {data: message.data};
+              var metadata = message.metadata || {comm_id};
+              var msg = {content, metadata}
+              msg_handler(msg);
+              return messages.next().then(processIteratorResult);
+            }
+            return messages.next().then(processIteratorResult);
+          }
+        })
+        var sendClosure = (data, metadata, buffers, disposeOnDone) => {
+          return comm_promise.then((comm) => {
+            comm.send(data, metadata, buffers, disposeOnDone);
+          });
+        };
+        var comm = {
+          send: sendClosure
+        };
+      }
+      window.PyViz.comms[comm_id] = comm;
+      return comm;
+    }
+    window.PyViz.comm_manager = new JupyterCommManager();
+
+
+
+var JS_MIME_TYPE = 'application/javascript';
+var HTML_MIME_TYPE = 'text/html';
+var EXEC_MIME_TYPE = 'application/vnd.holoviews_exec.v0+json';
+var CLASS_NAME = 'output';
+
+/**
+ * Render data to the DOM node
+ */
+function render(props, node) {
+  var div = document.createElement("div");
+  var script = document.createElement("script");
+  node.appendChild(div);
+  node.appendChild(script);
+}
+
+/**
+ * Handle when a new output is added
+ */
+function handle_add_output(event, handle) {
+  var output_area = handle.output_area;
+  var output = handle.output;
+  if ((output.data == undefined) || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
+    return
+  }
+  var id = output.metadata[EXEC_MIME_TYPE]["id"];
+  var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+  if (id !== undefined) {
+    var nchildren = toinsert.length;
+    var html_node = toinsert[nchildren-1].children[0];
+    html_node.innerHTML = output.data[HTML_MIME_TYPE];
+    var scripts = [];
+    var nodelist = html_node.querySelectorAll("script");
+    for (var i in nodelist) {
+      if (nodelist.hasOwnProperty(i)) {
+        scripts.push(nodelist[i])
+      }
+    }
+
+    scripts.forEach( function (oldScript) {
+      var newScript = document.createElement("script");
+      var attrs = [];
+      var nodemap = oldScript.attributes;
+      for (var j in nodemap) {
+        if (nodemap.hasOwnProperty(j)) {
+          attrs.push(nodemap[j])
+        }
+      }
+      attrs.forEach(function(attr) { newScript.setAttribute(attr.name, attr.value) });
+      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+    if (JS_MIME_TYPE in output.data) {
+      toinsert[nchildren-1].children[1].textContent = output.data[JS_MIME_TYPE];
+    }
+    output_area._hv_plot_id = id;
+    if ((window.Bokeh !== undefined) && (id in Bokeh.index)) {
+      window.PyViz.plot_index[id] = Bokeh.index[id];
+    } else {
+      window.PyViz.plot_index[id] = null;
+    }
+  } else if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+    var bk_div = document.createElement("div");
+    bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+    var script_attrs = bk_div.children[0].attributes;
+    for (var i = 0; i < script_attrs.length; i++) {
+      toinsert[toinsert.length - 1].childNodes[1].setAttribute(script_attrs[i].name, script_attrs[i].value);
+    }
+    // store reference to server id on output_area
+    output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+  }
+}
+
+/**
+ * Handle when an output is cleared or removed
+ */
+function handle_clear_output(event, handle) {
+  var id = handle.cell.output_area._hv_plot_id;
+  var server_id = handle.cell.output_area._bokeh_server_id;
+  if (((id === undefined) || !(id in PyViz.plot_index)) && (server_id !== undefined)) { return; }
+  var comm = window.PyViz.comm_manager.get_client_comm("hv-extension-comm", "hv-extension-comm", function () {});
+  if (server_id !== null) {
+    comm.send({event_type: 'server_delete', 'id': server_id});
+    return;
+  } else if (comm !== null) {
+    comm.send({event_type: 'delete', 'id': id});
+  }
+  delete PyViz.plot_index[id];
+  if ((window.Bokeh !== undefined) & (id in window.Bokeh.index)) {
+    var doc = window.Bokeh.index[id].model.document
+    doc.clear();
+    const i = window.Bokeh.documents.indexOf(doc);
+    if (i > -1) {
+      window.Bokeh.documents.splice(i, 1);
+    }
+  }
+}
+
+/**
+ * Handle kernel restart event
+ */
+function handle_kernel_cleanup(event, handle) {
+  delete PyViz.comms["hv-extension-comm"];
+  window.PyViz.plot_index = {}
+}
+
+/**
+ * Handle update_display_data messages
+ */
+function handle_update_output(event, handle) {
+  handle_clear_output(event, {cell: {output_area: handle.output_area}})
+  handle_add_output(event, handle)
+}
+
+function register_renderer(events, OutputArea) {
+  function append_mime(data, metadata, element) {
+    // create a DOM node to render to
+    var toinsert = this.create_output_subarea(
+    metadata,
+    CLASS_NAME,
+    EXEC_MIME_TYPE
+    );
+    this.keyboard_manager.register_events(toinsert);
+    // Render to node
+    var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+    render(props, toinsert[0]);
+    element.append(toinsert);
+    return toinsert
+  }
+
+  events.on('output_added.OutputArea', handle_add_output);
+  events.on('output_updated.OutputArea', handle_update_output);
+  events.on('clear_output.CodeCell', handle_clear_output);
+  events.on('delete.Cell', handle_clear_output);
+  events.on('kernel_ready.Kernel', handle_kernel_cleanup);
+
+  OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+    safe: true,
+    index: 0
+  });
+}
+
+if (window.Jupyter !== undefined) {
+  try {
+    var events = require('base/js/events');
+    var OutputArea = require('notebook/js/outputarea').OutputArea;
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  } catch(err) {
+  }
+}
+
+</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<style>*[data-root-id],
+*[data-root-id] > * {
+  box-sizing: border-box;
+  font-family: var(--jp-ui-font-family);
+  font-size: var(--jp-ui-font-size1);
+  color: var(--vscode-editor-foreground, var(--jp-ui-font-color1));
+}
+
+/* Override VSCode background color */
+.cell-output-ipywidget-background:has(> .cell-output-ipywidget-background
+    > .lm-Widget
+    > *[data-root-id]),
+.cell-output-ipywidget-background:has(> .lm-Widget > *[data-root-id]) {
+  background-color: transparent !important;
+}
+</style></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="alert alert-info" role="alert"><h2><p>Experiment setup</p>
+</h2></div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example for Gulf Stream region</span>
+<span class="n">lon_min</span> <span class="o">=</span> <span class="mi">295</span>                                          <span class="c1"># domain min longitude</span>
+<span class="n">lon_max</span> <span class="o">=</span> <span class="mi">305</span>                                          <span class="c1"># domain max longitude</span>
+<span class="n">lat_min</span> <span class="o">=</span> <span class="mf">33.</span>                                          <span class="c1"># domain min latitude</span>
+<span class="n">lat_max</span> <span class="o">=</span> <span class="mf">43.</span>                                          <span class="c1"># domain max latitude</span>
+
+<span class="c1"># Time slice if you are interested in a shorter evaluation period</span>
+<span class="n">time_min</span> <span class="o">=</span> <span class="s1">&#39;2019-01-01&#39;</span>                                <span class="c1"># time min for analysis</span>
+<span class="n">time_max</span> <span class="o">=</span> <span class="s1">&#39;2019-12-31&#39;</span>                                <span class="c1"># time max for analysis</span>
+
+<span class="c1"># Saving directory and outputs</span>
+<span class="n">saving_dir</span> <span class="o">=</span> <span class="s1">&#39;../data/&#39;</span>                                <span class="c1"># saving directory path</span>
+<span class="n">name_maps</span> <span class="o">=</span> <span class="s1">&#39;maps/DUACS_GS.nc&#39;</span>                              <span class="c1"># regional maps file name</span>
+<span class="n">name_alg</span> <span class="o">=</span> <span class="s1">&#39;independent_alongtrack/indep_nadir_GS.nc&#39;</span>                         <span class="c1"># regional independant nadir file name</span>
+<span class="n">name_drift</span> <span class="o">=</span> <span class="s1">&#39;independent_drifters/indep_drifters_GS.nc&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="alert alert-info" role="alert"><h2><p>Read online global data, select region and locally save file</p>
+</h2></div><section id="Data-for-reconstruction:-Sea-Surface-Height-from-available-nadirs-(except-Saral/AltiKa)">
+<h2>Data for reconstruction: Sea Surface Height from available nadirs (except Saral/AltiKa)<a class="headerlink" href="#Data-for-reconstruction:-Sea-Surface-Height-from-available-nadirs-(except-Saral/AltiKa)" title="Permalink to this headline"></a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Data-for-evaluation:-Sea-Surface-Height-from-Saral/AltiKa">
+<h2>Data for evaluation: Sea Surface Height from Saral/AltiKa<a class="headerlink" href="#Data-for-evaluation:-Sea-Surface-Height-from-Saral/AltiKa" title="Permalink to this headline"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">path_catalog</span> <span class="o">=</span> <span class="s2">&quot;https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023a_SSH_mapping_OSE/independent_alongtrack/alg/2019/catalog.html&quot;</span>
+<span class="n">path_data</span> <span class="o">=</span>    <span class="s2">&quot;https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023a_SSH_mapping_OSE/independent_alongtrack/alg/2019/&quot;</span>
+
+
+<span class="n">list_of_files</span> <span class="o">=</span> <span class="n">retrieve_list_of_files_from_url</span><span class="p">(</span><span class="n">path_catalog</span><span class="p">,</span> <span class="n">path_data</span><span class="p">)</span>
+
+<span class="n">xr</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">file_cache_maxsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ds_alg</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">list_of_files</span><span class="p">)[:],</span><span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="mi">47151</span><span class="p">},</span><span class="n">concat_dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">combine</span><span class="o">=</span><span class="s1">&#39;nested&#39;</span><span class="p">)</span>
+<span class="n">ds_alg</span> <span class="o">=</span> <span class="n">ds_alg</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">ds_alg</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">time_min</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds_alg</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;=</span>  <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">time_max</span><span class="p">)),</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds_alg</span> <span class="o">=</span> <span class="n">ds_alg</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">lon</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds_alg</span><span class="o">.</span><span class="n">longitude</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">lat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds_alg</span><span class="o">.</span><span class="n">latitude</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">ind_lonmax</span> <span class="o">=</span> <span class="n">lon</span><span class="o">&lt;</span><span class="n">lon_max</span>
+<span class="n">ind_lonmin</span> <span class="o">=</span> <span class="n">lon</span><span class="o">&gt;</span><span class="n">lon_min</span>
+<span class="n">ind_latmax</span> <span class="o">=</span> <span class="n">lat</span><span class="o">&lt;</span><span class="n">lat_max</span>
+<span class="n">ind_latmin</span> <span class="o">=</span> <span class="n">lat</span><span class="o">&gt;</span><span class="n">lat_min</span>
+<span class="n">ind_sel_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">ind_lonmax</span><span class="o">*</span><span class="n">ind_lonmin</span><span class="o">*</span><span class="n">ind_latmax</span><span class="o">*</span><span class="n">ind_latmin</span><span class="p">)</span>
+<span class="n">ds_alg</span> <span class="o">=</span> <span class="n">ds_alg</span><span class="o">.</span><span class="n">isel</span><span class="p">({</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="n">ind_sel_time</span><span class="p">})</span>
+<span class="n">ds_alg</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">saving_dir</span><span class="o">+</span><span class="n">name_alg</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+CPU times: user 5min 3s, sys: 38.9 s, total: 5min 42s
+Wall time: 10min 5s
+</pre></div></div>
+</div>
+</section>
+<section id="Data-for-evaluation:-Drifters">
+<h2>Data for evaluation: Drifters<a class="headerlink" href="#Data-for-evaluation:-Drifters" title="Permalink to this headline"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">path_catalog</span> <span class="o">=</span> <span class="s2">&quot;https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023a_SSH_mapping_OSE/independent_drifters/catalog.html&quot;</span>
+<span class="n">path_data</span> <span class="o">=</span>    <span class="s2">&quot;https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023a_SSH_mapping_OSE/independent_drifters/&quot;</span>
+
+
+<span class="n">list_of_files</span> <span class="o">=</span> <span class="n">retrieve_list_of_files_from_url</span><span class="p">(</span><span class="n">path_catalog</span><span class="p">,</span> <span class="n">path_data</span><span class="p">,</span><span class="s1">&#39;uv_&#39;</span><span class="p">)</span>
+
+<span class="n">xr</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">file_cache_maxsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ds_drift</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">list_of_files</span><span class="p">)[:],</span><span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="mi">6091</span><span class="p">},</span><span class="n">concat_dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">combine</span><span class="o">=</span><span class="s1">&#39;nested&#39;</span><span class="p">)</span>
+<span class="n">ds_drift</span> <span class="o">=</span> <span class="n">ds_drift</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">ds_drift</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">time_min</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds_drift</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;=</span>  <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">time_max</span><span class="p">)),</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds_drift</span> <span class="o">=</span> <span class="n">ds_drift</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">lon</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds_drift</span><span class="o">.</span><span class="n">longitude</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">lat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds_drift</span><span class="o">.</span><span class="n">latitude</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">lon</span><span class="p">[</span><span class="n">lon</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">lon</span><span class="p">[</span><span class="n">lon</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">360</span>
+<span class="n">ind_lonmax</span> <span class="o">=</span> <span class="n">lon</span><span class="o">&lt;</span><span class="n">lon_max</span>
+<span class="n">ind_lonmin</span> <span class="o">=</span> <span class="n">lon</span><span class="o">&gt;</span><span class="n">lon_min</span>
+<span class="n">ind_latmax</span> <span class="o">=</span> <span class="n">lat</span><span class="o">&lt;</span><span class="n">lat_max</span>
+<span class="n">ind_latmin</span> <span class="o">=</span> <span class="n">lat</span><span class="o">&gt;</span><span class="n">lat_min</span>
+<span class="n">ind_sel_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">ind_lonmax</span><span class="o">*</span><span class="n">ind_lonmin</span><span class="o">*</span><span class="n">ind_latmax</span><span class="o">*</span><span class="n">ind_latmin</span><span class="p">)</span>
+<span class="n">ds_drift</span> <span class="o">=</span> <span class="n">ds_drift</span><span class="o">.</span><span class="n">isel</span><span class="p">({</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="n">ind_sel_time</span><span class="p">})</span>
+<span class="n">ds_drift</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">saving_dir</span><span class="o">+</span><span class="n">name_drift</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/file_manager.py:209</span>, in <span class="ansi-cyan-fg">CachingFileManager._acquire_with_cache_info</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    208</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg">--&gt; 209</span>     file <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_cache</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_key</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    210</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">KeyError</span>:
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/lru_cache.py:55</span>, in <span class="ansi-cyan-fg">LRUCache.__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_lock:
+<span class="ansi-green-fg">---&gt; 55</span>     value <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_cache</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     56</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_cache<span style="color: rgb(98,98,98)">.</span>move_to_end(key)
+
+<span class="ansi-red-fg">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;/Users/sammymetref/Documents/DataChallenges_testing/2023a_SSH_mapping_OSE/data/independent_drifters/indep_drifters_GS.nc&#39;,), &#39;a&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;0f541993-496c-441b-ac11-e9f405007329&#39;]
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">PermissionError</span>                           Traceback (most recent call last)
+File <span class="ansi-green-fg">&lt;timed exec&gt;:20</span>
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/core/dataset.py:1903</span>, in <span class="ansi-cyan-fg">Dataset.to_netcdf</span><span class="ansi-blue-fg">(self, path, mode, format, group, engine, encoding, unlimited_dims, compute, invalid_netcdf)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1900</span>     encoding <span style="color: rgb(98,98,98)">=</span> {}
+<span class="ansi-green-intense-fg ansi-bold">   1901</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">backends</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">api</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> to_netcdf
+<span class="ansi-green-fg">-&gt; 1903</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">to_netcdf</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">  </span><span class="ansi-yellow-bg" style="color: rgb(95,135,135)"># type: ignore  # mypy cannot resolve the overloads:(</span>
+<span class="ansi-green-intense-fg ansi-bold">   1904</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1905</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1906</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1907</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">format</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1908</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1909</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1910</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1911</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">unlimited_dims</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">unlimited_dims</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1912</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">compute</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">compute</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1913</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">multifile</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1914</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">invalid_netcdf</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">invalid_netcdf</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1915</span> <span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/api.py:1213</span>, in <span class="ansi-cyan-fg">to_netcdf</span><span class="ansi-blue-fg">(dataset, path_or_file, mode, format, group, engine, encoding, unlimited_dims, compute, multifile, invalid_netcdf)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1209</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-intense-fg ansi-bold">   1210</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(
+<span class="ansi-green-intense-fg ansi-bold">   1211</span>             <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">unrecognized option </span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">invalid_netcdf</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)"> for engine </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>engine<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">   1212</span>         )
+<span class="ansi-green-fg">-&gt; 1213</span> store <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">store_open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">target</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">format</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1215</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> unlimited_dims <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-intense-fg ansi-bold">   1216</span>     unlimited_dims <span style="color: rgb(98,98,98)">=</span> dataset<span style="color: rgb(98,98,98)">.</span>encoding<span style="color: rgb(98,98,98)">.</span>get(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">unlimited_dims</span><span style="color: rgb(175,0,0)">&#34;</span>, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>)
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:376</span>, in <span class="ansi-cyan-fg">NetCDF4DataStore.open</span><span class="ansi-blue-fg">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="ansi-green-intense-fg ansi-bold">    370</span> kwargs <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">dict</span>(
+<span class="ansi-green-intense-fg ansi-bold">    371</span>     clobber<span style="color: rgb(98,98,98)">=</span>clobber, diskless<span style="color: rgb(98,98,98)">=</span>diskless, persist<span style="color: rgb(98,98,98)">=</span>persist, <span style="color: rgb(0,135,0)">format</span><span style="color: rgb(98,98,98)">=</span><span style="color: rgb(0,135,0)">format</span>
+<span class="ansi-green-intense-fg ansi-bold">    372</span> )
+<span class="ansi-green-intense-fg ansi-bold">    373</span> manager <span style="color: rgb(98,98,98)">=</span> CachingFileManager(
+<span class="ansi-green-intense-fg ansi-bold">    374</span>     netCDF4<span style="color: rgb(98,98,98)">.</span>Dataset, filename, mode<span style="color: rgb(98,98,98)">=</span>mode, kwargs<span style="color: rgb(98,98,98)">=</span>kwargs
+<span class="ansi-green-intense-fg ansi-bold">    375</span> )
+<span class="ansi-green-fg">--&gt; 376</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">cls</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">manager</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lock</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">lock</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">autoclose</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">autoclose</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:323</span>, in <span class="ansi-cyan-fg">NetCDF4DataStore.__init__</span><span class="ansi-blue-fg">(self, manager, group, mode, lock, autoclose)</span>
+<span class="ansi-green-intense-fg ansi-bold">    321</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_group <span style="color: rgb(98,98,98)">=</span> group
+<span class="ansi-green-intense-fg ansi-bold">    322</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_mode <span style="color: rgb(98,98,98)">=</span> mode
+<span class="ansi-green-fg">--&gt; 323</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>format <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">ds</span><span style="color: rgb(98,98,98)">.</span>data_model
+<span class="ansi-green-intense-fg ansi-bold">    324</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_filename <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>ds<span style="color: rgb(98,98,98)">.</span>filepath()
+<span class="ansi-green-intense-fg ansi-bold">    325</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>is_remote <span style="color: rgb(98,98,98)">=</span> is_remote_uri(<span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_filename)
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:385</span>, in <span class="ansi-cyan-fg">NetCDF4DataStore.ds</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    383</span> <span style="color: rgb(175,0,255)">@property</span>
+<span class="ansi-green-intense-fg ansi-bold">    384</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">ds</span>(<span style="color: rgb(0,135,0)">self</span>):
+<span class="ansi-green-fg">--&gt; 385</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_acquire</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:379</span>, in <span class="ansi-cyan-fg">NetCDF4DataStore._acquire</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    378</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">_acquire</span>(<span style="color: rgb(0,135,0)">self</span>, needs_lock<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>):
+<span class="ansi-green-fg">--&gt; 379</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_manager<span style="color: rgb(98,98,98)">.</span>acquire_context(needs_lock) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> root:
+<span class="ansi-green-intense-fg ansi-bold">    380</span>         ds <span style="color: rgb(98,98,98)">=</span> _nc4_require_group(root, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_group, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_mode)
+<span class="ansi-green-intense-fg ansi-bold">    381</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> ds
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/contextlib.py:135</span>, in <span class="ansi-cyan-fg">_GeneratorContextManager.__enter__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    133</span> <span class="ansi-bold" style="color: rgb(0,135,0)">del</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>args, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>kwds, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>func
+<span class="ansi-green-intense-fg ansi-bold">    134</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg">--&gt; 135</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">next</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">gen</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    136</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">StopIteration</span>:
+<span class="ansi-green-intense-fg ansi-bold">    137</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">RuntimeError</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">generator didn</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">t yield</span><span style="color: rgb(175,0,0)">&#34;</span>) <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/file_manager.py:197</span>, in <span class="ansi-cyan-fg">CachingFileManager.acquire_context</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    194</span> <span style="color: rgb(175,0,255)">@contextlib</span><span style="color: rgb(98,98,98)">.</span>contextmanager
+<span class="ansi-green-intense-fg ansi-bold">    195</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">acquire_context</span>(<span style="color: rgb(0,135,0)">self</span>, needs_lock<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>):
+<span class="ansi-green-intense-fg ansi-bold">    196</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;Context manager for acquiring a file.&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">--&gt; 197</span>     file, cached <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_acquire_with_cache_info</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">needs_lock</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    198</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
+<span class="ansi-green-intense-fg ansi-bold">    199</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">yield</span> file
+
+File <span class="ansi-green-fg">~/miniconda3/envs/env-dc-global-ose0/lib/python3.10/site-packages/xarray/backends/file_manager.py:215</span>, in <span class="ansi-cyan-fg">CachingFileManager._acquire_with_cache_info</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    213</span>     kwargs <span style="color: rgb(98,98,98)">=</span> kwargs<span style="color: rgb(98,98,98)">.</span>copy()
+<span class="ansi-green-intense-fg ansi-bold">    214</span>     kwargs[<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mode</span><span style="color: rgb(175,0,0)">&#34;</span>] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_mode
+<span class="ansi-green-fg">--&gt; 215</span> file <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_opener</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    216</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_mode <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">w</span><span style="color: rgb(175,0,0)">&#34;</span>:
+<span class="ansi-green-intense-fg ansi-bold">    217</span>     <span style="color: rgb(95,135,135)"># ensure file doesn&#39;t get overridden when opened again</span>
+<span class="ansi-green-intense-fg ansi-bold">    218</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_mode <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">a</span><span style="color: rgb(175,0,0)">&#34;</span>
+
+File <span class="ansi-green-fg">src/netCDF4/_netCDF4.pyx:2463</span>, in <span class="ansi-cyan-fg">netCDF4._netCDF4.Dataset.__init__</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">src/netCDF4/_netCDF4.pyx:2026</span>, in <span class="ansi-cyan-fg">netCDF4._netCDF4._ensure_nc_success</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">PermissionError</span>: [Errno 13] Permission denied: b&#39;/Users/sammymetref/Documents/DataChallenges_testing/2023a_SSH_mapping_OSE/data/independent_drifters/indep_drifters_GS.nc&#39;
+</pre></div></div>
+</div>
+</section>
+<section id="Data-for-comparison:-DUACS-maps">
+<h2>Data for comparison: DUACS maps<a class="headerlink" href="#Data-for-comparison:-DUACS-maps" title="Permalink to this headline"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">path_catalog</span> <span class="o">=</span> <span class="s2">&quot;https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/catalog/MEOM/OCEAN_DATA_CHALLENGES/2023a_SSH_mapping_OSE/maps/DUACS_global_allsat-alg/catalog.html&quot;</span>
+<span class="n">path_data</span> <span class="o">=</span>    <span class="s2">&quot;https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2023a_SSH_mapping_OSE/maps/DUACS_global_allsat-alg/&quot;</span>
+
+
+<span class="n">list_of_files</span> <span class="o">=</span> <span class="n">retrieve_list_of_files_from_url</span><span class="p">(</span><span class="n">path_catalog</span><span class="p">,</span> <span class="n">path_data</span><span class="p">)</span>
+
+<span class="n">xr</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">file_cache_maxsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ds_maps</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">list_of_files</span><span class="p">)[:],</span><span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span><span class="mi">720</span><span class="p">,</span><span class="s1">&#39;longitude&#39;</span><span class="p">:</span><span class="mi">1440</span><span class="p">},</span><span class="n">concat_dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">combine</span><span class="o">=</span><span class="s1">&#39;nested&#39;</span><span class="p">)</span>
+<span class="n">ds_maps</span> <span class="o">=</span> <span class="n">ds_maps</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">time_min</span><span class="p">,</span> <span class="n">time_max</span><span class="p">))</span>
+
+<span class="c1"># We select the region size 0.5° wider on each side to avoid interpolation issues later</span>
+
+<span class="n">ds_maps</span> <span class="o">=</span> <span class="n">ds_maps</span><span class="o">.</span><span class="n">sel</span><span class="p">({</span><span class="s1">&#39;longitude&#39;</span><span class="p">:</span><span class="nb">slice</span><span class="p">(</span><span class="n">lon_min</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="n">lon_max</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)})</span>
+<span class="n">ds_maps</span> <span class="o">=</span> <span class="n">ds_maps</span><span class="o">.</span><span class="n">sel</span><span class="p">({</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span><span class="nb">slice</span><span class="p">(</span><span class="n">lat_min</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="n">lat_max</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)})</span>
+<span class="n">ds_maps</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">saving_dir</span><span class="o">+</span><span class="n">name_maps</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+CPU times: user 1min 30s, sys: 11.7 s, total: 1min 42s
+Wall time: 3min 24s
+</pre></div></div>
+</div>
+<section id="You-can-now-use-the-evaluation-notebooks-by-changing-the-data-directory-and-file-names-!">
+<h3>You can now use the evaluation notebooks by changing the data directory and file names !<a class="headerlink" href="#You-can-now-use-the-evaluation-notebooks-by-changing-the-data-directory-and-file-names-!" title="Permalink to this headline"></a></h3>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  x86_64-darwin-13
+  x86_64-darwin-22
+
+DEPENDENCIES
+
+BUNDLED WITH
+   2.4.12

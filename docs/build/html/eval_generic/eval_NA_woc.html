@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOC-NIO North Atlantic evaluation &mdash; ODC - global OSE mapping  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ODC - global OSE mapping
+              <img src="../_static/dc_2023_ose_global_logo-rtd.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generic evaluation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eval_generic_global.html">Global scale evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval_generic_NA.html">North Atlantic evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval_generic_WM.html">Western Mediterranean evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval_generic_GS.html">Gulf Stream evaluation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specific focus</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../eval_nio_rotaryspec.html">Near inertial oscillation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_evaluation.html">Notebooks evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks_download_data.html">Notebooks download the data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../metrics_alongtrack.html">SSH - Along track metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics_alongdrifter.html">Currents - Along drifter metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics_driftertraj.html">Currents - Lagrangian metrics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_traj.html">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ODC - global OSE mapping</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">WOC-NIO North Atlantic evaluation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/eval_generic/eval_NA_woc.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="woc-nio-north-atlantic-evaluation">
+<h1>WOC-NIO North Atlantic evaluation<a class="headerlink" href="#woc-nio-north-atlantic-evaluation" title="Permalink to this headline"></a></h1>
+<br> 
+<br>  
+<section id="ssh-evaluation-with-independant-nadir">
+<h2>SSH evaluation with independant nadir<a class="headerlink" href="#ssh-evaluation-with-independant-nadir" title="Permalink to this headline"></a></h2>
+<section id="statistics">
+<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline"></a></h3>
+</section>
+<section id="spectral">
+<h3>Spectral<a class="headerlink" href="#spectral" title="Permalink to this headline"></a></h3>
+</section>
+</section>
+<section id="u-v-evaluation-with-independant-drifters">
+<h2>U, V evaluation with independant drifters<a class="headerlink" href="#u-v-evaluation-with-independant-drifters" title="Permalink to this headline"></a></h2>
+<section id="id1">
+<h3>Statistics<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+</section>
+<section id="id2">
+<h3>Spectral<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+</section>
+</section>
+<section id="trajectory-evaluation-with-independant-drifters">
+<h2>Trajectory evaluation with independant drifters<a class="headerlink" href="#trajectory-evaluation-with-independant-drifters" title="Permalink to this headline"></a></h2>
+<p><img alt="WOC-NIO NA deviation maps h1" src="../_images/deviation_maps_WOC_NA_h1.png" />
+<img alt="WOC-NIO NA deviation maps h2" src="../_images/deviation_maps_WOC_NA_h2.png" />
+<img alt="WOC-NIO NA deviation maps h3" src="../_images/deviation_maps_WOC_NA_h3.png" />
+<img alt="WOC-NIO NA deviation maps h4" src="../_images/deviation_maps_WOC_NA_h4.png" />
+<img alt="WOC-NIO NA deviation maps h5" src="../_images/deviation_maps_WOC_NA_h5.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mod_traj module &mdash; WOC-ESA Data challenges  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mod_utils module" href="mod_utils.html" />
+    <link rel="prev" title="mod_switchvar module" href="mod_switchvar.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WOC-ESA Data challenges
+              <img src="../_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your own maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Mediterranean Sea</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_details.html">Mediterranean Sea setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_dc_medsea/dc_medsea_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Gulf Stream</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_details.html">Gulf Stream setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_sshsstproduct.html">WOC - Merged SSH/SST currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_dc_gulfstream/dc_gulfstream_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DC - Agulhas Current</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_details.html">Agulhas current setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_drifterproduct.html">WOC - Drifter data-driven currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_bfnqgproduct.html">WOC - BFN-QG geostrophic currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_dopplerproduct.html">WOC - Doppler currents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_dc_agulhas/dc_agulhas_otherproducts.html">Other products</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_1-standard-insitu.html">Standard insitu validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_2-effective-resolution.html">Effective resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_3-position-structures.html">Position of structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_4-dynamic-characterization.html">Dynamic characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_metrics_det/metrics_5-lagrangian-diagnostics.html">Lagrangian diagnostics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mod_compare.html">mod_compare module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_filter.html">mod_filter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_interp.html">mod_interp module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_powerspec.html">mod_powerspec module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_read.html">mod_read module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_spectral.html">mod_spectral module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_stat.html">mod_stat module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_switchvar.html">mod_switchvar module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mod_traj module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_utils.html">mod_utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_xscale.html">mod_xscale module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WOC-ESA Data challenges</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">mod_traj module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/6_scripts/mod_traj.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mod_traj">
+<span id="mod-traj-module"></span><h1>mod_traj module<a class="headerlink" href="#module-mod_traj" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.adv_eul">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">adv_eul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3600</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.adv_eul" title="Permalink to this definition"></a></dt>
+<dd><p>Perform Eulerian advection for drifter data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time0</strong> (<em>int</em>) – Initial time.</p></li>
+<li><p><strong>lon0</strong> (<em>float</em>) – Initial longitude.</p></li>
+<li><p><strong>lat0</strong> (<em>float</em>) – Initial latitude.</p></li>
+<li><p><strong>fu</strong> (<em>function</em>) – Function for calculating u-component of velocity.</p></li>
+<li><p><strong>fv</strong> (<em>function</em>) – Function for calculating v-component of velocity.</p></li>
+<li><p><strong>dt</strong> (<em>int</em><em>, </em><em>optional</em>) – Time step in seconds. Default is 3600 seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>lon1</strong> (<em>float</em>) – New longitude after advection.</p></li>
+<li><p><strong>lat1</strong> (<em>float</em>) – New latitude after advection.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+lon1, lat1 = adv_eul(time0, lon0, lat0, u_velocity_func, v_velocity_func)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.adv_rk4">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">adv_rk4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3600</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.adv_rk4" title="Permalink to this definition"></a></dt>
+<dd><p>Perform Runge-Kutta 4th order advection for drifter data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time0</strong> (<em>int</em>) – Initial time.</p></li>
+<li><p><strong>lon0</strong> (<em>float</em>) – Initial longitude.</p></li>
+<li><p><strong>lat0</strong> (<em>float</em>) – Initial latitude.</p></li>
+<li><p><strong>fu</strong> (<em>function</em>) – Function for calculating u-component of velocity.</p></li>
+<li><p><strong>fv</strong> (<em>function</em>) – Function for calculating v-component of velocity.</p></li>
+<li><p><strong>dt</strong> (<em>int</em><em>, </em><em>optional</em>) – Time step in seconds. Default is 3600 seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>lon1</strong> (<em>float</em>) – New longitude after advection.</p></li>
+<li><p><strong>lat1</strong> (<em>float</em>) – New latitude after advection.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+lon1, lat1 = adv_rk4(time0, lon0, lat0, u_velocity_func, v_velocity_func)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.compute_deviation">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">compute_deviation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt_hr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizon_days</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../results/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DUACS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'deviat_uv_DUACS.nc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.compute_deviation" title="Permalink to this definition"></a></dt>
+<dd><p>Compute deviation between real and artificial drifters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dict1</strong> (<em>dict</em>) – Dictionary containing drifter data.</p></li>
+<li><p><strong>Nt</strong> (<em>int</em>) – Total number of time steps.</p></li>
+<li><p><strong>dt_hr</strong> (<em>int</em>) – Time step size in hours.</p></li>
+<li><p><strong>horizon_days</strong> (<em>list</em>) – List of time horizons for deviation computation.</p></li>
+<li><p><strong>lon_out</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Longitudes for output grids. Default is a range from 0 to 360 with a step of 1 degree.</p></li>
+<li><p><strong>lat_out</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Latitudes for output grids. Default is a range from -90 to 90 with a step of 1 degree.</p></li>
+<li><p><strong>dir_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Output directory. Default is ‘../results/’.</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the deviation method. Default is ‘DUACS’.</p></li>
+<li><p><strong>results_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Output file name for deviation results. Default is ‘deviat_uv_DUACS.nc’.</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to overwrite (if True) or read (if False) output file when file already exists. Default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>rmse_norm</strong> (<em>numpy.ndarray</em>) – Normalized root mean square error (RMSE) of deviation.</p></li>
+<li><p><strong>var_norm</strong> (<em>numpy.ndarray</em>) – Normalized variance of deviation.</p></li>
+<li><p><strong>d_mean_1</strong> (<em>numpy.ndarray</em>) – Mean deviation.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+rmse_norm, var_norm, d_mean_1 = compute_deviation(drifter_data, N_time, time_step, horizon_list, lon_grid, lat_grid, dir_out=’../output’, method_name=’DUACS’, results_out=’deviation_results.nc’)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.compute_traj">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">compute_traj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_drifter_adv_maps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizons</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DUACS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../Data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dict_drifter_adv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'euler'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.compute_traj" title="Permalink to this definition"></a></dt>
+<dd><p>Compute trajectories of drifters based on given advection methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dict_drifter_adv_maps</strong> (<em>dict</em>) – Dictionary containing drifter advection maps.</p></li>
+<li><p><strong>horizons</strong> (<em>list</em>) – List of time horizons for trajectory computation.</p></li>
+<li><p><strong>fu</strong> (<em>function</em>) – Function for calculating u-component of velocity.</p></li>
+<li><p><strong>fv</strong> (<em>function</em>) – Function for calculating v-component of velocity.</p></li>
+<li><p><strong>Np</strong> (<em>int</em>) – Number of particles (drifters).</p></li>
+<li><p><strong>Nt</strong> (<em>int</em>) – Total number of time steps.</p></li>
+<li><p><strong>dt_h</strong> (<em>int</em>) – Time step size in hours.</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the advection method. Default is ‘DUACS’.</p></li>
+<li><p><strong>dir_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Output directory. Default is ‘../Data’.</p></li>
+<li><p><strong>prefix_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Output file prefix. Default is ‘dict_drifter_adv’.</p></li>
+<li><p><strong>mode</strong> (<em>str</em><em>, </em><em>optional</em>) – Advection mode (‘euler’ or ‘rk4’). Default is ‘euler’.</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to overwrite advection maps to files when files already exist. Default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict_drifter_adv_maps</strong> – Dictionary containing drifter trajectories.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+trajectories = compute_traj(drifter_adv_maps, horizons, u_velocity_func, v_velocity_func, N_particles, N_time, time_step, method_name=’Euler’, dir_out=’../Output’, overwrite=True)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.dist_drifters">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">dist_drifters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.dist_drifters" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the great-circle distance between two sets of coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat1</strong> (<em>float</em>) – Latitude of the first point.</p></li>
+<li><p><strong>lon1</strong> (<em>float</em>) – Longitude of the first point.</p></li>
+<li><p><strong>lat2</strong> (<em>float</em>) – Latitude of the second point.</p></li>
+<li><p><strong>lon2</strong> (<em>float</em>) – Longitude of the second point.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>distance</strong> – Great-circle distance between the two points in kilometers.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+distance = dist_drifters(lat1, lon1, lat2, lon2)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.plot_meantraj_deviation">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">plot_meantraj_deviation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../results/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">just_basin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'deviat_uv_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.plot_meantraj_deviation" title="Permalink to this definition"></a></dt>
+<dd><p>Plot mean drifter trajectory deviation and save plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dir_out</strong> (<em>str</em><em>, </em><em>optional</em>) – Directory containing deviation data files. Default is ‘../results/’.</p></li>
+<li><p><strong>just_basin</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter results for a specific basin (e.g., ‘Pacific’). Default is None.</p></li>
+<li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – Prefix of deviation data files. Default is ‘deviat*uv’.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+plot_meantraj_deviation(dir_out=’../results/’, just_basin=’Pacific’, prefix_=’deviat*uv’)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.plot_traj_deviation_maps">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">plot_traj_deviation_maps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lon_g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse_norm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt_hr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizon_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax_h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[40,</span> <span class="pre">80,</span> <span class="pre">120]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DUACS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.plot_traj_deviation_maps" title="Permalink to this definition"></a></dt>
+<dd><p>Plot deviation maps of drifter trajectories and save the maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lon_g</strong> (<em>numpy.ndarray</em>) – Longitudes of the grid.</p></li>
+<li><p><strong>lat_g</strong> (<em>numpy.ndarray</em>) – Latitudes of the grid.</p></li>
+<li><p><strong>rmse_norm</strong> (<em>numpy.ndarray</em>) – Normalized root mean square error (RMSE) of deviation.</p></li>
+<li><p><strong>dt_hr</strong> (<em>int</em><em>, </em><em>optional</em>) – Time step size in hours. Default is 24 hours.</p></li>
+<li><p><strong>horizon_days</strong> (<em>list</em><em>, </em><em>optional</em>) – List of time horizons for deviation maps. Default is [1, 2, 3].</p></li>
+<li><p><strong>vmax_h</strong> (<em>list</em><em>, </em><em>optional</em>) – List of maximum values for color scaling. Default is [40, 80, 120].</p></li>
+<li><p><strong>method_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the advection method. Default is ‘DUACS’.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+plot_traj_deviation_maps(lon_grid, lat_grid, rmse_norm, dt_hr=24, horizon_days=[1, 2, 3], vmax_h=[40, 80, 120], method_name=’Euler’)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mod_traj.prepare_drifter_data">
+<span class="sig-prename descclassname"><span class="pre">mod_traj.</span></span><span class="sig-name descname"><span class="pre">prepare_drifter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds_drifters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_traj.prepare_drifter_data" title="Permalink to this definition"></a></dt>
+<dd><p>Prepare drifter data for analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds_drifters</strong> (<em>xarray.Dataset</em>) – Drifter dataset containing longitude, latitude, time, and other variables.</p></li>
+<li><p><strong>maps</strong> (<em>xarray.Dataset</em>) – Maps dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>ind</strong> (<em>numpy.ndarray</em>) – Array of indices.</p></li>
+<li><p><strong>time_drifter</strong> (<em>numpy.ndarray</em>) – Array of time values for drifter data.</p></li>
+<li><p><strong>lon_drifter</strong> (<em>numpy.ndarray</em>) – Array of longitude values for drifter data.</p></li>
+<li><p><strong>lat_drifter</strong> (<em>numpy.ndarray</em>) – Array of latitude values for drifter data.</p></li>
+<li><p><strong>id_drifter</strong> (<em>numpy.ndarray</em>) – Array of drifter IDs.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p># Usage Example:
+ind, time_drifter, lon_drifter, lat_drifter, id_drifter = prepare_drifter_data(drifter_data, maps_data)</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mod_switchvar.html" class="btn btn-neutral float-left" title="mod_switchvar module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod_utils.html" class="btn btn-neutral float-right" title="mod_utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
