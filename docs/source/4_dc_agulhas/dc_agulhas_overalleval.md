@@ -1,7 +1,0 @@
-# Overall evaluation
-
-<br>
- 
-
-<br>  
-  

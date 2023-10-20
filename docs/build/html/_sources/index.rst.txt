@@ -40,18 +40,15 @@ The SWOT denoising regions:
 
 * `Mediterranean Sea <https://2024-dc-woc-esa.readthedocs.io/en/latest/2_dc_medsea/dc_medsea_details.html>`_
     * Area: [5°W, 25°E, 35°N, 47°N]
-    * Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear. 
-    * WOC products: Merged SSH/SST currents, Drifter data-driven currents, BFN-QG geostrophic currents 
+    * Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.  
 
 * `Gulf Stream <https://2024-dc-woc-esa.readthedocs.io/en/latest/3_dc_gulfstream/dc_gulfstream_details.html>`_ 
     * Area: [75°W, 45°W, 20°N, 50°N]
-    * Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics. 
-    * WOC products: Merged SSH/SST currents, Drifter data-driven currents, BFN-QG geostrophic currents, Doppler currents
+    * Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.  
     
 * `Atlantic circumpolar <https://2024-dc-woc-esa.readthedocs.io/en/latest/4_dc_agulhas/dc_agulhas_details.html>`_ 
     * Area: [14°E, 35°E, 45°S, 30°S]
-    * Dynamical specificities: Strongly geostrophic region. 
-    * WOC products: Drifter data-driven currents, BFN-QG geostrophic currents, Doppler currents
+    * Dynamical specificities: Strong Surface Wave Height (SWH) region.  
   
 :raw-html:`<br />` 
     
@@ -91,52 +88,22 @@ The SWOT denoising regions:
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: DC - Mediterranean Sea
+   :caption: SWOT denoising
 
-   2_dc_medsea/dc_medsea_details.md
-   2_dc_medsea/dc_medsea_overalleval.md
-   2_dc_medsea/dc_medsea_sshsstproduct.md 
-   2_dc_medsea/dc_medsea_drifterproduct.md 
-   2_dc_medsea/dc_medsea_bfnqgproduct.md 
-   2_dc_medsea/dc_medsea_dopplerproduct.md 
-   2_dc_medsea/dc_medsea_otherproducts.md 
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-   :caption: DC - Gulf Stream
- 
-   3_dc_gulfstream/dc_gulfstream_details.md
-   3_dc_gulfstream/dc_gulfstream_overalleval.md 
-   3_dc_gulfstream/dc_gulfstream_sshsstproduct.md 
-   3_dc_gulfstream/dc_gulfstream_drifterproduct.md 
-   3_dc_gulfstream/dc_gulfstream_bfnqgproduct.md 
-   3_dc_gulfstream/dc_gulfstream_dopplerproduct.md 
-   3_dc_gulfstream/dc_gulfstream_otherproducts.md 
- 
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-   :caption: DC - Agulhas Current
- 
-   4_dc_agulhas/dc_agulhas_details.md
-   4_dc_agulhas/dc_agulhas_overalleval.md
-   4_dc_agulhas/dc_agulhas_drifterproduct.md
-   4_dc_agulhas/dc_agulhas_bfnqgproduct.md
-   4_dc_agulhas/dc_agulhas_dopplerproduct.md
-   4_dc_agulhas/dc_agulhas_otherproducts.md
-   
+   2_swotdenoising/swotdenoising_details.md
+   2_swotdenoising/swotdenoising_overalleval.md
+   2_swotdenoising/swotdenoising_med.md
+   2_swotdenoising/swotdenoising_gulfstream.md
+   2_swotdenoising/swotdenoising_circum.md  
+  
 .. toctree::
    :hidden:
    :maxdepth: 1
    :caption: Metrics details
 
-   5_metrics_det/metrics_1-standard-insitu.md
-   5_metrics_det/metrics_2-effective-resolution.md
-   5_metrics_det/metrics_3-position-structures.md
-   5_metrics_det/metrics_4-dynamic-characterization.md
-   5_metrics_det/metrics_5-lagrangian-diagnostics.md
+   3_metrics_det/metrics_1-visualisation.md
+   3_metrics_det/metrics_2-energyloss.md
+   3_metrics_det/metrics_3-physicalpdf.md 
     
 
 .. toctree::
@@ -144,4 +111,4 @@ The SWOT denoising regions:
    :maxdepth: 2
    :caption: Scripts
 
-   6_scripts/modules.rst
+   4_scripts/modules.rst
