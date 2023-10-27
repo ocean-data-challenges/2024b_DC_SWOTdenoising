@@ -1,4 +1,5 @@
 # ignoring results directory
-/results/
+denoised_data/
+results/
 swot_data/
 /src/__pycache__/
