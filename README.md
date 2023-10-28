@@ -52,6 +52,32 @@ By organizing this data challenge, experts and researchers can come together to 
 
 ## The SWOT denoising regions
 
+* [Mediterranean Sea](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_med.html)
+    - Area: [5°W, 25°E, 35°N, 47°N]
+    - Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.
+
+* [Gulf Stream](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_gulfstream.html)
+    - Area: [75°W, 45°W, 20°N, 50°N]
+    - Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.
+
+* [Atlantic circumpolar](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_circum.html)
+    - Area: [14°E, 35°E, 45°S, 30°S]
+    - Dynamical specificities: Strong Surface Wave Height (SWH) region.
+
+<embed> 
+<center>
+<div id="image_map">
+    <map name="map_example">
+        <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_circum.html" target="_blank" alt="ACC" shape=poly coords="310,310, 310,290, 340,290, 340,310">
+        <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="160,150, 160,110, 210,110, 210,150">
+        <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="300,155, 300,115, 345,115, 345,155">
+        <img src="https://github.com/ocean-data-challenges/2024_DC_WOC-ESA/assets/33433820/4be7d3ae-ea45-4b5c-b049-06ef985024c0" title="Gulf Stream" alt="image map example" width=600 height=350 usemap="#map_example">
+    </map>
+</div>
+</center>
+</embed>
+
+
 ## Input data
  
 ## Evaluation
