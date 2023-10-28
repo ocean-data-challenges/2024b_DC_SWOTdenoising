@@ -22,6 +22,8 @@ SWOT denoising data challenge
 :raw-html:`<br />`
 
     
+Context
+=======
      
 
 The SWOT mission 
@@ -56,9 +58,10 @@ By organizing this data challenge, experts and researchers can come together to 
  
 
 The data challenge setup
-------------------------
+========================
 
-The SWOT denoising regions:  
+The SWOT denoising regions
+-------------------------- 
 
 * `Mediterranean Sea <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_med.html>`_
     * Area: [5°W, 25°E, 35°N, 47°N]
@@ -83,6 +86,16 @@ The SWOT denoising regions:
     </embed>
 
 :raw-html:`<br />` 
+
+
+Input data
+----------
+
+Evaluation
+----------
+
+Denoising techniques
+--------------------
 
 :raw-html:`<br />` 
 
