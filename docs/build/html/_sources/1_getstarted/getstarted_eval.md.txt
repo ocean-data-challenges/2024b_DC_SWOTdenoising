@@ -1,4 +1,4 @@
-# Evaluate your own maps
+# Evaluate your denoising technique
 
 <br> 
  
@@ -10,7 +10,7 @@ Once you have [installed the data challenge](getstarted_install.md) and [downloa
 
 <br> 
 
-## Maps format
+## Data format
 
 The input netcdf files must contain: 
 - `latitude`, `longitude` and `time` dimensions. 
