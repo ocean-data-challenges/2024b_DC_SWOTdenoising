@@ -22,8 +22,8 @@ SWOT denoising data challenge
 :raw-html:`<br />`
 
     
-Context
-=======
+1. Context
+==========
      
 
 The SWOT mission 
@@ -57,8 +57,8 @@ By organizing this data challenge, experts and researchers can come together to 
  
  
 
-The data challenge setup
-========================
+2. The data challenge setup
+===========================
 
 The SWOT denoising regions
 -------------------------- 
@@ -96,6 +96,62 @@ Evaluation
 
 Denoising techniques
 --------------------
+
+:raw-html:`<br />` 
+    
+
+
+3. Get started
+============== 
+
+Installation
+------------
+**How to Get Started?**
+
+Clone the data challenge repo by using HTTPS:
+
+.. code-block:: bash
+
+    git clone https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising.git
+
+Or clone it using SSH:
+
+.. code-block:: bash
+
+    git clone git@github.com:ocean-data-challenges/2024b_DC_SWOTdenoising.git
+
+Create the data challenge conda environment, named ``env-dc-swot-filtering``, by running the following command:
+
+.. code-block:: bash
+
+    conda env create --file=dc_environment.yml
+
+And activate it with:
+
+.. code-block:: bash
+
+    conda activate env-dc-swot-denoising
+
+Then add it to the available kernels for Jupyter to see:
+
+.. code-block:: bash
+
+    ipython kernel install --name "env-dc-swot-denoising" --user
+
+Finally, select the "env-dc-woc-esa" kernel in your notebook with Kernel > Change Kernel.
+
+You're now good to go!
+
+
+
+Download the data
+----------------- 
+
+The data is hosted and can be accessed on the MEOM server opendap `here <https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/catalog.html>`_.
+
+To download the SWOT dataset locally, you will need approximately 4 GB of disk space.  
+
+ 
 
 :raw-html:`<br />` 
 

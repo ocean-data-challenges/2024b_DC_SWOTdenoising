@@ -106,7 +106,7 @@
 <p><span class="raw-html"><br /></span></p>
 <p><span class="raw-html"><br /></span></p>
 <section id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline"></a></h2>
+<h2>1. Context<a class="headerlink" href="#context" title="Permalink to this headline"></a></h2>
 <section id="the-swot-mission">
 <h3>The SWOT mission<a class="headerlink" href="#the-swot-mission" title="Permalink to this headline"></a></h3>
 <p>The Surface Water and Ocean Topography (SWOT) satellite mission is an innovative project designed to measure various aspects of Earth’s water bodies, including the height of surface water, from oceans to land.</p>
@@ -125,7 +125,7 @@ This instrumental noise can introduce errors or uncertainty into the measurement
 </section>
 </section>
 <section id="the-data-challenge-setup">
-<h2>The data challenge setup<a class="headerlink" href="#the-data-challenge-setup" title="Permalink to this headline"></a></h2>
+<h2>2. The data challenge setup<a class="headerlink" href="#the-data-challenge-setup" title="Permalink to this headline"></a></h2>
 <section id="the-swot-denoising-regions">
 <h3>The SWOT denoising regions<a class="headerlink" href="#the-swot-denoising-regions" title="Permalink to this headline"></a></h3>
 <ul class="simple">
@@ -169,6 +169,41 @@ This instrumental noise can introduce errors or uncertainty into the measurement
 </section>
 <section id="denoising-techniques">
 <h3>Denoising techniques<a class="headerlink" href="#denoising-techniques" title="Permalink to this headline"></a></h3>
+<p><span class="raw-html"><br /></span></p>
+</section>
+</section>
+<section id="get-started">
+<h2>3. Get started<a class="headerlink" href="#get-started" title="Permalink to this headline"></a></h2>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h3>
+<p><strong>How to Get Started?</strong></p>
+<p>Clone the data challenge repo by using HTTPS:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising.git
+</pre></div>
+</div>
+<p>Or clone it using SSH:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:ocean-data-challenges/2024b_DC_SWOTdenoising.git
+</pre></div>
+</div>
+<p>Create the data challenge conda environment, named <code class="docutils literal notranslate"><span class="pre">env-dc-swot-filtering</span></code>, by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--file<span class="o">=</span>dc_environment.yml
+</pre></div>
+</div>
+<p>And activate it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>env-dc-swot-denoising
+</pre></div>
+</div>
+<p>Then add it to the available kernels for Jupyter to see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipython<span class="w"> </span>kernel<span class="w"> </span>install<span class="w"> </span>--name<span class="w"> </span><span class="s2">&quot;env-dc-swot-denoising&quot;</span><span class="w"> </span>--user
+</pre></div>
+</div>
+<p>Finally, select the “env-dc-woc-esa” kernel in your notebook with Kernel &gt; Change Kernel.</p>
+<p>You’re now good to go!</p>
+</section>
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline"></a></h3>
+<p>The data is hosted and can be accessed on the MEOM server opendap <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/catalog.html">here</a>.</p>
+<p>To download the SWOT dataset locally, you will need approximately 4 GB of disk space.</p>
 <p><span class="raw-html"><br /></span></p>
 <embed>
     So far, the github page visits amount to: <br> <br> <a href="https://github.com/ocean-data-challenges/2024_DC_WOC-ESA"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Focean-data-challenges%2F2024_DC_WOC-ESA&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=PAGE+VIEWS&edge_flat=false"/></a>

@@ -16,7 +16,7 @@ So far, the github page visits amount to:
 
 
 
-# Context 
+# 1. Context 
 
 
 ## The SWOT mission  
@@ -47,7 +47,7 @@ This is precisely why initiatives like the present data challenge are crucial in
 
 By organizing this data challenge, experts and researchers can come together to share their expertise, test various noise removal and data processing methods, and collectively work towards more accurate and robust results. This collaborative approach fosters innovation and encourages the development of improved techniques for handling instrumental noise and deriving valuable information from SWOT data.
 
-# The data challenge setup 
+# 2. The data challenge setup 
  
 
 ## The SWOT denoising regions
@@ -63,7 +63,7 @@ By organizing this data challenge, experts and researchers can come together to 
 
   
 
-# 4. Get started
+# 3. Get started
  
 
 ## Installation
