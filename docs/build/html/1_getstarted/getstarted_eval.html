@@ -55,21 +55,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#currents-maps-format">Currents maps format</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#available-metrics-and-where-to-find-them">Available metrics and where to find them</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ssh-evaluation-with-independant-nadir-ssh-data">SSH evaluation with independant nadir SSH data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#check-example-1">Check example 1</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#currents-evaluation-with-independant-drifter-currents">Currents evaluation with independant drifter currents</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#check-example-2">Check example 2</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#currents-evaluation-with-independant-drifter-trajectories">Currents evaluation with independant drifter trajectories</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#check-example-3">Check example 3</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#available-metrics-and-where-to-find-them">Available metrics and where to find them</a></li>
 </ul>
 </li>
 </ul>
@@ -131,77 +117,18 @@
 <h2>Data format<a class="headerlink" href="#data-format" title="Permalink to this headline"></a></h2>
 <p>The input netcdf files must contain:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code> and <code class="docutils literal notranslate"><span class="pre">time</span></code> dimensions.</p></li>
-<li><p>for sea level anomaly evaluation, a sea level anomaly variable <code class="docutils literal notranslate"><span class="pre">sla</span></code>.</p></li>
-<li><p>for currents evaluation, a meridional and a zonal currents variable <code class="docutils literal notranslate"><span class="pre">ugos</span></code> and <code class="docutils literal notranslate"><span class="pre">vgos</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_lines</span></code> and <code class="docutils literal notranslate"><span class="pre">num_pixels</span></code> dimensions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code> and <code class="docutils literal notranslate"><span class="pre">time</span></code> variables.</p></li>
+<li><p>for denoising evaluation, a denoised ssh variable <code class="docutils literal notranslate"><span class="pre">ssha_method_denoised</span></code>.</p></li>
 </ul>
 <p>Note that some formatting can be done using xarray within the jupyter notebooks. For instance, you can change a variable’s name simply with <code class="docutils literal notranslate"><span class="pre">ds</span> <span class="pre">=</span> <span class="pre">ds.rename_var({'my_sla':'sla'})</span></code>.</p>
 <section id="currents-maps-format">
 <h3>Currents maps format<a class="headerlink" href="#currents-maps-format" title="Permalink to this headline"></a></h3>
-<p><img alt="Currents_Format" src="../_images/Maps_format_Currents.png" /></p>
 <br> 
 </section>
 </section>
 <section id="available-metrics-and-where-to-find-them">
 <h2>Available metrics and where to find them<a class="headerlink" href="#available-metrics-and-where-to-find-them" title="Permalink to this headline"></a></h2>
-<section id="ssh-evaluation-with-independant-nadir-ssh-data">
-<h3>SSH evaluation with independant nadir SSH data<a class="headerlink" href="#ssh-evaluation-with-independant-nadir-ssh-data" title="Permalink to this headline"></a></h3>
-<section id="check-example-1">
-<h4><a class="reference external" href="https://github.com/ocean-data-challenges/2023a_SSH_mapping_OSE/blob/main/nb_diags_global/ssh_scores_DUACS_geos.ipynb">Check example 1</a><a class="headerlink" href="#check-example-1" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p><strong>Grid boxes statistics (maps)</strong></p>
-<ul>
-<li><p><strong>SSH Error variance</strong></p></li>
-<li><p><strong>SSH Explained variance</strong></p></li>
-</ul>
-</li>
-</ul>
-<br> 
-<ul class="simple">
-<li><p><strong>Statistics by regimes (scalar scores)</strong></p></li>
-</ul>
-<br> 
-<ul class="simple">
-<li><p><strong>Spectral effective resolution (maps)</strong></p></li>
-</ul>
-<br> 
-<br> 
-</section>
-</section>
-<section id="currents-evaluation-with-independant-drifter-currents">
-<h3>Currents evaluation with independant drifter currents<a class="headerlink" href="#currents-evaluation-with-independant-drifter-currents" title="Permalink to this headline"></a></h3>
-<section id="check-example-2">
-<h4><a class="reference external" href="https://github.com/ocean-data-challenges/2023a_SSH_mapping_OSE/blob/main/nb_diags_global/uv_scores_DUACS_geos.ipynb">Check example 2</a><a class="headerlink" href="#check-example-2" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p><strong>Grid boxes statistics (maps)</strong></p>
-<ul>
-<li><p><strong>Currents Error variance</strong></p></li>
-<li><p><strong>Currents Explained variance</strong></p></li>
-</ul>
-</li>
-</ul>
-<br> 
-<ul class="simple">
-<li><p><strong>Statistics by regimes (scalar scores)</strong></p></li>
-</ul>
-<br> 
-<ul class="simple">
-<li><p><strong>Zonaly averaged rotary spectra (omega-latitude plots)</strong></p></li>
-</ul>
-<br> 
-<br> 
-</section>
-</section>
-<section id="currents-evaluation-with-independant-drifter-trajectories">
-<h3>Currents evaluation with independant drifter trajectories<a class="headerlink" href="#currents-evaluation-with-independant-drifter-trajectories" title="Permalink to this headline"></a></h3>
-<section id="check-example-3">
-<h4><a class="reference external" href="https://github.com/ocean-data-challenges/2023a_SSH_mapping_OSE/blob/main/nb_diags_global/uv_scores_DUACS_geos.ipynb">Check example 3</a><a class="headerlink" href="#check-example-3" title="Permalink to this headline"></a></h4>
-<ul class="simple">
-<li><p><strong>Drifter deviation maps at fixed horizons (maps)</strong></p></li>
-<li><p><strong>Drifter deviation global (horizon series)</strong></p></li>
-</ul>
-</section>
-</section>
 </section>
 </section>
 
