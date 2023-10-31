@@ -14,7 +14,7 @@ SWOT denoising data challenge
 :raw-html:`<br />`
 
 .. image:: ../../figures/dc_2024b_SWOTdenoising_banner.jpg
-    :width: 600 
+    :width: 1000 
     :align: center
 
 :raw-html:`<br />`
