@@ -179,22 +179,33 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: SWOT denoising
+   :caption: 1d orbit SWOT denoising
 
-   2_swotdenoising/swotdenoising_details.md
-   2_swotdenoising/swotdenoising_overalleval.md
-   2_swotdenoising/swotdenoising_med.md
-   2_swotdenoising/swotdenoising_gulfstream.md
-   2_swotdenoising/swotdenoising_circum.md  
+   2_1dswotdenoising/1dswotdenoising_details.md
+   2_1dswotdenoising/1dswotdenoising_overalleval.md
+   2_1dswotdenoising/1dswotdenoising_med.md
+   2_1dswotdenoising/1dswotdenoising_gulfstream.md
+   2_1dswotdenoising/1dswotdenoising_circum.md  
+   
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: 21d orbit SWOT denoising
+
+   3_21dswotdenoising/21dswotdenoising_details.md
+   3_21dswotdenoising/21dswotdenoising_overalleval.md
+   3_21dswotdenoising/21dswotdenoising_med.md
+   3_21dswotdenoising/21dswotdenoising_gulfstream.md
+   3_21dswotdenoising/21dswotdenoising_circum.md  
   
 .. toctree::
    :hidden:
    :maxdepth: 1
    :caption: Metrics details
 
-   3_metrics_det/metrics_1-visualisation.md
-   3_metrics_det/metrics_2-energyloss.md
-   3_metrics_det/metrics_3-physicalpdf.md 
+   4_metrics_det/metrics_1-visualisation.md
+   4_metrics_det/metrics_2-energyloss.md
+   4_metrics_det/metrics_3-physicalpdf.md 
     
 
 .. toctree::
@@ -202,4 +213,4 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
    :maxdepth: 2
    :caption: Scripts
 
-   4_scripts/modules.rst
+   5_scripts/modules.rst

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gomez module &mdash; SWOT denoising data challenge  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="plot module" href="plot.html" />
+    <link rel="prev" title="filters_bidim module" href="filters_bidim.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SWOT denoising data challenge
+              <img src="../_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your denoising technique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1d orbit SWOT denoising</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_details.html">SWOT denoising setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">21d orbit SWOT denoising</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_details.html">SWOT denoising setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_metrics_det/metrics_1-visualisation.html">Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_metrics_det/metrics_2-energyloss.html">Energy loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_metrics_det/metrics_3-physicalpdf.html">Physical pdf</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="benchmark.html">benchmark module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eval_on_nadirtrack.html">eval_on_nadirtrack module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters_bidim.html">filters_bidim module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">gomez module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot.html">plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swot.html">swot module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SWOT denoising data challenge</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">gomez module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/5_scripts/gomez.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-gomez">
+<span id="gomez-module"></span><h1>gomez module<a class="headerlink" href="#module-gomez" title="Permalink to this headline"></a></h1>
+<p>implementation of a varitionnal SWOT filter,
+based on the work by Gomez-Navarro et al. (<a class="reference external" href="https://doi.org/10.3390/rs12040734">https://doi.org/10.3390/rs12040734</a>)
+adapted from the SWOTdenoise code &#64;https://github.com/meom-group/SWOTmodule</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gomez.</span></span><span class="sig-name descname"><span class="pre">VariationnalFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.cost_function">
+<span class="sig-name descname"><span class="pre">cost_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.cost_function" title="Permalink to this definition"></a></dt>
+<dd><p>fonction de coût</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.debug">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#gomez.VariationnalFilter.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.div">
+<span class="sig-name descname"><span class="pre">div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">px</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">py</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.div" title="Permalink to this definition"></a></dt>
+<dd><p>divergence</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.filter" title="Permalink to this definition"></a></dt>
+<dd><p>high level filter application</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.gradx">
+<span class="sig-name descname"><span class="pre">gradx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.gradx" title="Permalink to this definition"></a></dt>
+<dd><p>gradient dans la direction x</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.grady">
+<span class="sig-name descname"><span class="pre">grady</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.grady" title="Permalink to this definition"></a></dt>
+<dd><p>gradient dans la direction y</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.invmask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">invmask</span></span><a class="headerlink" href="#gomez.VariationnalFilter.invmask" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.laplacian">
+<span class="sig-name descname"><span class="pre">laplacian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.laplacian" title="Permalink to this definition"></a></dt>
+<dd><p>calcul du laplacien</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.lat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lat</span></span><a class="headerlink" href="#gomez.VariationnalFilter.lat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.lon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lon</span></span><a class="headerlink" href="#gomez.VariationnalFilter.lon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.mapper">
+<span class="sig-name descname"><span class="pre">mapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">png</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gomez.VariationnalFilter.mapper" title="Permalink to this definition"></a></dt>
+<dd><p>convenience mapper for debug</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#gomez.VariationnalFilter.mask" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gomez.VariationnalFilter.ssha">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ssha</span></span><a class="headerlink" href="#gomez.VariationnalFilter.ssha" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="filters_bidim.html" class="btn btn-neutral float-left" title="filters_bidim module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plot.html" class="btn btn-neutral float-right" title="plot module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

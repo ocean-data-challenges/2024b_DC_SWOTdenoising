@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eval_on_nadirtrack module &mdash; SWOT denoising data challenge  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="filters_bidim module" href="filters_bidim.html" />
+    <link rel="prev" title="benchmark module" href="benchmark.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SWOT denoising data challenge
+              <img src="../_static/dc_2024_WOC-ESA_map2.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_data.html">Download the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_getstarted/getstarted_eval.html">Evaluate your denoising technique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1d orbit SWOT denoising</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_details.html">SWOT denoising setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">21d orbit SWOT denoising</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_details.html">SWOT denoising setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_overalleval.html">Overall evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_metrics_det/metrics_1-visualisation.html">Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_metrics_det/metrics_2-energyloss.html">Energy loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_metrics_det/metrics_3-physicalpdf.html">Physical pdf</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="benchmark.html">benchmark module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">eval_on_nadirtrack module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters_bidim.html">filters_bidim module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gomez.html">gomez module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot.html">plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swot.html">swot module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SWOT denoising data challenge</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">eval_on_nadirtrack module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/5_scripts/eval_on_nadirtrack.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-eval_on_nadirtrack">
+<span id="eval-on-nadirtrack-module"></span><h1>eval_on_nadirtrack module<a class="headerlink" href="#module-eval_on_nadirtrack" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">eval_on_nadirtrack.</span></span><span class="sig-name descname"><span class="pre">Benchmark_onNadirs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gridstep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.compute_psd">
+<span class="sig-name descname"><span class="pre">compute_psd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etuvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_files_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lengh_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.compute_psd" title="Permalink to this definition"></a></dt>
+<dd><p>compute along track psd</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.compute_stats">
+<span class="sig-name descname"><span class="pre">compute_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etuvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_files_input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.compute_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Compute statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>l_files</strong> (<em>list</em>) – List of SWOT track files.</p></li>
+<li><p><strong>etuvar</strong> (<em>str</em>) – Calibrated SSH variable name.</p></li>
+<li><p><strong>l_files_input</strong> (<em>list</em>) – List of input files.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.display_psd">
+<span class="sig-name descname"><span class="pre">display_psd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'calib'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.display_psd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.display_stats">
+<span class="sig-name descname"><span class="pre">display_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.display_stats" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.display_stats_acrosstrack">
+<span class="sig-name descname"><span class="pre">display_stats_acrosstrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calib</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.display_stats_acrosstrack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.stats_dict">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stats_dict</span></span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.stats_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.write_psd">
+<span class="sig-name descname"><span class="pre">write_psd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.write_psd" title="Permalink to this definition"></a></dt>
+<dd><p>export des résultats vers un fichier NetCDF</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.Benchmark_onNadirs.write_stats">
+<span class="sig-name descname"><span class="pre">write_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.Benchmark_onNadirs.write_stats" title="Permalink to this definition"></a></dt>
+<dd><p>export results on NetCDF fie</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">eval_on_nadirtrack.</span></span><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#eval_on_nadirtrack.color" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.BLUE">
+<span class="sig-name descname"><span class="pre">BLUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[94m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.BLUE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.BOLD">
+<span class="sig-name descname"><span class="pre">BOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[1m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.BOLD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.CYAN">
+<span class="sig-name descname"><span class="pre">CYAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[96m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.CYAN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.DARKCYAN">
+<span class="sig-name descname"><span class="pre">DARKCYAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[36m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.DARKCYAN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.END">
+<span class="sig-name descname"><span class="pre">END</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.END" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.GREEN">
+<span class="sig-name descname"><span class="pre">GREEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[92m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.GREEN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.PURPLE">
+<span class="sig-name descname"><span class="pre">PURPLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[95m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.PURPLE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.RED">
+<span class="sig-name descname"><span class="pre">RED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[91m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.RED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.UNDERLINE">
+<span class="sig-name descname"><span class="pre">UNDERLINE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[4m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.UNDERLINE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.color.YELLOW">
+<span class="sig-name descname"><span class="pre">YELLOW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[93m'</span></em><a class="headerlink" href="#eval_on_nadirtrack.color.YELLOW" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.compute_segment_alongtrack">
+<span class="sig-prename descclassname"><span class="pre">eval_on_nadirtrack.</span></span><span class="sig-name descname"><span class="pre">compute_segment_alongtrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_alongtrack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_alongtrack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_alongtrack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssh_alongtrack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssh_map_interp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenght_scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.compute_segment_alongtrack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.compute_snr1">
+<span class="sig-prename descclassname"><span class="pre">eval_on_nadirtrack.</span></span><span class="sig-name descname"><span class="pre">compute_snr1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavenumber</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.compute_snr1" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> – </p></li>
+<li><p><strong>wavenumber</strong> – </p></li>
+<li><p><strong>threshold</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.interp_swot2nadir">
+<span class="sig-prename descclassname"><span class="pre">eval_on_nadirtrack.</span></span><span class="sig-name descname"><span class="pre">interp_swot2nadir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sats</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_of_swottracks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swottracks_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inputs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nremoval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_nadir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.interp_swot2nadir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eval_on_nadirtrack.progress_bar">
+<span class="sig-prename descclassname"><span class="pre">eval_on_nadirtrack.</span></span><span class="sig-name descname"><span class="pre">progress_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eval_on_nadirtrack.progress_bar" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="benchmark.html" class="btn btn-neutral float-left" title="benchmark module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="filters_bidim.html" class="btn btn-neutral float-right" title="filters_bidim module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Datlas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
