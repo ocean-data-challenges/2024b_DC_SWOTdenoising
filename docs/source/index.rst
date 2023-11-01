@@ -62,6 +62,19 @@ By organizing this data challenge, experts and researchers can come together to 
 
 The SWOT denoising regions
 -------------------------- 
+    
+.. raw:: html
+
+    <embed> 
+        <center>
+        <div class="image-container"> 
+        <map name="map_example1"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html" target="_blank" alt="ACC" shape=poly coords="335,177, 335,165, 348,165, 348,177"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="157,95, 157,83, 170,83, 170,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="203,90, 203,80, 215,80, 215,90"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html" target="_blank" alt="Californian Current" shape=poly coords="92,95, 92,83, 105,83, 105,95">  <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html" target="_blank" alt="Madagascar shelf" shape=poly coords="243,132, 243,121, 255,121, 255,132">  <img src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/b62394ab-cc2b-488e-82a7-421474e48b84" title="1d orbit" alt="image map example" width=400 height=250 usemap="#map_example1"></map>
+        <map name="map_example2"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html" target="_blank" alt="ACC" shape=poly coords="335,177, 335,165, 348,165, 348,177"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="157,95, 157,83, 170,83, 170,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="203,90, 203,80, 215,80, 215,90"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html" target="_blank" alt="Californian Current" shape=poly coords="92,95, 92,83, 105,83, 105,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html" target="_blank" alt="Madagascar shelf" shape=poly coords="243,132, 243,121, 255,121, 255,132"> <img src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/7cef9610-3380-4c0c-abde-b706b1b6518f" title="21d orbit" alt="image map example" width=400 height=250 usemap="#map_example2"></map> 
+        </div> 
+        </center>
+
+    </embed>
+
 
 * Gulf Stream: `GS - 1 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html>`_ and `GS - 21 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html>`_
     - Area: [55°W, 45°W, 30°N, 40°N]
@@ -83,18 +96,6 @@ The SWOT denoising regions
     - Area: [44°W, 54°W, 12°S, 2°S]
     - Dynamical specificities: Shelf with shallow topography and inaccurate MSS representation.
  
-    
-.. raw:: html
-
-    <embed> 
-        <center>
-        <div class="image-container"> 
-        <map name="map_example1"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html" target="_blank" alt="ACC" shape=poly coords="335,177, 335,165, 348,165, 348,177"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="157,95, 157,83, 170,83, 170,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="203,90, 203,80, 215,80, 215,90"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html" target="_blank" alt="Californian Current" shape=poly coords="92,95, 92,83, 105,83, 105,95">  <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html" target="_blank" alt="Madagascar shelf" shape=poly coords="243,132, 243,121, 255,121, 255,132">  <img src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/b62394ab-cc2b-488e-82a7-421474e48b84" title="1d orbit" alt="image map example" width=400 height=250 usemap="#map_example1"></map>
-        <map name="map_example2"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html" target="_blank" alt="ACC" shape=poly coords="335,177, 335,165, 348,165, 348,177"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="157,95, 157,83, 170,83, 170,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="203,90, 203,80, 215,80, 215,90"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html" target="_blank" alt="Californian Current" shape=poly coords="92,95, 92,83, 105,83, 105,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html" target="_blank" alt="Madagascar shelf" shape=poly coords="243,132, 243,121, 255,121, 255,132"> <img src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/7cef9610-3380-4c0c-abde-b706b1b6518f" title="21d orbit" alt="image map example" width=400 height=250 usemap="#map_example2"></map> 
-        </div> 
-        </center>
-
-    </embed>
 
 :raw-html:`<br />` 
 
@@ -102,8 +103,24 @@ The SWOT denoising regions
 Input data
 ----------
 
+
+:raw-html:`<b>SWOT file structure</b>`
+
+
+.. image:: ../../figures/illust_SWOT_netcdffile.png
+    :width: 500 
+    :align: center
+
 Evaluation
 ----------
+
+    * `Visualisation <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_1-visualisation.html>`_
+
+    * `Physical pdf <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_2-physicalpdf.html>`_
+
+    * `Spectrum <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_3-spectrum.html>`_
+
+    * `Energy loss <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_4-energyloss.html>`_
 
 Denoising techniques
 --------------------
@@ -219,8 +236,9 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
    :caption: Metrics details
 
    4_metrics_det/metrics_1-visualisation.md
-   4_metrics_det/metrics_2-energyloss.md
-   4_metrics_det/metrics_3-physicalpdf.md 
+   4_metrics_det/metrics_2-physicalpdf.md 
+   4_metrics_det/metrics_3-spectrum.md
+   4_metrics_det/metrics_4-energyloss.md
     
 
 .. toctree::
