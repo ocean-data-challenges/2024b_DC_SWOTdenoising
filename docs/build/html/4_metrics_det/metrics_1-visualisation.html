@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Energy loss" href="metrics_2-energyloss.html" />
-    <link rel="prev" title="Atlantic Circumpolar region" href="../3_21dswotdenoising/21dswotdenoising_circum.html" />
+    <link rel="next" title="Physical pdf" href="metrics_2-physicalpdf.html" />
+    <link rel="prev" title="Madagascar shelf region" href="../3_21dswotdenoising/21dswotdenoising_mada.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -56,17 +56,21 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_details.html">SWOT denoising setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_cali.html">Californian current region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_1dswotdenoising/1dswotdenoising_mada.html">Madagascar shelf region</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">21d orbit SWOT denoising</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_details.html">SWOT denoising setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_cali.html">Californian current region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_21dswotdenoising/21dswotdenoising_mada.html">Madagascar shelf region</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
 <ul class="current">
@@ -79,17 +83,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#movies">Movies</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="metrics_2-energyloss.html">Energy loss</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metrics_3-physicalpdf.html">Physical pdf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_2-physicalpdf.html">Physical pdf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_3-spectrum.html">Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_4-energyloss.html">Energy loss</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../5_scripts/benchmark.html">benchmark module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_scripts/eval_on_nadirtrack.html">eval_on_nadirtrack module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_scripts/filters_bidim.html">filters_bidim module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_scripts/gomez.html">gomez module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_scripts/plot.html">plot module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../5_scripts/swot.html">swot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_scripts/mod_plot.html">mod_plot module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_scripts/mod_switchvar.html">mod_switchvar module</a></li>
 </ul>
 
         </div>
@@ -125,20 +126,20 @@
 <section id="day-orbit-gulf-stream-example">
 <h3>1 day orbit - Gulf Stream example<a class="headerlink" href="#day-orbit-gulf-stream-example" title="Permalink to this headline"></a></h3>
 <p><strong>SSH</strong></p>
-<p><img alt="1d GS ssh" src="../_images/plot_Unetbaseline_GS_1d_2023-04-23_ssh.png" /></p>
+<img src="../gallery/plot_Unetbaseline_GS_1d_2023-04-23_ssh.png" alt="1d GS ssh" width="400"/>
 <p><strong>Gradients of SSH</strong></p>
-<p><img alt="1d GS ssh" src="../_images/plot_Unetbaseline_GS_1d_2023-04-23_grad.png" /></p>
+<img src="../gallery/plot_Unetbaseline_GS_1d_2023-04-23_grad.png" alt="1d GS ssh" width="400"/> 
 <p><strong>Laplacian of SSH</strong></p>
-<p><img alt="1d GS ssh" src="../_images/plot_Unetbaseline_GS_1d_2023-04-23_lapl.png" /></p>
+<img src="../gallery/plot_Unetbaseline_GS_1d_2023-04-23_lapl" alt="1d GS ssh" width="400"/>  
 </section>
 <section id="id1">
 <h3>21 day orbit - Gulf Stream example<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
 <p><strong>SSH</strong></p>
-<p><img alt="1d GS ssh" src="../_images/plot_Unetbaseline_GS_21d_2023-09-12_ssh.png" /></p>
+<img src="../gallery/plot_Unetbaseline_GS_21d_2023-09-12_ssh" alt="1d GS ssh" width="400"/>   
 <p><strong>Gradients of SSH</strong></p>
-<p><img alt="1d GS ssh" src="../_images/plot_Unetbaseline_GS_21d_2023-09-12_grad.png" /></p>
+<img src="../gallery/plot_Unetbaseline_GS_21d_2023-09-12_grad" alt="1d GS ssh" width="400"/>   
 <p><strong>Laplacian of SSH</strong></p>
-<p><img alt="1d GS ssh" src="../_images/plot_Unetbaseline_GS_21d_2023-09-12_lapl.png" /></p>
+<img src="../gallery/plot_Unetbaseline_GS_21d_2023-09-12_lapl" alt="1d GS ssh" width="400"/>   
 <br>
 </section>
 </section>
@@ -152,8 +153,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../3_21dswotdenoising/21dswotdenoising_circum.html" class="btn btn-neutral float-left" title="Atlantic Circumpolar region" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="metrics_2-energyloss.html" class="btn btn-neutral float-right" title="Energy loss" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../3_21dswotdenoising/21dswotdenoising_mada.html" class="btn btn-neutral float-left" title="Madagascar shelf region" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="metrics_2-physicalpdf.html" class="btn btn-neutral float-right" title="Physical pdf" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
