@@ -55,17 +55,21 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_details.html">SWOT denoising setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_cali.html">Californian current region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_mada.html">Madagascar shelf region</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">21d orbit SWOT denoising</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_details.html">SWOT denoising setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_circum.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_cali.html">Californian current region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_mada.html">Madagascar shelf region</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
 <ul>
@@ -138,25 +142,41 @@ This instrumental noise can introduce errors or uncertainty into the measurement
 <h3>The SWOT denoising regions<a class="headerlink" href="#the-swot-denoising-regions" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><dl class="simple">
-<dt><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_med.html">Mediterranean Sea</a></dt><dd><ul>
-<li><p>Area: [5°W, 25°E, 35°N, 47°N]</p></li>
-<li><p>Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_gulfstream.html">Gulf Stream</a></dt><dd><ul>
-<li><p>Area: [75°W, 45°W, 20°N, 50°N]</p></li>
+<dt>Gulf Stream: <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html">GS - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html">GS - 21 day orbit</a></dt><dd><ul>
+<li><p>Area: [55°W, 45°W, 30°N, 40°N]</p></li>
 <li><p>Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_circum.html">Atlantic circumpolar</a></dt><dd><ul>
-<li><p>Area: [14°E, 35°E, 45°S, 30°S]</p></li>
+<dt>Mediterranean Sea: <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html">Med - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html">Med - 21 day orbit</a></dt><dd><ul>
+<li><p>Area: [2°W, 8°E, 36°N, 44°N]</p></li>
+<li><p>Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Atlantic circumpolar <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html">ACC - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html">ACC - 21 day orbit</a></dt><dd><ul>
+<li><p>Area: [152°E, 162°E, 64°S, 54°S]</p></li>
 <li><p>Dynamical specificities: Strong Surface Wave Height (SWH) region.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Californian Current <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html">Cali - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html">Cali - 21 day orbit</a></dt><dd><ul>
+<li><p>Area: [130°W, 120°W, 30°N, 40°N]</p></li>
+<li><p>Dynamical specificities: Coastal high variability region with internal waves.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Madagascar shelf <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html">Mada - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html">Mada - 21 day orbit</a></dt><dd><ul>
+<li><p>Area: [44°W, 54°W, 12°S, 2°S]</p></li>
+<li><p>Dynamical specificities: Shelf with shallow topography and inaccurate MSS representation.</p></li>
 </ul>
 </dd>
 </dl>

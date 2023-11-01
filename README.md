@@ -52,17 +52,26 @@ By organizing this data challenge, experts and researchers can come together to 
 
 ## The SWOT denoising regions
 
-* [Mediterranean Sea](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_med.html)
-    - Area: [5°W, 25°E, 35°N, 47°N]
+
+* Gulf Stream: [1 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html) and [21 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html)
+    - Area: [55°W, 45°W, 30°N, 40°N]
+    - Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.
+    
+* Mediterranean Sea: [1 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html) and [21 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html)
+    - Area: [2°W, 8°E, 36°N, 44°N]
     - Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.
 
-* [Gulf Stream](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_gulfstream.html)
-    - Area: [75°W, 45°W, 20°N, 50°N]
-    - Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.
-
-* [Atlantic circumpolar](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_circum.html)
-    - Area: [14°E, 35°E, 45°S, 30°S]
+* Atlantic circumpolar [1 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html) and [21 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html)
+    - Area: [152°E, 162°E, 64°S, 54°S]
     - Dynamical specificities: Strong Surface Wave Height (SWH) region.
+    
+* Californian Current [1 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html) and [21 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html)
+    - Area: [130°W, 120°W, 30°N, 40°N]
+    - Dynamical specificities: Coastal high variability region with internal waves.
+    
+* Madagascar shelf [1 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html) and [21 day orbit](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html)
+    - Area: [44°W, 54°W, 12°S, 2°S]
+    - Dynamical specificities: Shelf with shallow topography and inaccurate MSS representation.
 
 <embed> 
 <center>

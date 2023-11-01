@@ -63,17 +63,27 @@ By organizing this data challenge, experts and researchers can come together to 
 The SWOT denoising regions
 -------------------------- 
 
-* `Mediterranean Sea <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_med.html>`_
-    * Area: [5°W, 25°E, 35°N, 47°N]
-    * Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.  
+* Gulf Stream: `GS - 1 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html>`_ and `GS - 21 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html>`_
+    - Area: [55°W, 45°W, 30°N, 40°N]
+    - Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.
 
-* `Gulf Stream <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_gulfstream.html>`_ 
-    * Area: [75°W, 45°W, 20°N, 50°N]
-    * Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.  
-    
-* `Atlantic circumpolar <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_swotdenoising/swotdenoising_circum.html>`_ 
-    * Area: [14°E, 35°E, 45°S, 30°S]
-    * Dynamical specificities: Strong Surface Wave Height (SWH) region.  
+* Mediterranean Sea: `Med - 1 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html>`_ and `Med - 21 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html>`_
+    - Area: [2°W, 8°E, 36°N, 44°N]
+    - Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.
+
+* Atlantic circumpolar `ACC - 1 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html>`_ and `ACC - 21 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html>`_
+    - Area: [152°E, 162°E, 64°S, 54°S]
+    - Dynamical specificities: Strong Surface Wave Height (SWH) region.
+
+* Californian Current `Cali - 1 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html>`_ and `Cali - 21 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html>`_
+    - Area: [130°W, 120°W, 30°N, 40°N]
+    - Dynamical specificities: Coastal high variability region with internal waves.
+
+* Madagascar shelf `Mada - 1 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html>`_ and `Mada - 21 day orbit <https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html>`_
+    - Area: [44°W, 54°W, 12°S, 2°S]
+    - Dynamical specificities: Shelf with shallow topography and inaccurate MSS representation.
+
+
   
 :raw-html:`<br />` 
     
@@ -183,9 +193,11 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
 
    2_1dswotdenoising/1dswotdenoising_details.md
    2_1dswotdenoising/1dswotdenoising_overalleval.md
-   2_1dswotdenoising/1dswotdenoising_med.md
    2_1dswotdenoising/1dswotdenoising_gulfstream.md
-   2_1dswotdenoising/1dswotdenoising_circum.md  
+   2_1dswotdenoising/1dswotdenoising_med.md
+   2_1dswotdenoising/1dswotdenoising_acc.md  
+   2_1dswotdenoising/1dswotdenoising_cali.md  
+   2_1dswotdenoising/1dswotdenoising_mada.md  
    
 .. toctree::
    :hidden:
@@ -194,9 +206,11 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
 
    3_21dswotdenoising/21dswotdenoising_details.md
    3_21dswotdenoising/21dswotdenoising_overalleval.md
-   3_21dswotdenoising/21dswotdenoising_med.md
    3_21dswotdenoising/21dswotdenoising_gulfstream.md
-   3_21dswotdenoising/21dswotdenoising_circum.md  
+   3_21dswotdenoising/21dswotdenoising_med.md
+   3_21dswotdenoising/21dswotdenoising_acc.md 
+   3_21dswotdenoising/21dswotdenoising_cali.md 
+   3_21dswotdenoising/21dswotdenoising_mada.md  
   
 .. toctree::
    :hidden:
