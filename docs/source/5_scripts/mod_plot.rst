@@ -1,7 +1,7 @@
-benchmark module
+mod\_plot module
 ================
 
-.. automodule:: benchmark
+.. automodule:: mod_plot
    :members:
    :undoc-members:
    :show-inheritance:
