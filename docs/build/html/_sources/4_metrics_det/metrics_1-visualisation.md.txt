@@ -13,29 +13,29 @@
 
 **SSH**
 
-<img src="../gallery/plot_Unetbaseline_GS_1d_2023-04-23_ssh.png" alt="1d GS ssh" width="400"/>
+![1d GS ssh](../gallery/plot_Unetbaseline_GS_1d_2023-04-23_ssh.png)
 
 **Gradients of SSH**
 
-<img src="../gallery/plot_Unetbaseline_GS_1d_2023-04-23_grad.png" alt="1d GS ssh" width="400"/> 
+![1d GS ssh](../gallery/plot_Unetbaseline_GS_1d_2023-04-23_grad.png)
 
 **Laplacian of SSH** 
 
-<img src="../gallery/plot_Unetbaseline_GS_1d_2023-04-23_lapl" alt="1d GS ssh" width="400"/>  
+![1d GS ssh](../gallery/plot_Unetbaseline_GS_1d_2023-04-23_lapl.png)
 
 ### 21 day orbit - Gulf Stream example
  
 **SSH**
 
-<img src="../gallery/plot_Unetbaseline_GS_21d_2023-09-12_ssh" alt="1d GS ssh" width="400"/>   
+![1d GS ssh](../gallery/plot_Unetbaseline_GS_21d_2023-09-12_ssh.png)
 
 **Gradients of SSH** 
-  
-<img src="../gallery/plot_Unetbaseline_GS_21d_2023-09-12_grad" alt="1d GS ssh" width="400"/>   
+
+![1d GS ssh](../gallery/plot_Unetbaseline_GS_21d_2023-09-12_grad.png)
 
 **Laplacian of SSH** 
- 
-<img src="../gallery/plot_Unetbaseline_GS_21d_2023-09-12_lapl" alt="1d GS ssh" width="400"/>   
+
+![1d GS ssh](../gallery/plot_Unetbaseline_GS_21d_2023-09-12_lapl.png)
 
 <br>
 
