@@ -11,28 +11,21 @@
 **SSH**
   
   
-<video controls width="500">
-  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/c8e8ac13-50bb-4702-b79a-c234d98ae364" type="video/mp4" /> 
+<video controls width="800">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/43aad547-ae4f-4b04-bc82-5e1f52713fe3" type="video/mp4" /> 
   
 </video>
 
-<video controls width="500">
-  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/ea8e589b-c4ec-4094-a2dd-0f70807e2c51" type="video/mp4" /> 
-  
-</video>
+
+ 
 
 
 **Gradients of SSH** 
 
 
 
-<video controls width="500">
-  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/f0079737-42ef-4875-8132-2cebd788bf42" type="video/mp4" /> 
-  
-</video>
-
-<video controls width="500">
-  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/3276ea34-425a-4b0b-95ce-5b688b12bae1" type="video/mp4" /> 
+<video controls width="800">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/68f629ce-5e69-4281-ad21-abf1245f046e" type="video/mp4" /> 
   
 </video>
 
@@ -41,28 +34,10 @@
 **Laplacian of SSH** 
 
 
-<video controls width="500">
-  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/5dfcbbdd-a06f-4362-8d34-8a1ecf3e7748" type="video/mp4" /> 
+<video controls width="800">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/d650496d-6631-4bb8-bfc7-f8d45d756938" type="video/mp4" /> 
   
 </video>
- 
-<video controls width="500">
-  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/920c5b90-ba29-411e-bfe1-be50e5731d97" type="video/mp4" /> 
-  
-</video>
-
-
-## 21 day orbit - Gulf Stream example
- 
-**SSH**
- 
-
-**Gradients of SSH** 
- 
-
-**Laplacian of SSH** 
- 
-<br> 
  
 <br>
  

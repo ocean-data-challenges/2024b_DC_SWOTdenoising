@@ -65,7 +65,7 @@ def plot_snapshots(ds_SWOT, variable='ssh', name_denoised='ssha_denoised_unet', 
     
     
 
-def create_movie2(ds_passes, var_type = 'ssh',name_denoised='ssha_denoised_unet', method='SWOT', region_info=None, 
+def create_movie(ds_passes, var_type = 'ssh',name_denoised='ssha_denoised_unet', method='SWOT', region_info=None, 
                  time0 = np.datetime64('2023-06-03'), ndays = 38, dir_output='../figures/', 
                  dim_name=['time','latitude','longitude'],orbit = '1d', framerate=3, Display=True, newmovie=False):
  
@@ -170,7 +170,7 @@ def create_movie2(ds_passes, var_type = 'ssh',name_denoised='ssha_denoised_unet'
     
     
 
-def create_movie(ds_passes, name_var = 'ssha', method='SWOT', region='GS', lonlat_minmax=[309,314,30,42], 
+def create_movie_old(ds_passes, name_var = 'ssha', method='SWOT', region='GS', lonlat_minmax=[309,314,30,42], 
                  time0 = np.datetime64('2023-06-03'), ndays = 38, dir_output='../figures/', 
                  dim_name=['time','latitude','longitude'], framerate=3, Display=True, clim=[-0.6,0.6], 
                  cmap='Spectral', newmovie=False):
