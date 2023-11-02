@@ -80,7 +80,7 @@ html_theme = 'sphinx_rtd_theme'
 #html_theme = 'nature'
 #html_theme = 'pyramid'
 
-html_logo = "figures/dc_2024_WOC-ESA_map2.jpg"
+html_logo = "figures/dc_2024b_SWOTdenoise_map.jpg"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
