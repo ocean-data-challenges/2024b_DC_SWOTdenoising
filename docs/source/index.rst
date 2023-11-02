@@ -235,7 +235,8 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
    :maxdepth: 1
    :caption: Metrics details
 
-   4_metrics_det/metrics_1-visualisation.md
+   4_metrics_det/metrics_1a-visu-snapshot.md
+   4_metrics_det/metrics_1b-visu-movies.md
    4_metrics_det/metrics_2-physicalpdf.md 
    4_metrics_det/metrics_3-spectrum.md
    4_metrics_det/metrics_4-energyloss.md
