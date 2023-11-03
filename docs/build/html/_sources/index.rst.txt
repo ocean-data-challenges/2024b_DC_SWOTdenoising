@@ -125,6 +125,12 @@ Evaluation
 Denoising techniques
 --------------------
 
+
+    * Unet Baseline: Current L3 product denoising process. Has issues in region with high SWH (Antarctic Circumpolar) and with inaccurate MSS (Madagascar Shelf). Do not produce realistic first and second order derivatives. 
+    
+    * Gomez V1: Considers only a constant tuning parameter lambda2. Has issues at the border of the swaths and at the land coasts.  
+    
+
 :raw-html:`<br />` 
     
 

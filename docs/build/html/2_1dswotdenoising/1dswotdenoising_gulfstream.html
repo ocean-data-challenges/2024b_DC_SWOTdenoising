@@ -56,7 +56,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="1dswotdenoising_details.html">SWOT denoising setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Gulf Stream region</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gulf Stream region</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#snapshots">Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#movies">Movies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#physical-pdf">Physical pdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#power-spectrum-density">Power Spectrum Density</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="1dswotdenoising_med.html">Mediterranean region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1dswotdenoising_cali.html">Californian current region</a></li>
@@ -115,7 +121,114 @@
   <section class="tex2jax_ignore mathjax_ignore" id="gulf-stream-region">
 <h1>Gulf Stream region<a class="headerlink" href="#gulf-stream-region" title="Permalink to this headline"></a></h1>
 <br>
-<br>  
+<section id="snapshots">
+<h2>Snapshots<a class="headerlink" href="#snapshots" title="Permalink to this headline"></a></h2>
+<p><strong>SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/plot_Unet_baseline_GS_1d_2023-04-23_ssh.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/plot_Gomez_v1_GS_1d_2023-04-23_ssh.png" /></p></th>
+</tr>
+</thead>
+</table>
+<p><strong>Gradients of SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/plot_Unet_baseline_GS_1d_2023-04-23_grad.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/plot_Gomez_v1_GS_1d_2023-04-23_grad.png" /></p></th>
+</tr>
+</thead>
+</table>
+<p><strong>Laplacian of SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/plot_Unet_baseline_GS_1d_2023-04-23_lapl.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/plot_Gomez_v1_GS_1d_2023-04-23_lapl.png" /></p></th>
+</tr>
+</thead>
+</table>
+<br>
+</section>
+<section id="movies">
+<h2>Movies<a class="headerlink" href="#movies" title="Permalink to this headline"></a></h2>
+<p><strong>SSH</strong></p>
+<video controls width="500">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/43aad547-ae4f-4b04-bc82-5e1f52713fe3" type="video/mp4" /> 
+</video>
+<video controls width="500">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/a2dfc3b6-5a11-4128-a819-8de1797202e6" type="video/mp4" /> 
+</video>
+<p><strong>Gradients of SSH</strong></p>
+<video controls width="500">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/68f629ce-5e69-4281-ad21-abf1245f046e" type="video/mp4" /> 
+</video>
+<video controls width="500">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/8201d804-1b2d-4b7f-81b0-a325c4e06cd2" type="video/mp4" /> 
+</video>
+<p><strong>Laplacian of SSH</strong></p>
+<video controls width="500">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/d650496d-6631-4bb8-bfc7-f8d45d756938" type="video/mp4" /> 
+</video>
+<video controls width="500">
+  <source src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/2644d0e4-30b0-42ca-9672-d7ca085f1f5b" type="video/mp4" /> 
+</video>
+<br>
+</section>
+<section id="physical-pdf">
+<h2>Physical pdf<a class="headerlink" href="#physical-pdf" title="Permalink to this headline"></a></h2>
+<p><strong>SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/pdf_Unet_baseline_GS_1d_ssh.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/pdf_Gomez_v1_GS_1d_ssh.png" /></p></th>
+</tr>
+</thead>
+</table>
+<p><strong>Gradients of SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/pdf_Unet_baseline_GS_1d_grad.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/pdf_Gomez_v1_GS_1d_grad.png" /></p></th>
+</tr>
+</thead>
+</table>
+<p><strong>Laplacian of SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/pdf_Unet_baseline_GS_1d_lapl.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/pdf_Gomez_v1_GS_1d_lapl.png" /></p></th>
+</tr>
+</thead>
+</table>
+<br>
+</section>
+<section id="power-spectrum-density">
+<h2>Power Spectrum Density<a class="headerlink" href="#power-spectrum-density" title="Permalink to this headline"></a></h2>
+<p><strong>SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/psd_Unet_baseline_GS_1d_ssh.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/psd_Gomez_v1_GS_1d_ssh.png" /></p></th>
+</tr>
+</thead>
+</table>
+<p><strong>Gradients of SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/psd_Unet_baseline_GS_1d_grad.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/psd_Gomez_v1_GS_1d_grad.png" /></p></th>
+</tr>
+</thead>
+</table>
+<p><strong>Laplacian of SSH</strong></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="1d GS ssh" src="../_images/psd_Unet_baseline_GS_1d_lapl.png" /></p></th>
+<th class="head"><p><img alt="1d GS ssh" src="../_images/psd_Gomez_v1_GS_1d_lapl.png" /></p></th>
+</tr>
+</thead>
+</table>
+</section>
 </section>
 
 

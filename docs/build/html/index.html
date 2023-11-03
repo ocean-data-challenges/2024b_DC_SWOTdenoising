@@ -210,6 +210,12 @@ This instrumental noise can introduce errors or uncertainty into the measurement
 </section>
 <section id="denoising-techniques">
 <h3>Denoising techniques<a class="headerlink" href="#denoising-techniques" title="Permalink to this headline"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Unet Baseline: Current L3 product denoising process. Has issues in region with high SWH (Antarctic Circumpolar) and with inaccurate MSS (Madagascar Shelf). Do not produce realistic first and second order derivatives.</p></li>
+<li><p>Gomez V1: Considers only a constant tuning parameter lambda2. Has issues at the border of the swaths and at the land coasts.</p></li>
+</ul>
+</div></blockquote>
 <p><span class="raw-html"><br /></span></p>
 </section>
 </section>
