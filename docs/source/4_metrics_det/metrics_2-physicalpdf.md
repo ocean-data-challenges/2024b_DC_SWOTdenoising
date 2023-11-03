@@ -2,6 +2,7 @@
 
 <br>
  
+Check the [demo notebook](https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/blob/main/notebooks_demos/demo_pdfvars_swot.ipynb) on GitHub. 
 
 <br> 
 
