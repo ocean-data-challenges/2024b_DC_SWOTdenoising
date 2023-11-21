@@ -3,7 +3,8 @@ channels:
   - pyviz
 dependencies:
   - python=3.10
-  - numpy=1.21.*
+  - conda-forge::numpy=1.22.4
+  - pandas=2.1.1
   - scipy
   - hvplot
   - conda-forge::pyinterp
@@ -14,6 +15,7 @@ dependencies:
   - tabulate
   - datashader
   - netcdf4
+  - conda-forge::ffmpeg
   - pip
   - pip:
     - mycolorpy
