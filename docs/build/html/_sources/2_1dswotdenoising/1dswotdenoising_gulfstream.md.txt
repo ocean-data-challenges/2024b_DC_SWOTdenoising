@@ -27,7 +27,7 @@
 **SSH**
   
   
-<video controls width="500">
+<video controls width="800">
   <source src="../_static/movie_intercomp_Gulfstream_ssh.mp4" type="video/mp4" /> 
   
 </video>
@@ -39,7 +39,7 @@
 
 
 
-<video controls width="500">
+<video controls width="800">
   <source src="../_static/movie_intercomp_Gulfstream_grad.mp4" type="video/mp4" /> 
   
 </video>
@@ -48,7 +48,7 @@
 **Laplacian of SSH** 
 
 
-<video controls width="500">
+<video controls width="800">
   <source src="../_static/movie_intercomp_Gulfstream_lapl.mp4" type="video/mp4" /> 
   
 </video>
