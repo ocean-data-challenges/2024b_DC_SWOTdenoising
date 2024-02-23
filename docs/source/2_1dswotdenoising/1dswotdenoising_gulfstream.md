@@ -45,7 +45,7 @@
 </video>
   
 
-**Laplacian of SSH** 
+**Laplacian of SSH**  
 
 
 <video controls width="800">
