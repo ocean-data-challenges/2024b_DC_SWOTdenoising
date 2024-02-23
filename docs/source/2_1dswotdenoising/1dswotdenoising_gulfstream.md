@@ -65,7 +65,7 @@
 |----|----|----|
 | ![1d GS ssh](../_static/pdf_compare_GS_1d_ssh.png) |![1d GS ssh](../_static/pdf_compare_GS_1d_grad.png) | ![1d GS ssh](../_static/pdf_compare_GS_1d_lapl.png) |
 
-
+ 
  
 <br>
 
