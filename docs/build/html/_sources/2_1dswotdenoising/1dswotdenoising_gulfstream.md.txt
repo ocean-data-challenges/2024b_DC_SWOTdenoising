@@ -57,7 +57,7 @@
 <br>
 
  
-## Physical pdf
+## Physical pdf 
 
 
 
@@ -93,7 +93,8 @@
 
 - Raw SWOT discontinuities: **29.3 %**
 - Unet baseline discontinuities: **1.5 %**
-- Gomez_V1 discontinuities: **1.6 %**
+- Gomez_V1 discontinuities: **0.4 %** 
+- UnetGomez discontinuities: **0.1 %** 
 
 | **Discontinuities function of SWH** |   
 |----| 
