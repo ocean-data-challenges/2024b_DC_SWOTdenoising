@@ -91,6 +91,9 @@
 
 **Total discontinuity percentages**
 
+
+Discontinuity scores based on the Roberts discontinuities. The scores correspond to the percentage of yellow points with respect to the blue points in the "Masked Roberts discontinuities" Figure above. 
+
 - Raw SWOT discontinuities: **29.3 %**
 - Unet baseline discontinuities: **1.5 %**
 - Gomez_V1 discontinuities: **0.4 %** 
