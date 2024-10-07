@@ -4,7 +4,7 @@
 
 <br>  
 
-The data are hosted and can be accessed on the MEOM server opendap [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/catalog.html). You can store the downloaded dataset in the swot_data/ directory. 
+The data are hosted and can be accessed on the MEOM server opendap [here](https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024b_DC_SWOTdenoising/catalog.html). You can store the downloaded dataset in the swot_data/ directory. 
 
 To download the SWOT dataset locally, you will need approximately 4 GB of disk space.  
 
@@ -23,13 +23,21 @@ The dataset is presented with the following directory structure:
  
 
 ## Download and read the data
+
  
- 
+``` 
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024b_DC_SWOTdenoising/swot_data.tar.gz 
+tar -xvf swot_data.tar.gz  
+rm -f swot_data.tar.gz
 ```
-cd swot_data/
-wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/NOTAVAILABLEYET.html 
-tar -xvf swot_1j_share.tar.gz  
-rm -f swot_1j_share.tar.gz
+
+and 
+
+
+``` 
+wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024b_DC_SWOTdenoising/denoised_data.tar.gz 
+tar -xvf denoised_data.tar.gz  
+rm -f denoised_data.tar.gz
 ```
 
 **Example notebooks**

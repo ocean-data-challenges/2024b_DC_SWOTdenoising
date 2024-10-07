@@ -380,10 +380,10 @@ import subprocess
 from IPython.display import Video
 
 
-def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv'], dir_output='../results/',
-                    region='Agulhas', framerate=24, colsize = 14):
-
-    date = np.datetime64('2023-04-23')
+def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv'], 
+                    date=np.datetime64('2023-04-23'), dir_output='../results/',
+                    region='Agulhas', framerate=24, colsize = 14, suffix='v02'):
+ 
     
     
     if var_type == 'ssh':
@@ -454,7 +454,7 @@ def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv']
             
             date = date + np.timedelta64(1,'D')
             
-    moviename = f'movie_intercomp_{region}_{var_type}.mp4'
+    moviename = f'movie_intercomp_{suffix}_{region}_{var_type}.mp4'
 
 
     # Create movie

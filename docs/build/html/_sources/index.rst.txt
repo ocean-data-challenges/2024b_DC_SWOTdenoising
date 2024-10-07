@@ -201,17 +201,15 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
 :raw-html:`<br />`
  
     
-.. toctree::
-   :hidden:
-   :maxdepth: 2
+.. toctree:: 
+   :maxdepth: 1
    :caption: Get started 
 
    1_getstarted/getstarted_install.md
    1_getstarted/getstarted_data.md 
    1_getstarted/getstarted_eval.md
 
-.. toctree::
-   :hidden:
+.. toctree:: 
    :maxdepth: 1
    :caption: 1d orbit SWOT denoising
 
@@ -223,8 +221,7 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
    2_1dswotdenoising/1dswotdenoising_cali.md  
    2_1dswotdenoising/1dswotdenoising_mada.md  
    
-.. toctree::
-   :hidden:
+.. toctree:: 
    :maxdepth: 1
    :caption: 21d orbit SWOT denoising
 
@@ -250,7 +247,7 @@ To download the SWOT dataset locally, you will need approximately 4 GB of disk s
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Scripts
 
    5_scripts/modules.rst
