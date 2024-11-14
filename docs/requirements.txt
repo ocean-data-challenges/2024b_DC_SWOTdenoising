@@ -5,3 +5,4 @@ ipykernel
 nbsphinx
 sphinx-gallery
 sphinx-rtd-theme
+pydata_sphinx_theme
