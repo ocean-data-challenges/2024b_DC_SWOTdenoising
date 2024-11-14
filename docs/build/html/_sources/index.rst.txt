@@ -138,6 +138,12 @@ If you are interested in more data challenges relating to oceanographic data (gl
 
    4_metrics_det/index_metrics.md 
     
+.. toctree::  
+    :caption: Contact us
+    :hidden:
+    :maxdepth: 0 
+    
+    contactus.md  
 
 .. toctree::
    :hidden:
