@@ -141,7 +141,7 @@ If you are interested in more data challenges relating to oceanographic data (gl
 .. toctree::  
     :caption: Contact us
     :hidden:
-    :maxdepth: 0 
+    :maxdepth: 0  
     
     contactus.md  
 
