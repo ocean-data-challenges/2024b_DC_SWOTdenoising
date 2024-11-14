@@ -1,0 +1,7 @@
+calculate\_currents module
+==========================
+
+.. automodule:: calculate_currents
+   :members:
+   :undoc-members:
+   :show-inheritance:

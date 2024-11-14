@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Evaluate your denoising technique &#8212; SWOT denoising data challenge  documentation</title>
   
@@ -29,21 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=ff50aca1" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1_getstarted/getstarted_eval';</script>
-    <script src="../_static/js/custom.js"></script>
+    <script src="../_static/js/custom.js?v=713f7fb5"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Experimental setup" href="../2_1dswotdenoising_setup/1dswotdenoising_details.html" />
@@ -179,7 +177,7 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../5_scripts/modules.html">
-                        <no title>
+                        src
                       </a>
                     </li>
                 
@@ -327,7 +325,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../5_scripts/modules.html">
-                        <no title>
+                        src
                       </a>
                     </li>
                 
@@ -452,13 +450,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="evaluate-your-denoising-technique">
-<h1>Evaluate your denoising technique<a class="headerlink" href="#evaluate-your-denoising-technique" title="Permalink to this headline">#</a></h1>
+<h1>Evaluate your denoising technique<a class="headerlink" href="#evaluate-your-denoising-technique" title="Link to this heading">#</a></h1>
 <br> 
 <br> 
 <p>Once you have <a class="reference internal" href="getstarted_install.html"><span class="doc std std-doc">installed the data challenge</span></a> and <a class="reference internal" href="getstarted_data.html"><span class="doc std std-doc">downloaded the data</span></a>, you can now evaluate your maps. Although, you might want to check first that your sea level anomaly or sea surface currents maps respect a certain format. You can then scroll through the different metrics, checking the DUACS evaluation notebooks as example.</p>
 <br> 
 <section id="data-format">
-<h2>Data format<a class="headerlink" href="#data-format" title="Permalink to this headline">#</a></h2>
+<h2>Data format<a class="headerlink" href="#data-format" title="Link to this heading">#</a></h2>
 <p>The input netcdf files must contain:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">num_lines</span></code> and <code class="docutils literal notranslate"><span class="pre">num_pixels</span></code> dimensions.</p></li>
@@ -467,12 +465,12 @@ document.write(`
 </ul>
 <p>Note that some formatting can be done using xarray within the jupyter notebooks. For instance, you can change a variable’s name simply with <code class="docutils literal notranslate"><span class="pre">ds</span> <span class="pre">=</span> <span class="pre">ds.rename_var({'my_sla':'sla'})</span></code>.</p>
 <section id="currents-maps-format">
-<h3>Currents maps format<a class="headerlink" href="#currents-maps-format" title="Permalink to this headline">#</a></h3>
+<h3>Currents maps format<a class="headerlink" href="#currents-maps-format" title="Link to this heading">#</a></h3>
 <br> 
 </section>
 </section>
 <section id="available-metrics-and-where-to-find-them">
-<h2>Available metrics and where to find them<a class="headerlink" href="#available-metrics-and-where-to-find-them" title="Permalink to this headline">#</a></h2>
+<h2>Available metrics and where to find them<a class="headerlink" href="#available-metrics-and-where-to-find-them" title="Link to this heading">#</a></h2>
 </section>
 </section>
 

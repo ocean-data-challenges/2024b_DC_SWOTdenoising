@@ -1,0 +1,10 @@
+spectral\_analysis package
+==========================
+
+Module contents
+---------------
+
+.. automodule:: spectral_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:

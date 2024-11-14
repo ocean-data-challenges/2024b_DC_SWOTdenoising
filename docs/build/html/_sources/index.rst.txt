@@ -137,13 +137,6 @@ If you are interested in more data challenges relating to oceanographic data (gl
    :caption: Metrics details
 
    4_metrics_det/index_metrics.md 
-    
-.. toctree::  
-    :caption: Contact us
-    :hidden:
-    :maxdepth: 0  
-    
-    contactus.md  
 
 .. toctree::
    :hidden:
@@ -151,3 +144,10 @@ If you are interested in more data challenges relating to oceanographic data (gl
    :caption: Scripts
 
    5_scripts/modules.rst
+    
+.. toctree::  
+    :caption: Contact us
+    :hidden:
+    :maxdepth: 0  
+    
+    contactus.md  

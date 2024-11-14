@@ -1,0 +1,7 @@
+calculate\_vorticity module
+===========================
+
+.. automodule:: calculate_vorticity
+   :members:
+   :undoc-members:
+   :show-inheritance:

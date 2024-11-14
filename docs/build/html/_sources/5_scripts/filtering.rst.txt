@@ -1,0 +1,10 @@
+filtering package
+=================
+
+Module contents
+---------------
+
+.. automodule:: filtering
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,10 @@
+geostrophy package
+==================
+
+Module contents
+---------------
+
+.. automodule:: geostrophy
+   :members:
+   :undoc-members:
+   :show-inheritance:

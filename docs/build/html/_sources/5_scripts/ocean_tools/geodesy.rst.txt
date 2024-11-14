@@ -1,0 +1,10 @@
+geodesy package
+===============
+
+Module contents
+---------------
+
+.. automodule:: geodesy
+   :members:
+   :undoc-members:
+   :show-inheritance:
