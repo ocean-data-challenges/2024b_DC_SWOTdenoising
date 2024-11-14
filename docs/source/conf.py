@@ -43,6 +43,7 @@ extensions = [
     'myst_parser',
     "nbsphinx",
     "sphinx_gallery.load_style",
+    'sphinx.ext.intersphinx',
 ]
 
 
@@ -75,10 +76,41 @@ exclude_patterns = ['gallery']
 # a list of builtin themes.
 #
 #html_theme = 'classic'
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
 #html_theme = 'alabaster'
 #html_theme = 'nature'
 #html_theme = 'pyramid'
+html_theme = "pydata_sphinx_theme" 
+ 
+html_theme_options = { 
+    "icon_links": [ 
+        {
+            "name": "DC on GitHub",
+            "url": "https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising",
+            "icon": "fa-brands fa-github",
+        },
+        {
+            "name": "ODC website",
+            "url": "https://ocean-data-challenges.github.io",
+            "icon": "_static/logo_odc.jpg",
+            "type": "local",
+        },   
+    ],
+    "header_links_before_dropdown":8,  
+    
+    "logo": { 
+        "image_dark": "_static/dc_2024b_SWOTdenoise_map.jpg",
+    }, 
+    "show_nav_level": 2,
+    "show_toc_level": 2,
+    "navbar_align": "left",  # [left, content, right] For testing that the navbar items align properly
+    # "show_nav_level": 2,  
+    "footer_start": ["copyright"],  
+    "secondary_sidebar_items": [],
+    
+    "collapse_navigation": True,
+    # "back_to_top_button": False,
+}
 
 html_logo = "figures/dc_2024b_SWOTdenoise_map.jpg"
 

@@ -16,6 +16,7 @@ dependencies:
   - datashader
   - netcdf4
   - conda-forge::ffmpeg
+  - conda-forge::zcollection
   - pip
   - pip:
     - mycolorpy

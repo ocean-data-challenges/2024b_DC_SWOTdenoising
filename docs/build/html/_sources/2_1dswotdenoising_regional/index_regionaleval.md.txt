@@ -1,0 +1,53 @@
+# Regional evaluations
+
+
+<span> </br> </span>
+
+--- 
+
+
+```{toctree}
+:maxdepth: 1
+
+1dswotdenoising_gulfstream
+```
+
+--- 
+
+
+```{toctree}
+:maxdepth: 1
+
+1dswotdenoising_med
+```
+
+--- 
+
+
+```{toctree}
+:maxdepth: 1
+
+1dswotdenoising_acc
+```
+
+--- 
+
+
+```{toctree}
+:maxdepth: 1
+
+1dswotdenoising_cali
+```
+
+--- 
+
+
+```{toctree}
+:maxdepth: 1
+
+1dswotdenoising_mada
+```
+
+--- 
+
+<span> </br> </span>  

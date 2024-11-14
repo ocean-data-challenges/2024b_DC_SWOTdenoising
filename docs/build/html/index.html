@@ -1,292 +1,450 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SWOT denoising data challenge &mdash; SWOT denoising data challenge  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>SWOT denoising data challenge &#8212; SWOT denoising data challenge  documentation</title>
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="1_getstarted/getstarted_install.html" />
+    <link rel="next" title="Participate" href="1_getstarted/index_getstarted.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
-</head>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
 
-          
-          
-          <a href="#" class="icon icon-home">
-            SWOT denoising data challenge
-              <img src="_static/dc_2024b_SWOTdenoise_map.jpg" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Get started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_data.html">Download the data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_eval.html">Evaluate your denoising technique</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">1d orbit SWOT denoising</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_details.html">SWOT denoising setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_cali.html">Californian current region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_mada.html">Madagascar shelf region</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">21d orbit SWOT denoising</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_details.html">SWOT denoising setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_cali.html">Californian current region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_mada.html">Madagascar shelf region</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Metrics details</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="4_metrics_det/metrics_1a-visu-snapshot.html">Snap shots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_metrics_det/metrics_1b-visu-movies.html">Movies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_metrics_det/metrics_2-physicalpdf.html">Physical pdf</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_metrics_det/metrics_3-spectrum.html">Power Spectrum Density</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_metrics_det/metrics_4-energyloss.html">Energy loss</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Scripts</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="5_scripts/dict_regions_info.html">dict_regions_info module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5_scripts/mod_plot.html">mod_plot module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5_scripts/mod_spectral.html">mod_spectral module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5_scripts/mod_switchvar.html">mod_switchvar module</a></li>
-</ul>
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/dc_2024b_SWOTdenoise_map.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/dc_2024b_SWOTdenoise_map.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="1_getstarted/index_getstarted.html">
+                        Participate
+                      </a>
+                    </li>
+                
 
-        </div>
-      </div>
-    </nav>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="2_1dswotdenoising_setup/1dswotdenoising_details.html">
+                        Experimental setup
+                      </a>
+                    </li>
+                
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">SWOT denoising data challenge</a>
-      </nav>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="2_1dswotdenoising_V03/index_eval_V03.html">
+                        Evaluation SWOT-V03
+                      </a>
+                    </li>
+                
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">SWOT denoising data challenge</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="2_1dswotdenoising_V102/index_eval_V102.html">
+                        Evaluation SWOT-V102
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="4_metrics_det/index_metrics.html">
+                        Metrics details
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="5_scripts/modules.html">
+                        <no title>
+                      </a>
+                    </li>
+                
   </ul>
-  <hr/>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising" title="DC on GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">DC on GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ocean-data-challenges.github.io" title="ODC website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/logo_odc.jpg" class="icon-link-image" alt="ODC website"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="1_getstarted/index_getstarted.html">
+                        Participate
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="2_1dswotdenoising_setup/1dswotdenoising_details.html">
+                        Experimental setup
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="2_1dswotdenoising_V03/index_eval_V03.html">
+                        Evaluation SWOT-V03
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="2_1dswotdenoising_V102/index_eval_V102.html">
+                        Evaluation SWOT-V102
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="4_metrics_det/index_metrics.html">
+                        Metrics details
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="5_scripts/modules.html">
+                        <no title>
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising" title="DC on GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">DC on GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ocean-data-challenges.github.io" title="ODC website" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/logo_odc.jpg" class="icon-link-image" alt="ODC website"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="swot-denoising-data-challenge">
-<h1>SWOT denoising data challenge<a class="headerlink" href="#swot-denoising-data-challenge" title="Permalink to this headline"></a></h1>
+<h1>SWOT denoising data challenge<a class="headerlink" href="#swot-denoising-data-challenge" title="Permalink to this headline">#</a></h1>
 <p><span class="raw-html"><br /></span></p>
 <a class="reference internal image-reference" href="_images/dc_2024b_SWOTdenoising_banner.jpg"><img alt="_images/dc_2024b_SWOTdenoising_banner.jpg" class="align-center" src="_images/dc_2024b_SWOTdenoising_banner.jpg" style="width: 1000px;" /></a>
 <p><span class="raw-html"><br /></span></p>
 <p><span class="raw-html"><br /></span></p>
-<section id="context">
-<h2>1. Context<a class="headerlink" href="#context" title="Permalink to this headline"></a></h2>
 <section id="the-swot-mission">
-<h3>The SWOT mission<a class="headerlink" href="#the-swot-mission" title="Permalink to this headline"></a></h3>
+<h2>The SWOT mission<a class="headerlink" href="#the-swot-mission" title="Permalink to this headline">#</a></h2>
 <p>The Surface Water and Ocean Topography (SWOT) satellite mission is an innovative project designed to measure various aspects of Earth’s water bodies, including the height of surface water, from oceans to land.</p>
 <p>SWOT aims to measure the height of almost all surface water on Earth. It will provide data on oceans, land, and freshwater resources. This mission covers the entire water supply-demand chain, making it unique in its capability to monitor Earth’s surface water entirely. SWOT offers very high-definition data, this level of detail enables scientists to monitor sea level changes near coasts, observe dynamic features in the open ocean, and track factors like ocean circulation and the transport of heat, energy, oxygen, and nutrients.</p>
 <p>The mission involves extensive calibration and validation efforts. Field campaigns have been planned worldwide to compare SWOT observations with ground-based measurements. Scientists from various regions are coming together to contribute to the calibration phase. Although the original requirement was to deliver validated datasets a year after SWOT’s launch, NASA and CNES are exploring a new approach to distribute data earlier to the science community. This approach encourages active participation from the scientific community, through the SWOT Science Team, in the validation phase.</p>
 </section>
 <section id="the-intrumental-karin-noise">
-<h3>The intrumental KaRIn noise<a class="headerlink" href="#the-intrumental-karin-noise" title="Permalink to this headline"></a></h3>
+<h2>The intrumental KaRIn noise<a class="headerlink" href="#the-intrumental-karin-noise" title="Permalink to this headline">#</a></h2>
 <p>The instrumental noise in KaRIn (Ku-band Radar Interferometer), the key instrument onboard the SWOT satellite, is a critical factor to consider and mitigate in the processing of SWOT data. KaRIn is designed to measure the height of Earth’s water surfaces with high precision. To achieve the mission’s goals, it needs to be extremely sensitive to variations in sea surface height (SSH). However, like any instrument, KaRIn is subject to various sources of noise that can affect the accuracy of its measurements.
 This instrumental noise can introduce errors or uncertainty into the measurements, which need to be corrected or removed to ensure the data’s accuracy.</p>
 <p>In regions with low noise, the impact on the data may be minimal. However, in areas with more significant noise, the presence of instrumental noise can lead to inaccuracies in the derived measurements of SSH.For instance, surface wave height can be a factor. High surface wave conditions can make it challenging to obtain precise measurements of water height. In such conditions, the instrumental noise may become more pronounced, making it difficult to remove it effectively. Also, the quality of first and second derivatives of SSH data along SWOT tracks is crucial for understanding ocean dynamics, such as currents and eddies. Errors introduced by instrumental noise can impact the derivatives and hinder the accuracy of these derived oceanographic parameters.</p>
 <p>The Unet method used for noise removal is a valuable tool for mitigating instrumental noise in SWOT data. However, as with any data processing technique, it may have limitations, particularly in regions with extreme conditions (that were not seen in the Unet’s training) such as high surface wave heights. When the Unet correction fails to reduce noise in some areas, it indicates the need for more robust methods or improvements in the processing techniques.</p>
+</section>
+<section id="the-swot-denoising-data-challenge">
+<h2>The SWOT denoising data challenge<a class="headerlink" href="#the-swot-denoising-data-challenge" title="Permalink to this headline">#</a></h2>
 <p>To address this challenge, researchers and scientists working with SWOT data need to continuously refine and improve the noise removal and data processing methods. This includes developing more sophisticated algorithms, considering the unique conditions in different regions, and exploring ways to optimize the Unet method or develop new approaches for noise removal.</p>
 <p>This is precisely why initiatives like the present data challenge are crucial in the context of the SWOT mission. The challenges related to instrumental noise in KaRIn data, as well as the difficulties encountered in processing SWOT data in regions with unique conditions highlight the need for collaborative efforts and innovative solutions.</p>
 <p>By organizing this data challenge, experts and researchers can come together to share their expertise, test various noise removal and data processing methods, and collectively work towards more accurate and robust results. This collaborative approach fosters innovation and encourages the development of improved techniques for handling instrumental noise and deriving valuable information from SWOT data.</p>
+<p>To start with this data challenge you can check the <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/1_getstarted/index_getstarted.html">Participation</a>  section to learn how to:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/1_getstarted/getstarted_install.html">Install</a> the challenge,</p></li>
+<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/1_getstarted/getstarted_data.html">Download the data</a>,</p></li>
+<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/1_getstarted/getstarted_eval.html">Evaluate your denoising techniques</a>.</p></li>
+</ol>
 </section>
-</section>
-<section id="the-data-challenge-setup">
-<h2>2. The data challenge setup<a class="headerlink" href="#the-data-challenge-setup" title="Permalink to this headline"></a></h2>
-<section id="the-swot-denoising-regions">
-<h3>The SWOT denoising regions<a class="headerlink" href="#the-swot-denoising-regions" title="Permalink to this headline"></a></h3>
+<section id="more-data-challenges">
+<h2>More data challenges<a class="headerlink" href="#more-data-challenges" title="Permalink to this headline">#</a></h2>
+<p>If you are interested in more data challenges relating to oceanographic data (global altimetric mapping, SWOT preprocessing techniques …), you can visit the ocean-data-challenges website.</p>
 <embed>
-    <center>
-    <div class="image-container">
-    <map name="map_example1"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html" target="_blank" alt="ACC" shape=poly coords="335,177, 335,165, 348,165, 348,177"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="157,95, 157,83, 170,83, 170,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="203,90, 203,80, 215,80, 215,90"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html" target="_blank" alt="Californian Current" shape=poly coords="92,95, 92,83, 105,83, 105,95">  <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html" target="_blank" alt="Madagascar shelf" shape=poly coords="243,132, 243,121, 255,121, 255,132">  <img src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/b62394ab-cc2b-488e-82a7-421474e48b84" title="1d orbit" alt="image map example" width=400 height=250 usemap="#map_example1"></map>
-    <map name="map_example2"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html" target="_blank" alt="ACC" shape=poly coords="335,177, 335,165, 348,165, 348,177"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html" target="_blank" alt="Gulf Stream" shape=poly coords="157,95, 157,83, 170,83, 170,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html" target="_blank" alt="Mediterranean Sea" shape=poly coords="203,90, 203,80, 215,80, 215,90"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html" target="_blank" alt="Californian Current" shape=poly coords="92,95, 92,83, 105,83, 105,95"> <area href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html" target="_blank" alt="Madagascar shelf" shape=poly coords="243,132, 243,121, 255,121, 255,132"> <img src="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising/assets/33433820/7cef9610-3380-4c0c-abde-b706b1b6518f" title="21d orbit" alt="image map example" width=400 height=250 usemap="#map_example2"></map>
-    </div>
-    </center>
 
-</embed><ul class="simple">
-<li><dl class="simple">
-<dt>Gulf Stream: <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_gulfstream.html">GS - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_gulfstream.html">GS - 21 day orbit</a></dt><dd><ul>
-<li><p>Area: [55°W, 45°W, 30°N, 40°N]</p></li>
-<li><p>Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Mediterranean Sea: <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_med.html">Med - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_med.html">Med - 21 day orbit</a></dt><dd><ul>
-<li><p>Area: [2°W, 8°E, 36°N, 44°N]</p></li>
-<li><p>Dynamical specificities: A quasi-closed basin with strong ageostrophic dynamics and vertical shear.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Atlantic circumpolar <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_acc.html">ACC - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_acc.html">ACC - 21 day orbit</a></dt><dd><ul>
-<li><p>Area: [152°E, 162°E, 64°S, 54°S]</p></li>
-<li><p>Dynamical specificities: Strong Surface Wave Height (SWH) region.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Californian Current <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_cali.html">Cali - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_cali.html">Cali - 21 day orbit</a></dt><dd><ul>
-<li><p>Area: [130°W, 120°W, 30°N, 40°N]</p></li>
-<li><p>Dynamical specificities: Coastal high variability region with internal waves.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Madagascar shelf <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising/1dswotdenoising_mada.html">Mada - 1 day orbit</a> and <a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/3_21dswotdenoising/21dswotdenoising_mada.html">Mada - 21 day orbit</a></dt><dd><ul>
-<li><p>Area: [44°W, 54°W, 12°S, 2°S]</p></li>
-<li><p>Dynamical specificities: Shelf with shallow topography and inaccurate MSS representation.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<p><span class="raw-html"><br /></span></p>
-</section>
-<section id="input-data">
-<h3>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline"></a></h3>
-<p><span class="raw-html"><b>SWOT file structure</b></span></p>
-<a class="reference internal image-reference" href="_images/illust_SWOT_netcdffile.png"><img alt="_images/illust_SWOT_netcdffile.png" class="align-center" src="_images/illust_SWOT_netcdffile.png" style="width: 500px;" /></a>
-</section>
-<section id="evaluation">
-<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_1-visualisation.html">Visualisation</a></p></li>
-<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_2-physicalpdf.html">Physical pdf</a></p></li>
-<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_3-spectrum.html">Spectrum</a></p></li>
-<li><p><a class="reference external" href="https://2024b-dc-swotdenoising.readthedocs.io/en/latest/4_metrics_det/metrics_4-energyloss.html">Energy loss</a></p></li>
-</ul>
-</div></blockquote>
-</section>
-<section id="denoising-techniques">
-<h3>Denoising techniques<a class="headerlink" href="#denoising-techniques" title="Permalink to this headline"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Unet Baseline: Current L3 product denoising process. Has issues in region with high SWH (Antarctic Circumpolar) and with inaccurate MSS (Madagascar Shelf). Do not produce realistic first and second order derivatives.</p></li>
-<li><p>Gomez V1: Considers only a constant tuning parameter lambda2. Has issues at the border of the swaths and at the land coasts.</p></li>
-</ul>
-</div></blockquote>
-<p><span class="raw-html"><br /></span></p>
-</section>
-</section>
-<section id="get-started">
-<h2>3. Get started<a class="headerlink" href="#get-started" title="Permalink to this headline"></a></h2>
-<section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h3>
-<p><strong>How to Get Started?</strong></p>
-<p>Clone the data challenge repo by using HTTPS:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising.git
-</pre></div>
-</div>
-<p>Or clone it using SSH:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:ocean-data-challenges/2024b_DC_SWOTdenoising.git
-</pre></div>
-</div>
-<p>Create the data challenge conda environment, named <code class="docutils literal notranslate"><span class="pre">env-dc-swot-filtering</span></code>, by running the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--file<span class="o">=</span>dc_environment.yml
-</pre></div>
-</div>
-<p>And activate it with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>env-dc-swot-denoising
-</pre></div>
-</div>
-<p>Then add it to the available kernels for Jupyter to see:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipython<span class="w"> </span>kernel<span class="w"> </span>install<span class="w"> </span>--name<span class="w"> </span><span class="s2">&quot;env-dc-swot-denoising&quot;</span><span class="w"> </span>--user
-</pre></div>
-</div>
-<p>Finally, select the “env-dc-woc-esa” kernel in your notebook with Kernel &gt; Change Kernel.</p>
-<p>You’re now good to go!</p>
-</section>
-<section id="download-the-data">
-<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline"></a></h3>
-<p>The data is hosted and can be accessed on the MEOM server opendap <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/MEOM/OCEAN_DATA_CHALLENGES/2024b_DC_SWOTdenoising/catalog.html">here</a>. You can store the downloaded dataset in the swot_data/ directory.</p>
-<p><span class="raw-html"><br /></span></p>
+    <br />
+
+    <center><a  href="https://ocean-data-challenges.github.io"/> <img src="_static/odc_webpage.jpg" alt="Alt Text" width="500"/></a></center>
+
+    <center><a  href="https://ocean-data-challenges.github.io" alt="Alt Text"/> ocean-data-challenges.github.io </a></center>
+
+    <br />
+
+    <br /><p><span class="raw-html"><br /></span></p>
 <embed>
     So far, the github page visits amount to: <br> <br> <a href="https://github.com/ocean-data-challenges/2024b_DC_SWOTdenoising"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Focean-data-challenges%2F2024b_DC_SWOTdenoising&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 
 </embed><hr class="docutils" />
 <p><span class="raw-html"><br /></span></p>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Get started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_data.html">Download the data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_getstarted/getstarted_eval.html">Evaluate your denoising technique</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">1d orbit SWOT denoising</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_details.html">SWOT denoising setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_med.html">Mediterranean region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_cali.html">Californian current region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_1dswotdenoising/1dswotdenoising_mada.html">Madagascar shelf region</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">21d orbit SWOT denoising</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_details.html">SWOT denoising setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_overalleval.html">Overall evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_gulfstream.html">Gulf Stream region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_med.html">Mediterranean region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_acc.html">Atlantic Circumpolar region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_cali.html">Californian current region</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_21dswotdenoising/21dswotdenoising_mada.html">Madagascar shelf region</a></li>
-</ul>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -294,36 +452,78 @@ This instrumental noise can introduce errors or uncertainty into the measurement
 </div>
 </section>
 </section>
-</section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="1_getstarted/getstarted_install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, Datlas.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="1_getstarted/index_getstarted.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Participate</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
-</body>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Datlas.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
 </html>

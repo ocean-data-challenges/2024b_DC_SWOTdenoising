@@ -4,24 +4,33 @@ import xarray as xr
 import matplotlib.pyplot as plt 
 
 def plot_snapshots(ds_SWOT, variable='ssh', name_denoised='ssha_denoised_unet', date_plot=np.datetime64('2023-09-12'), 
-                   region_info=None, method = 'Unet_baseline', orbit = '1d', dir_output='../figures/', savefig = True, fig=None, diff=False):
+                   region_info=None, method = 'Unet_baseline', orbit = '1d', dir_output='../figures/', vmax=None, savefig = True, fig=None, diff=False):
 
     if variable == 'ssh':
         cmap = 'Spectral'
-        vmin=-0.6
-        vmax =0.6
+        if vmax == None:
+            vmin=-0.6
+            vmax =0.6
+        else : 
+            vmin = -vmax
         noisy_var = 'ssha_new_editing'
         
     if variable == 'grad':
         cmap = 'inferno'
-        vmin= 0.
-        vmax =0.0005
+        if vmax == None:
+            vmin= 0.
+            vmax =0.0005
+        else : 
+            vmin = -vmax
         noisy_var = 'grad_new_editing'
         
     if variable == 'lapl':
         cmap = 'viridis'
-        vmin = -0.005
-        vmax = 0.005
+        if vmax == None:
+            vmin = -0.005
+            vmax = 0.005
+        else : 
+            vmin = -vmax
         noisy_var = 'lapl_new_editing'
        
     if diff: 
@@ -67,24 +76,33 @@ def plot_snapshots(ds_SWOT, variable='ssh', name_denoised='ssha_denoised_unet', 
         return fig
     
 
-def plot_compare_snapshots(ds_SWOT, methods=['Noisy'], var_type='ssh', name_var=['ssha_new_editing'], date_plot=np.datetime64('2023-09-12'), region_info=None, method = 'Unet_baseline', orbit = '1d', dir_output='../figures/', savefig = True, colsize = 14, fig=None, diff=False):
+def plot_compare_snapshots(ds_SWOT, methods=['Noisy'], var_type='ssh', name_var=['ssha_new_editing'], date_plot=np.datetime64('2023-09-12'), region_info=None, method = 'Unet_baseline', orbit = '1d', vmax=None, dir_output='../figures/', savefig = True, colsize = 14, fig=None, diff=False):
 
     if var_type == 'ssh':
         cmap = 'Spectral'
-        vmin=-0.6
-        vmax =0.6
+        if vmax == None:
+            vmin=-0.6
+            vmax =0.6
+        else : 
+            vmin = -vmax
         noisy_var = 'ssha_new_editing'
         
     if var_type == 'grad':
         cmap = 'inferno'
-        vmin= 0.
-        vmax =0.0005
+        if vmax == None:
+            vmin= 0.
+            vmax =0.0005
+        else : 
+            vmin = 0
         noisy_var = 'grad_new_editing'
         
     if var_type == 'lapl':
         cmap = 'viridis'
-        vmin = -0.005
-        vmax = 0.005
+        if vmax == None:
+            vmin = -0.005
+            vmax = 0.005
+        else : 
+            vmin = -vmax
         noisy_var = 'lapl_new_editing'
        
     if diff: 
@@ -117,8 +135,8 @@ def plot_compare_snapshots(ds_SWOT, methods=['Noisy'], var_type='ssh', name_var=
 
 
         date1 = date_plot + np.timedelta64(1,'D') 
-        ids=ds_SWOT.where(ds_SWOT.time>date_plot,drop=True)
-        ids=ids.where(ids.time<date1,drop=True) 
+        ids=ds_SWOT.where(ds_SWOT['time'].compute()>date_plot,drop=True)
+        ids=ids.where(ids['time'].compute()<date1,drop=True) 
 
         if i_met%2 == 0 and nmet!=1:  
             ax0.scatter(ids.longitude,ids.latitude,c=ids[name_var[i_met]],s=2,cmap=cmap, vmin=vmin, vmax = vmax) 
@@ -382,24 +400,31 @@ from IPython.display import Video
 
 def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv'], 
                     date=np.datetime64('2023-04-23'), dir_output='../results/',
-                    region='Agulhas', framerate=24, colsize = 14, suffix='v02'):
+                    region='Agulhas', vmax=None, framerate=24, colsize = 14, suffix='v02'):
  
     
     
     if var_type == 'ssh':
         cmap = 'Spectral'
-        vmin=-0.6
-        vmax =0.6 
+        if vmax == None:
+            vmin=-0.6
+            vmax =0.6
+        else : 
+            vmin = -vmax
         
     if var_type == 'grad':
         cmap = 'inferno'
         vmin= 0.
-        vmax =0.0005 
+        if vmax == None:
+            vmax =0.0005 
         
     if var_type == 'lapl':
         cmap = 'viridis'
-        vmin = -0.005
-        vmax = 0.005 
+        if vmax == None:
+            vmin = -0.005
+            vmax = 0.005 
+        else : 
+            vmin = -vmax
        
     
     for tt in range(12): 
@@ -431,8 +456,8 @@ def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv']
  
                 
                 date1 = date + np.timedelta64(1,'D') 
-                ids=ds_passes.where(ds_passes.time>date,drop=True)
-                ids=ids.where(ids.time<date1,drop=True) 
+                ids=ds_passes.where(ds_passes['time'].compute()>date,drop=True)
+                ids=ids.where(ids['time'].compute()<date1,drop=True) 
             
                 if i_met%2 == 0 and nmet!=1:  
                     ax0.scatter(ids.longitude,ids.latitude,c=ids[name_var[i_met]],s=2,cmap=cmap, vmin=vmin, vmax = vmax) 
