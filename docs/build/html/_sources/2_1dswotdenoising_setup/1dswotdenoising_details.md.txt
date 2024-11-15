@@ -21,7 +21,7 @@ The SWOT denoising regions
 </embed>
 
 
-## SWOT-V03
+## [SWOT-V03](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising_V03.html)
 
 **Period: 2023-04-23 to 2023-05-04**
 
@@ -29,7 +29,7 @@ The SWOT denoising regions
     - Area: [55°W, 45°W, 30°N, 40°N]
     - Dynamical specificities: High variability region with mixed geostrophic and ageostrophic dynamics.
 
-## SWOT-V102
+## [SWOT-V102](https://2024b-dc-swotdenoising.readthedocs.io/en/latest/2_1dswotdenoising_V102.html)
 
 **Period: 2023-05-01 to 2023-05-11**
 
