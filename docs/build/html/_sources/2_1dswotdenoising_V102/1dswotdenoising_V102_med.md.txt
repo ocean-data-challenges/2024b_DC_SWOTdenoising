@@ -105,8 +105,8 @@
 
 Discontinuity scores based on the Roberts discontinuities. The scores correspond to the percentage of yellow points with respect to the blue points in the "Masked Roberts discontinuities" Figure above. 
 
-- Noisy SWOT discontinuities: **24.43 %**
-- Denoised SWOT discontinuities: **0.29 %** 
+- Noisy SWOT discontinuities: **7.72 %**
+- Denoised SWOT discontinuities: **0.28 %** 
 
 | **Discontinuities function of SWH** |   
 |----| 
