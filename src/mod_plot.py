@@ -400,9 +400,14 @@ from IPython.display import Video
 
 def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv'], 
                     date=np.datetime64('2023-04-23'), dir_output='../results/',
-                    region='Agulhas', vmax=None, framerate=24, colsize = 14, suffix='v02'):
+                    region_info='Agulhas', vmax=None, framerate=24, colsize = 14, suffix='v02'):
  
     
+    region = region_info['name']
+    lon_min = region_info['lon_min']
+    lon_max = region_info['lon_max']
+    lat_min = region_info['lat_min']
+    lat_max = region_info['lat_max']
     
     if var_type == 'ssh':
         cmap = 'Spectral'
@@ -467,10 +472,12 @@ def movie_intercomp(ds_passes, methods=['DUACS'], var_type='uv', name_var=['uv']
                     cbar = fig.colorbar(im)
                 ax0.set_title(methods[i_met])  
                 
+                ax0.axis([lon_min, lon_max, lat_min, lat_max])
 
             if nmet%2 !=0 and nmet!=1:
                 i_met += 1
                 axs[int(i_met/2),i_met%2].axis('off')
+
                  
 
             fig.savefig(f'{dir_output}frame_intercomp_{region}_{var_type}_{str(tt).zfill(5)}.png',dpi=100)
